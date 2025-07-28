@@ -1,105 +1,81 @@
 import json
-from typing import List, Dict, Any
-import xlsxwriter
+from typing import Dict, Any, List
+from openpyxl import load_workbook
+from openpyxl.drawing.image import Image as XLImage
 
 
-def write_description(ws, row: int, col: int, runs: List[Dict[str, Any]], workbook):
-    """Write rich text description supporting bold and background color."""
-    segments = []
-    for run in runs:
-        text = run.get('text', '')
-        fmt_args = {}
-        if run.get('bold'):
-            fmt_args['bold'] = True
-        if run.get('bgcolor'):
-            fmt_args['bg_color'] = run['bgcolor']
-        if fmt_args:
-            fmt = workbook.add_format(fmt_args)
-            segments.append(fmt)
-        segments.append(text)
-    ws.write_rich_string(row, col, *segments)
+START_ROW = 7  # first product row in the template
+PLACEHOLDER_ROWS = 3  # number of placeholder product rows in the template
 
 
-def create_order_workbook(data: Dict[str, Any], output: str) -> None:
-    wb = xlsxwriter.Workbook(output)
-    ws = wb.add_worksheet()
+def fill_cells(ws, cells: Dict[str, Any]) -> None:
+    """Write values from the json ``cells`` mapping into the worksheet.
 
-    IMAGE_COLUMNS = {
-        "产品图片": "images/products",
-        "颜色图片": "images/colors",
-        "印刷logo图片": "images/logos",
-    }
-
-    row = 0
-    normal = wb.add_format({'font_size': 11})
-    bold = wb.add_format({'bold': True})
-
-    # company header
-    for line in data.get('company_header', []):
-        ws.write(row, 0, line, normal)
-        row += 1
-
-    # document title
-    title = data.get('title', '订单')
-    ws.write(row, 0, title, bold)
-    row += 1
-
-    # supplier/order info lines
-    info_lines = data.get('info_lines', [])
-    for info in info_lines:
-        ws.write_row(row, 0, info, normal)
-        row += 1
-
-    # table header
-    columns = data['table']['columns']
-    for idx, col_name in enumerate(columns):
-        ws.write(row, idx, col_name, bold)
-        if col_name in IMAGE_COLUMNS:
-            ws.set_column(idx, idx, 20)
-    row += 1
-
-    # items
-    for item in data['table']['items']:
-        col_idx = 0
-        for key in columns:
-            value = item.get(key, '')
-            if key == '描述' and isinstance(value, list):
-                write_description(ws, row, col_idx, value, wb)
-            elif key in IMAGE_COLUMNS and value:
-                ws.insert_image(row, col_idx, value, {
-                    'x_offset': 2,
-                    'y_offset': 2,
-                    'x_scale': 0.5,
-                    'y_scale': 0.5,
-                })
-            else:
-                ws.write(row, col_idx, value, normal)
-            col_idx += 1
-        ws.set_row(row, 70)
-        row += 1
-
-    # totals if present
-    if 'total' in data['table']:
-        ws.write_row(row, 0, data['table']['total'], normal)
-        row += 1
-
-    # notes
-    for note in data.get('notes', []):
-        ws.write(row, 0, note, normal)
-        row += 1
-
-    # footer (signatures)
-    if 'footer' in data:
-        ws.write_row(row, 0, [data['footer'].get('buyer', ''), '', data['footer'].get('supplier', '')], normal)
-    wb.close()
+    ``cells`` now maps cell addresses to objects with ``value`` and
+    optionally ``key``.  Only the ``value`` field is written into the
+    worksheet, but keeping the ``key`` in the JSON makes it easier to
+    understand where the value came from when converting back from Excel.
+    """
+    for address, meta in cells.items():
+        if isinstance(meta, dict):
+            value = meta.get("value", "")
+        else:
+            value = meta
+        ws[address] = value
 
 
-if __name__ == '__main__':
+def insert_products(ws, products: List[Dict[str, Any]]) -> None:
+    """Insert product rows into the worksheet starting at START_ROW."""
+    ws.delete_rows(START_ROW, PLACEHOLDER_ROWS)
+    ws.insert_rows(START_ROW, len(products))
+
+    for idx, item in enumerate(products):
+        r = START_ROW + idx
+        ws.cell(row=r, column=1, value=item.get("产品编号", ""))
+        img_path = item.get("产品图片")
+        if img_path:
+            try:
+                ws.add_image(XLImage(img_path), f"B{r}")
+            except Exception:
+                ws.cell(row=r, column=2, value=img_path)
+        ws.cell(row=r, column=3, value=item.get("描述", ""))
+        ws.cell(row=r, column=4, value=item.get("数量/个", ""))
+        ws.cell(row=r, column=5, value=item.get("单价", ""))
+        ws.cell(row=r, column=6, value=f"=E{r}*D{r}")
+        ws.cell(row=r, column=7, value=item.get("包装方式", ""))
+
+    total_row = START_ROW + len(products)
+    ws.cell(row=total_row, column=4, value=f"=SUM(D{START_ROW}:D{total_row-1})")
+    ws.cell(row=total_row, column=6, value=f"=SUM(F{START_ROW}:F{total_row-1})")
+
+
+def create_order_workbook(data: Dict[str, Any], template: str, output: str) -> None:
+    wb = load_workbook(template)
+    ws = wb.active
+
+    fill_cells(ws, data.get("cells", {}))
+    insert_products(ws, data.get("products", []))
+
+    footer = data.get("footer", {})
+    if footer:
+        if "buyer" in footer:
+            ws["B69"] = footer["buyer"]
+        if "supplier" in footer:
+            ws["E69"] = footer["supplier"]
+
+    wb.save(output)
+
+
+if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description='Generate order excel from JSON data')
-    parser.add_argument('json', help='Path to order data json')
-    parser.add_argument('output', help='Output Excel file path')
+
+    parser = argparse.ArgumentParser(description="Fill order template spreadsheet")
+    parser.add_argument("json", help="Path to order data json")
+    parser.add_argument("output", help="Output Excel file path")
+    parser.add_argument("--template", default="docs/template_order_excel_1.xlsx", help="Template workbook path")
     args = parser.parse_args()
-    with open(args.json, 'r', encoding='utf-8') as f:
-        order_data = json.load(f)
-    create_order_workbook(order_data, args.output)
+
+    with open(args.json, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    create_order_workbook(data, args.template, args.output)

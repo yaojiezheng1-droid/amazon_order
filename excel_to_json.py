@@ -1,12 +1,46 @@
 import sys
-import zipfile
 import json
+import zipfile
 import xml.etree.ElementTree as ET
-from typing import List, Dict
+from typing import Dict, Tuple, Any, List
 
 NAMESPACE = '{http://schemas.openxmlformats.org/spreadsheetml/2006/main}'
+YELLOW = 'FFFFFF00'
 
-def read_rows(path: str) -> List[List[str]]:
+
+def guess_key(address: str, cells: Dict[str, Tuple[str, str, str]]) -> str:
+    """Return a label for the given cell address.
+
+    The label is taken from the nearest non-yellow cell either to the left
+    on the same row or above in the same column.  If no such cell exists the
+    returned key is an empty string.
+    """
+    # separate column letters and row number
+    col = ''.join(ch for ch in address if ch.isalpha())
+    row = int(''.join(ch for ch in address if ch.isdigit()))
+
+    # look left
+    if len(col) == 1 and col > 'A':
+        left_col = chr(ord(col) - 1)
+        left_addr = f'{left_col}{row}'
+        left = cells.get(left_addr)
+        if left and left[1] != YELLOW and left[0]:
+            return str(left[0])
+
+    # look upward
+    r = row - 1
+    while r > 0:
+        up_addr = f'{col}{r}'
+        cell = cells.get(up_addr)
+        if cell:
+            if cell[1] != YELLOW and cell[0]:
+                return str(cell[0])
+        r -= 1
+    return ''
+
+
+def read_workbook(path: str) -> Dict[str, Tuple[str, str, str]]:
+    """Return mapping of cell address -> (value, color, formula)."""
     with zipfile.ZipFile(path) as z:
         shared = []
         if 'xl/sharedStrings.xml' in z.namelist():
@@ -14,115 +48,88 @@ def read_rows(path: str) -> List[List[str]]:
             for si in root.findall('.//' + NAMESPACE + 'si'):
                 text = ''.join(t.text or '' for t in si.findall('.//' + NAMESPACE + 't'))
                 shared.append(text)
-        sheet = z.read('xl/worksheets/sheet1.xml')
-        root = ET.fromstring(sheet)
-        rows = []
-        for row in root.findall('.//' + NAMESPACE + 'row'):
-            cells = []
-            for c in row.findall(NAMESPACE + 'c'):
-                t = c.get('t')
-                v = c.find(NAMESPACE + 'v')
-                val = ''
-                if v is not None:
-                    val = shared[int(v.text)] if t == 's' else v.text
-                elif t == 'inlineStr':
-                    is_elem = c.find(NAMESPACE + 'is')
-                    if is_elem is not None:
-                        val = ''.join(tel.text or '' for tel in is_elem.findall('.//' + NAMESPACE + 't'))
-                cells.append(val if val is not None else '')
-            rows.append(cells)
-        return rows
 
-def parse_order(rows: List[List[str]]) -> Dict:
-    # trim empty trailing rows
-    while rows and not any(rows[-1]):
-        rows.pop()
+        style_root = ET.fromstring(z.read('xl/styles.xml'))
+        fills = style_root.find(NAMESPACE + 'fills')
+        fill_colors = []
+        for f in fills.findall(NAMESPACE + 'fill'):
+            pattern = f.find(NAMESPACE + 'patternFill')
+            color = None
+            if pattern is not None:
+                fg = pattern.find(NAMESPACE + 'fgColor')
+                if fg is not None:
+                    color = fg.get('rgb')
+            fill_colors.append(color)
+        cell_xfs = style_root.find(NAMESPACE + 'cellXfs')
+        xfs = [int(xf.get('fillId')) for xf in cell_xfs.findall(NAMESPACE + 'xf')]
 
-    title_idx = None
-    for i, r in enumerate(rows):
-        text = ''.join(r)
-        if '订单' in text or '打样单' in text:
-            title_idx = i
+        sheet_root = ET.fromstring(z.read('xl/worksheets/sheet1.xml'))
+        cells = {}
+        for c in sheet_root.findall('.//' + NAMESPACE + 'c'):
+            addr = c.get('r')
+            t = c.get('t')
+            v = c.find(NAMESPACE + 'v')
+            val = ''
+            if v is not None:
+                val = shared[int(v.text)] if t == 's' else v.text
+            f = c.find(NAMESPACE + 'f')
+            formula = f.text if f is not None else None
+            color = None
+            s = c.get('s')
+            if s is not None:
+                color = fill_colors[xfs[int(s)]]
+            cells[addr] = (val, color, formula)
+        return cells
+
+
+def parse_order(path: str) -> Dict[str, Any]:
+    cells = read_workbook(path)
+
+    # Determine product rows based on yellow fill in columns A-G starting at row 7
+    products = []
+    row = 7
+    while True:
+        row_cells = [cells.get(f'{chr(65+i)}{row}', ('', None, None)) for i in range(7)]
+        if not all(c[1] == YELLOW for c in row_cells):
             break
-    if title_idx is None:
-        raise ValueError('title row not found')
+        products.append({
+            '产品编号': row_cells[0][0],
+            '产品图片': row_cells[1][0],
+            '描述': row_cells[2][0],
+            '数量/个': row_cells[3][0],
+            '单价': row_cells[4][0],
+            '包装方式': row_cells[6][0],
+        })
+        row += 1
 
-    company_header = []
-    for r in rows[:title_idx]:
-        if r and r[0]:
-            for line in r[0].split('\n'):
-                line = line.strip()
-                if line:
-                    company_header.append(line)
+    yellow_cells = {}
+    for addr, (val, color, _) in cells.items():
+        if color == YELLOW:
+            r = int(''.join(ch for ch in addr if ch.isdigit()))
+            if r < 7 or r >= row:
+                yellow_cells[addr] = {
+                    'key': guess_key(addr, cells),
+                    'value': val
+                }
 
-    title = ''.join(rows[title_idx]).strip()
-
-    info_lines = []
-    header_row = None
-    idx = title_idx + 1
-    while idx < len(rows):
-        r = rows[idx]
-        if any(x in r for x in ('客号', '型号', '图片', '商品名称', '产品描述')):
-            header_row = r
-            break
-        if any(cell for cell in r):
-            info_lines.append(r)
-        idx += 1
-    if header_row is None:
-        raise ValueError('table header not found')
-
-    columns = [c for c in header_row if c]
-    idx += 1
-    items = []
-    total = None
-    while idx < len(rows):
-        r = rows[idx]
-        if not any(r):
-            idx += 1
-            continue
-        join = ''.join(r)
-        if join.startswith('总计') or join.startswith('TOTAL') or join.startswith('TOTAL:'):
-            total = r
-            idx += 1
-            continue
-        if any(word in r[0] for word in ('备注', '以上', '包装', '交货', '付款', '注意')):
-            break
-        item = {columns[i]: (r[i] if i < len(r) else '') for i in range(len(columns))}
-        items.append(item)
-        idx += 1
-
-    notes = []
     footer = {}
-    while idx < len(rows):
-        r = rows[idx]
-        if any('宁波品秀美容科技有限公司' in c for c in r):
-            footer['buyer'] = '宁波品秀美容科技有限公司'
-        if any('瑾秀制刷' in c or '菲迪印刷' in c or '和鑫制刷厂' in c for c in r):
-            footer['supplier'] = next((c for c in r if c), '')
-        note = next((c for c in r if c), '')
-        if note:
-            notes.append(note)
-        idx += 1
+    if 'B69' in cells:
+        footer['buyer'] = cells['B69'][0]
+    if 'E69' in cells:
+        footer['supplier'] = cells['E69'][0]
 
     data = {
-        'company_header': company_header,
-        'title': title,
-        'info_lines': info_lines,
-        'table': {'columns': columns, 'items': items},
+        'cells': yellow_cells,
+        'products': products,
+        'footer': footer,
     }
-    if total:
-        data['table']['total'] = total
-    if notes:
-        data['notes'] = notes
-    if footer:
-        data['footer'] = footer
     return data
+
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
         print('usage: excel_to_json.py <input.xlsx> <output.json>')
         sys.exit(1)
-    rows = read_rows(sys.argv[1])
-    data = parse_order(rows)
+    data = parse_order(sys.argv[1])
     with open(sys.argv[2], 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
