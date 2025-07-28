@@ -11,11 +11,13 @@
     ["联系人：", "陈文锋", "", "", "订单安排人：孙诚昱"]
   ],
   "table": {
-    "columns": ["客号", "产品图片", "描述", "数量/个", "单价", "金额", "包装方式"],
+    "columns": ["客号", "产品图片", "颜色图片", "印刷logo图片", "描述", "数量/个", "单价", "金额", "包装方式"],
     "items": [
       {
         "客号": "EC1601",
-        "产品图片": "image1.png",
+        "产品图片": "images/products/sample_product.png",
+        "颜色图片": "images/colors/green.png",
+        "印刷logo图片": "images/logos/logo.png",
         "描述": [
           {"text": "细针洗头刷TPEE，硬度55，"},
           {"text": "注意控制针头毛边", "bold": true, "bgcolor": "#FFFF00"}

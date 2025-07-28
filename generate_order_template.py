@@ -24,6 +24,12 @@ def create_order_workbook(data: Dict[str, Any], output: str) -> None:
     wb = xlsxwriter.Workbook(output)
     ws = wb.add_worksheet()
 
+    IMAGE_COLUMNS = {
+        "产品图片": "images/products",
+        "颜色图片": "images/colors",
+        "印刷logo图片": "images/logos",
+    }
+
     row = 0
     normal = wb.add_format({'font_size': 11})
     bold = wb.add_format({'bold': True})
@@ -46,7 +52,10 @@ def create_order_workbook(data: Dict[str, Any], output: str) -> None:
 
     # table header
     columns = data['table']['columns']
-    ws.write_row(row, 0, columns, bold)
+    for idx, col_name in enumerate(columns):
+        ws.write(row, idx, col_name, bold)
+        if col_name in IMAGE_COLUMNS:
+            ws.set_column(idx, idx, 20)
     row += 1
 
     # items
@@ -56,9 +65,17 @@ def create_order_workbook(data: Dict[str, Any], output: str) -> None:
             value = item.get(key, '')
             if key == '描述' and isinstance(value, list):
                 write_description(ws, row, col_idx, value, wb)
+            elif key in IMAGE_COLUMNS and value:
+                ws.insert_image(row, col_idx, value, {
+                    'x_offset': 2,
+                    'y_offset': 2,
+                    'x_scale': 0.5,
+                    'y_scale': 0.5,
+                })
             else:
                 ws.write(row, col_idx, value, normal)
             col_idx += 1
+        ws.set_row(row, 70)
         row += 1
 
     # totals if present
