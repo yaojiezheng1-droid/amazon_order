@@ -25,6 +25,10 @@ def read_rows(path: str) -> List[List[str]]:
                 val = ''
                 if v is not None:
                     val = shared[int(v.text)] if t == 's' else v.text
+                elif t == 'inlineStr':
+                    is_elem = c.find(NAMESPACE + 'is')
+                    if is_elem is not None:
+                        val = ''.join(tel.text or '' for tel in is_elem.findall('.//' + NAMESPACE + 't'))
                 cells.append(val if val is not None else '')
             rows.append(cells)
         return rows
