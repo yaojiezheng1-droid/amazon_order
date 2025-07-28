@@ -10,3 +10,10 @@ This repository organizes files used for managing Amazon orders. It is designed 
 
 Each directory contains an empty `.gitkeep` file so that it is tracked by Git even when no spreadsheets are present.
 
+
+## Generating Order Templates
+
+Use `generate_order_template.py` with a JSON file that follows the
+structure documented in `docs/order_template.md` to create a purchase
+order spreadsheet. An example JSON file is provided in
+`docs/order_template_example.json`.
