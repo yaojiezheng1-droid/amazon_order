@@ -6,6 +6,7 @@ from openpyxl.drawing.image import Image as XLImage
 
 START_ROW = 7  # first product row in the template
 PLACEHOLDER_ROWS = 3  # number of placeholder product rows in the template
+BUYER_ROW = 69  # base row for buyer name (before any inserted rows)
 
 
 def fill_cells(ws, cells: Dict[str, Any]) -> None:
@@ -24,13 +25,23 @@ def fill_cells(ws, cells: Dict[str, Any]) -> None:
         ws[address] = value
 
 
-def insert_products(ws, products: List[Dict[str, Any]]) -> None:
-    """Insert product rows into the worksheet starting at START_ROW."""
-    ws.delete_rows(START_ROW, PLACEHOLDER_ROWS)
-    ws.insert_rows(START_ROW, len(products))
+def insert_products(ws, products: List[Dict[str, Any]]) -> int:
+    """Insert product rows into the worksheet starting at ``START_ROW``.
 
-    for idx, item in enumerate(products):
+    Returns the number of rows inserted which is used to adjust footer
+    positions below the product table.
+    """
+    # Only insert additional rows when more products are supplied than the
+    # placeholders in the template.  This keeps the rest of the sheet in the
+    # same position when possible.
+    extra = max(0, len(products) - PLACEHOLDER_ROWS)
+    if extra:
+        ws.insert_rows(START_ROW + PLACEHOLDER_ROWS, extra)
+
+    row_count = max(len(products), PLACEHOLDER_ROWS)
+    for idx in range(row_count):
         r = START_ROW + idx
+        item = products[idx] if idx < len(products) else {}
         ws.cell(row=r, column=1, value=item.get("产品编号", ""))
         img_path = item.get("产品图片")
         if img_path:
@@ -38,15 +49,18 @@ def insert_products(ws, products: List[Dict[str, Any]]) -> None:
                 ws.add_image(XLImage(img_path), f"B{r}")
             except Exception:
                 ws.cell(row=r, column=2, value=img_path)
+        else:
+            ws.cell(row=r, column=2, value="")
         ws.cell(row=r, column=3, value=item.get("描述", ""))
         ws.cell(row=r, column=4, value=item.get("数量/个", ""))
         ws.cell(row=r, column=5, value=item.get("单价", ""))
         ws.cell(row=r, column=6, value=f"=E{r}*D{r}")
         ws.cell(row=r, column=7, value=item.get("包装方式", ""))
 
-    total_row = START_ROW + len(products)
+    total_row = START_ROW + row_count
     ws.cell(row=total_row, column=4, value=f"=SUM(D{START_ROW}:D{total_row-1})")
     ws.cell(row=total_row, column=6, value=f"=SUM(F{START_ROW}:F{total_row-1})")
+    return extra
 
 
 def create_order_workbook(data: Dict[str, Any], template: str, output: str) -> None:
@@ -54,14 +68,16 @@ def create_order_workbook(data: Dict[str, Any], template: str, output: str) -> N
     ws = wb.active
 
     fill_cells(ws, data.get("cells", {}))
-    insert_products(ws, data.get("products", []))
+    offset = insert_products(ws, data.get("products", []))
 
     footer = data.get("footer", {})
     if footer:
+        buyer_cell = f"B{BUYER_ROW + offset}"
+        supplier_cell = f"E{BUYER_ROW + offset}"
         if "buyer" in footer:
-            ws["B69"] = footer["buyer"]
+            ws[buyer_cell] = footer["buyer"]
         if "supplier" in footer:
-            ws["E69"] = footer["supplier"]
+            ws[supplier_cell] = footer["supplier"]
 
     wb.save(output)
 
@@ -72,7 +88,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Fill order template spreadsheet")
     parser.add_argument("json", help="Path to order data json")
     parser.add_argument("output", help="Output Excel file path")
-    parser.add_argument("--template", default="docs/template_order_excel_1.xlsx", help="Template workbook path")
+    parser.add_argument("--template", default="docs/base_template.xlsx", help="Template workbook path")
     args = parser.parse_args()
 
     with open(args.json, "r", encoding="utf-8") as f:
