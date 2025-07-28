@@ -34,3 +34,10 @@ An example JSON file is provided in `docs/order_template_example.json`.
   `docs/parent_child_mapping.json`. When ordering child SKUs belonging to
   different parents, create a separate spreadsheet for each parent product.
 
+
+## Converting Workbooks to JSON
+
+Run `convert_all_excel.py` to parse every `.xlsx` file in the repository.
+The script writes each workbook to the `json_exports/` directory.  File names
+are sanitized to contain only letters, numbers, underscores, and hyphens.
+A short hash is appended to ensure uniqueness across similarly named files.
