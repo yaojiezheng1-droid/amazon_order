@@ -17,6 +17,9 @@ Each directory contains an empty `.gitkeep` file so that it is tracked by Git ev
 ## Generating Order Templates
 
 Use `generate_order_template.py` with a JSON file that follows the
-structure documented in `docs/order_template.md` to create a purchase
-order spreadsheet. An example JSON file is provided in
-`docs/order_template_example.json`.
+structure documented in `docs/order_template.md`. The JSON lists every
+yellow cell from the Excel template with its label (`key`) and the value
+to write. The script fills those cells in `docs/template_order_excel_1.xlsx`
+and inserts product rows. Green cells contain formulas that compute totals
+automatically.
+An example JSON file is provided in `docs/order_template_example.json`.
