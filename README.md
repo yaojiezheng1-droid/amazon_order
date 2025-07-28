@@ -7,6 +7,9 @@ This repository organizes files used for managing Amazon orders. It is designed 
 - `orders/` – Past orders and new purchase orders.
 - `accessories/` – Packaging and accessory information, including accessory past orders.
 - `docs/` – Project notes and other documentation.
+- `images/` – Product related images used when generating order spreadsheets. It
+  contains `products/`, `colors/`, and `logos/` subdirectories for the different
+  image types.
 
 Each directory contains an empty `.gitkeep` file so that it is tracked by Git even when no spreadsheets are present.
 
