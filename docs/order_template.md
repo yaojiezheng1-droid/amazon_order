@@ -43,6 +43,11 @@ the same style as the samples in the `orders/` directory.
 - **table.items** – list of line items. When the `\u63CF\u8FF0` column is a
   list of runs, each run can specify `bold` or `bgcolor` to preserve rich
   text formatting.
+- If columns named `产品图片`, `颜色图片`, or `印刷logo图片` are present, the
+  corresponding values should be relative paths to image files in the
+  `images/products`, `images/colors`, or `images/logos` directories
+  respectively. These images will be inserted into the generated
+  spreadsheet.
 - **table.total** – optional row summarising quantity and amount.
 - **notes** – list of additional lines following the product table.
 - **footer** – buyer and supplier names used at the bottom of the sheet.
