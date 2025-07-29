@@ -113,13 +113,27 @@
       "children": [
         {
           "sku": "FSC-WB01",
-          "name": "",
-          "accessories": []
+          "name": "FSC漂白榉木头梳（木针）",
+          "accessories": [
+            {
+              "sku": "FSC-WB02-1",
+              "name": "ecoed木针按摩梳包装",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "FSC-WB02",
-          "name": "",
-          "accessories": []
+          "name": "FSC漂白榉木头梳(尼龙针)",
+          "accessories": [
+            {
+              "sku": "FSC-WB02-1",
+              "name": "ecoed木针按摩梳包装",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         }
       ]
     },
@@ -223,18 +237,39 @@
       "children": [
         {
           "sku": "EC403",
-          "name": "",
-          "accessories": []
+          "name": "Ecoed咖啡渣浴刷",
+          "accessories": [
+            {
+              "sku": "EC403-1",
+              "name": "ecoed咖啡渣浴刷包装",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "EC403-2",
-          "name": "",
-          "accessories": []
+          "name": "Ecoed原色浴刷",
+          "accessories": [
+            {
+              "sku": "EC403-2-1",
+              "name": "原色绿色浴刷包装",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "EC403-3",
-          "name": "",
-          "accessories": []
+          "name": "Ecoed绿色浴刷",
+          "accessories": [
+            {
+              "sku": "EC403-2-1",
+              "name": "原色绿色浴刷包装",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         }
       ]
     },
@@ -272,13 +307,27 @@
       "children": [
         {
           "sku": "EC04-GREEN",
-          "name": "",
-          "accessories": []
+          "name": "化妆刷套装GREEN",
+          "accessories": [
+            {
+              "sku": "EC301-4-GR",
+              "name": "ecoed化妆刷包装绿4",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "EC04-NATURAL",
-          "name": "",
-          "accessories": []
+          "name": "化妆刷套装NATURAL",
+          "accessories": [
+            {
+              "sku": "EC301-4-PK",
+              "name": "ecoed化妆刷包装灰4",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         }
       ]
     },
@@ -287,23 +336,51 @@
       "children": [
         {
           "sku": "EC-D1-PINK",
-          "name": "",
-          "accessories": []
+          "name": "化妆刷大头 PINK",
+          "accessories": [
+            {
+              "sku": "EC301-1-PK",
+              "name": "ecoed化妆刷包装灰1",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "EC-D1-GREEN",
-          "name": "",
-          "accessories": []
+          "name": "化妆刷大头 GREEN",
+          "accessories": [
+            {
+              "sku": "EC301-1-GR",
+              "name": "ecoed化妆刷包装绿1",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "EC-D1-NATURAL",
-          "name": "",
-          "accessories": []
+          "name": "化妆刷大头 NATURAL",
+          "accessories": [
+            {
+              "sku": "EC301-1-PK",
+              "name": "ecoed化妆刷包装灰1",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "EC-D1-CYAN",
-          "name": "",
-          "accessories": []
+          "name": "化妆刷大头 CYAN",
+          "accessories": [
+            {
+              "sku": "EC301-1-GR",
+              "name": "ecoed化妆刷包装绿1",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         }
       ]
     },
@@ -312,23 +389,51 @@
       "children": [
         {
           "sku": "EC-P3-PINK",
-          "name": "",
-          "accessories": []
+          "name": "化妆刷平头PINK",
+          "accessories": [
+            {
+              "sku": "EC301-3-PK",
+              "name": "ecoed化妆刷包装灰3",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "EC-P3-GREEN",
-          "name": "",
-          "accessories": []
+          "name": "化妆刷平头GREEN",
+          "accessories": [
+            {
+              "sku": "EC301-3-GR",
+              "name": "ecoed化妆刷包装绿3",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "EC-P3-NATURAL",
-          "name": "",
-          "accessories": []
+          "name": "化妆刷平头NATURAL",
+          "accessories": [
+            {
+              "sku": "EC301-3-PK",
+              "name": "ecoed化妆刷包装灰3",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "EC-P3-CYAN",
-          "name": "",
-          "accessories": []
+          "name": "化妆刷平头CYAN",
+          "accessories": [
+            {
+              "sku": "EC301-3-GR",
+              "name": "ecoed化妆刷包装绿3",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         }
       ]
     },
@@ -337,23 +442,51 @@
       "children": [
         {
           "sku": "EC-X2-PINK",
-          "name": "",
-          "accessories": []
+          "name": "化妆刷斜头PINK",
+          "accessories": [
+            {
+              "sku": "EC301-2-PK",
+              "name": "ecoed化妆刷包装灰2",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "EC-X2-GREEN",
-          "name": "",
-          "accessories": []
+          "name": "化妆刷斜头GREEN",
+          "accessories": [
+            {
+              "sku": "EC301-2-GR",
+              "name": "ecoed化妆刷包装绿2",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "EC-X2-NATURAL",
-          "name": "",
-          "accessories": []
+          "name": "化妆刷斜头NATURAL",
+          "accessories": [
+            {
+              "sku": "EC301-2-PK",
+              "name": "ecoed化妆刷包装灰2",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "EC-X2-CYAN",
-          "name": "",
-          "accessories": []
+          "name": "化妆刷斜头CYAN",
+          "accessories": [
+            {
+              "sku": "EC301-2-GR",
+              "name": "ecoed化妆刷包装绿2",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         }
       ]
     },
@@ -362,13 +495,39 @@
       "children": [
         {
           "sku": "2EC-Pink",
-          "name": "",
-          "accessories": []
+          "name": "Ecoed洗头刷粉色两只装细针",
+          "accessories": [
+            {
+              "sku": "EC401-3",
+              "name": "ecoed发泡带洗头刷用",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "EC404-2-3-2",
+              "name": "洗头刷包装粉色细针两只",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "2EC-Blue",
-          "name": "",
-          "accessories": []
+          "name": "Ecoed洗头刷蓝色两只装细针",
+          "accessories": [
+            {
+              "sku": "EC401-3",
+              "name": "ecoed发泡带洗头刷用",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "EC404-2-2-2",
+              "name": "洗头刷包装蓝色细针两只",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "2EC-Green",
@@ -390,8 +549,21 @@
         },
         {
           "sku": "2EC-Yellow",
-          "name": "",
-          "accessories": []
+          "name": "Ecoed洗头刷原色两只装细针",
+          "accessories": [
+            {
+              "sku": "EC401-3",
+              "name": "ecoed发泡带洗头刷用",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "EC404-2-4-2",
+              "name": "洗头刷包装原色细针两只",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         }
       ]
     },
@@ -405,8 +577,15 @@
         },
         {
           "sku": "BB101-3",
-          "name": "",
-          "accessories": []
+          "name": "boxxbrush盒子梳紫色",
+          "accessories": [
+            {
+              "sku": "BB101-2-1",
+              "name": "boxxbrush盒子pet",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         }
       ]
     },
@@ -483,18 +662,63 @@
         },
         {
           "sku": "EC405-3-Green",
-          "name": "",
-          "accessories": []
+          "name": "ecoed 洗头刷405单只装绿色50硬",
+          "accessories": [
+            {
+              "sku": "EC401-3",
+              "name": "ecoed发泡带洗头刷用",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "EC204-2-3-1",
+              "name": "ecoed吊粒洗头刷赠品",
+              "ratio_main": "1",
+              "ratio_accessory": "2"
+            },
+            {
+              "sku": "ECSB-1-1",
+              "name": "洗头刷包装绿色粗针单只",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "EC405-3-Pink",
-          "name": "",
-          "accessories": []
+          "name": "ecoed 洗头刷405单只装棕色50硬",
+          "accessories": [
+            {
+              "sku": "EC401-3",
+              "name": "ecoed发泡带洗头刷用",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "ECSB-7-1",
+              "name": "洗头刷包装粉色粗针单只",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "EC405-3-Grey",
-          "name": "",
-          "accessories": []
+          "name": "ecoed 洗头刷405单只装原色50硬",
+          "accessories": [
+            {
+              "sku": "EC401-3",
+              "name": "ecoed发泡带洗头刷用",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "ECSB-8-1",
+              "name": "洗头刷包装原色粗针单只",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         }
       ]
     },
@@ -503,18 +727,57 @@
       "children": [
         {
           "sku": "ECSB-2Green",
-          "name": "",
-          "accessories": []
+          "name": "Ecoed洗头刷绿色组合装",
+          "accessories": [
+            {
+              "sku": "EC401-3",
+              "name": "ecoed发泡带洗头刷用",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "2EC-1-1",
+              "name": "ecoed洗头刷包装2只装",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "ECSB-2Blue",
-          "name": "",
-          "accessories": []
+          "name": "Ecoed洗头刷蓝色组合装",
+          "accessories": [
+            {
+              "sku": "EC401-3",
+              "name": "ecoed发泡带洗头刷用",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "2EC-1-1",
+              "name": "ecoed洗头刷包装2只装",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "ECSB-TPR1",
-          "name": "",
-          "accessories": []
+          "name": "洗头刷TPR绿色",
+          "accessories": [
+            {
+              "sku": "EC401-3",
+              "name": "ecoed发泡带洗头刷用",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "ECSB-TPR1-1",
+              "name": "洗头刷TPR绿色",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         }
       ]
     },
@@ -523,18 +786,93 @@
       "children": [
         {
           "sku": "NW-GRAY1",
-          "name": "",
-          "accessories": []
+          "name": "norsewood灰色榉木气垫猪鬃梳（bass）",
+          "accessories": [
+            {
+              "sku": "US-RB01-01",
+              "name": "norsewood清洁刷子木",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "XLZ",
+              "name": "norsewood雪梨纸猪鬃梳",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "TZ",
+              "name": "norsewood logo贴纸",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "SSD",
+              "name": "norsewood鹿皮绒收缩袋",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "NW-GRAY2",
-          "name": "",
-          "accessories": []
+          "name": "norsewood灰色榉木气垫梳尼龙针（bass）",
+          "accessories": [
+            {
+              "sku": "US-RB01-01",
+              "name": "norsewood清洁刷子木",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "XLZ",
+              "name": "norsewood雪梨纸猪鬃梳",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "TZ",
+              "name": "norsewood logo贴纸",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "SSD",
+              "name": "norsewood鹿皮绒收缩袋",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "NW-GRAY3",
-          "name": "",
-          "accessories": []
+          "name": "norsewood灰色榉木气垫梳木针（bass）",
+          "accessories": [
+            {
+              "sku": "US-RB01-01",
+              "name": "norsewood清洁刷子木",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "XLZ",
+              "name": "norsewood雪梨纸猪鬃梳",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "TZ",
+              "name": "norsewood logo贴纸",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "SSD",
+              "name": "norsewood鹿皮绒收缩袋",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         }
       ]
     },
@@ -543,18 +881,39 @@
       "children": [
         {
           "sku": "AMCB-black",
-          "name": "",
-          "accessories": []
+          "name": "尼龙卷发定型梳(蓝色)",
+          "accessories": [
+            {
+              "sku": "AMCB-black-1",
+              "name": "猪鬃卷发通风梳",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "AMCB-Pink",
-          "name": "",
-          "accessories": []
+          "name": "卷发定型梳粉色",
+          "accessories": [
+            {
+              "sku": "AM413-2-1",
+              "name": "胶皮黑人卷发梳粉色包装",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "AMCB-Blue",
-          "name": "",
-          "accessories": []
+          "name": "卷发定型梳蓝色",
+          "accessories": [
+            {
+              "sku": "AM413-3-1",
+              "name": "胶皮黑人卷发梳蓝色包装",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
         },
         {
           "sku": "AMCB-01",
