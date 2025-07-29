@@ -68,10 +68,17 @@ def read_workbook(path: str) -> Dict[str, Tuple[str, str, str]]:
         for c in sheet_root.findall('.//' + NAMESPACE + 'c'):
             addr = c.get('r')
             t = c.get('t')
-            v = c.find(NAMESPACE + 'v')
             val = ''
-            if v is not None:
-                val = shared[int(v.text)] if t == 's' else v.text
+            if t == 'inlineStr':
+                is_elem = c.find(NAMESPACE + 'is')
+                if is_elem is not None:
+                    t_elem = is_elem.find(NAMESPACE + 't')
+                    if t_elem is not None:
+                        val = t_elem.text or ''
+            else:
+                v = c.find(NAMESPACE + 'v')
+                if v is not None:
+                    val = shared[int(v.text)] if t == 's' else v.text
             f = c.find(NAMESPACE + 'f')
             formula = f.text if f is not None else None
             color = None
