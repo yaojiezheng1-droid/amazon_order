@@ -1169,6 +1169,132 @@
           ]
         }
       ]
+    },
+    "Elasticbrush01": {
+      "name": "ecoed 可降解绿色鱼骨梳",
+      "children": [
+        {
+          "sku": "Elasticbrush01",
+          "name": "ecoed 可降解绿色鱼骨梳",
+          "accessories": [
+            {
+              "sku": "EC221-1-1",
+              "name": "ecoed鱼骨梳包装2.0绿",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
+        }
+      ]
+    },
+    "Elasticbrush05": {
+      "name": "ecoed 可降解蓝色鱼骨梳",
+      "children": [
+        {
+          "sku": "Elasticbrush05",
+          "name": "ecoed 可降解蓝色鱼骨梳",
+          "accessories": [
+            {
+              "sku": "EC221-3-1",
+              "name": "ecoed鱼骨梳包装2.0蓝",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
+        }
+      ]
+    },
+    "EERB2.11.3": {
+      "name": "ellen evyse黑色弹性漆铝筒2只装2.1/1.3in",
+      "children": [
+        {
+          "sku": "EERB2.11.3",
+          "name": "ellen evyse黑色弹性漆铝筒2只装2.1/1.3in",
+          "accessories": [
+            {
+              "sku": "EYJ",
+              "name": "鳄鱼夹",
+              "ratio_main": "1",
+              "ratio_accessory": "2"
+            },
+            {
+              "sku": "EE1101-1-2",
+              "name": "鳄鱼夹板，双面印刷",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "EE1.3#2.1-1",
+              "name": "EE1.3&2.1 铝桶包装烫金",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
+        }
+      ]
+    },
+    "17-A1KN-KJGW": {
+      "name": "黑人卷发定型梳(蓝色)",
+      "children": [
+        {
+          "sku": "17-A1KN-KJGW",
+          "name": "黑人卷发定型梳(蓝色)",
+          "accessories": [
+            {
+              "sku": "17-A1KN-KJGW-1",
+              "name": "黑人卷发梳包装",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
+        }
+      ]
+    },
+    "AMSC-green": {
+      "name": "卷发梳睡帽套装",
+      "children": [
+        {
+          "sku": "AMSC-green",
+          "name": "卷发梳睡帽套装",
+          "accessories": [
+            {
+              "sku": "AMSC-green-1",
+              "name": "卷发梳睡帽包装",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "SM-01",
+              "name": "睡帽",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
+        }
+      ]
+    },
+    "EE-RB-1.32.1": {
+      "name": "玫瑰金圆桶刷2.1&1.3in",
+      "children": [
+        {
+          "sku": "EE-RB-1.32.1",
+          "name": "玫瑰金圆桶刷2.1&1.3in",
+          "accessories": [
+            {
+              "sku": "EE1.3#2.1-1",
+              "name": "EE1.3&2.1 铝桶包装烫金",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            },
+            {
+              "sku": "EERB-FJ",
+              "name": "金色铝筒发夹",
+              "ratio_main": "1",
+              "ratio_accessory": "1"
+            }
+          ]
+        }
+      ]
     }
   }
 }
