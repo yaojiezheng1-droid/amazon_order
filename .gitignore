@@ -1,0 +1,9 @@
+# Ignore everything in order_generation/orders/all_orders
+order_generation/orders/all_orders/*
+
+# Ignore everything in order_generation/images
+order_generation/images/*
+
+# Except the .gitignore files themselves so the directories remain in Git
+!order_generation/orders/all_orders/.gitignore
+!order_generation/images/.gitignore
