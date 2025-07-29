@@ -41,4 +41,4 @@ corresponding yellow cells before inserting the product rows.
 - **footer** – optional buyer and supplier names written near the bottom of the
   sheet.
 
-`docs/order_template_example.json` shows a full example.
+`order_generation/docs/order_template_example.json` shows a full example.
