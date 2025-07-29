@@ -46,8 +46,19 @@ def load_purchase_orders(path: Path):
         t = parse_time(time_str)
         info = latest.get(sku)
         if info is None or t > info['time']:
-            latest[sku] = {'po': current_po, 'time': t}
-    return {sku: info['po'] for sku, info in latest.items()}
+            latest[sku] = {
+                'po': current_po,
+                'time': t,
+                'file': row.get('CC')
+            }
+
+    return {
+        sku: {
+            'purchase_order': info['po'],
+            'order_file': info.get('file')
+        }
+        for sku, info in latest.items()
+    }
 
 
 def extend_mapping(mapping_path: Path, po_map: dict, output_path: Path):
@@ -56,13 +67,23 @@ def extend_mapping(mapping_path: Path, po_map: dict, output_path: Path):
 
     for parent in data.get('parents', {}).values():
         for child in parent.get('children', []):
-            child_po = po_map.get(child.get('sku'))
-            if child_po:
-                child['purchase_order'] = child_po
+            child_info = po_map.get(child.get('sku'))
+            if child_info:
+                po = child_info.get('purchase_order') if isinstance(child_info, dict) else child_info
+                if po:
+                    child['purchase_order'] = po
+                order_file = child_info.get('order_file') if isinstance(child_info, dict) else None
+                if order_file:
+                    child['purchase_order_file'] = order_file
             for acc in child.get('accessories', []):
-                acc_po = po_map.get(acc.get('sku'))
-                if acc_po:
-                    acc['purchase_order'] = acc_po
+                acc_info = po_map.get(acc.get('sku'))
+                if acc_info:
+                    po = acc_info.get('purchase_order') if isinstance(acc_info, dict) else acc_info
+                    if po:
+                        acc['purchase_order'] = po
+                    order_file = acc_info.get('order_file') if isinstance(acc_info, dict) else None
+                    if order_file:
+                        acc['purchase_order_file'] = order_file
 
     with output_path.open('w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
