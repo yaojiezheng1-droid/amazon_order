@@ -698,11 +698,11 @@
               "ratio_main": "1",
               "ratio_accessory": "1",
               "purchase_order": "24AM029-1",
-              "purchase_order_file": "24AM029-1-FD(1)"
+              "purchase_order_file": "24AM029-1-FD(1).xlsx"
             }
           ],
           "purchase_order": "24AM029",
-          "purchase_order_file": "副本24AM029-JX 新款洗头刷(1)"
+          "purchase_order_file": "副本24AM029-JX 新款洗头刷(1).xlsx"
         },
         {
           "sku": "EC405-1-Grey",
@@ -794,7 +794,7 @@
               "ratio_main": "1",
               "ratio_accessory": "1",
               "purchase_order": "24AM029-1",
-              "purchase_order_file": "24AM029-1-FD(1)"
+              "purchase_order_file": "24AM029-1-FD(1).xlsx"
             }
           ],
           "purchase_order": "PO231007004"
