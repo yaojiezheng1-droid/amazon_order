@@ -12,10 +12,12 @@
               "name": "木头脚锉 包装",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM011-1-FD"
+              "purchase_order": "25AM011-1-FD",
+              "purchase_order_file": "25AM011-1-FD.xlsx"
             }
           ],
-          "purchase_order": "25AM011"
+          "purchase_order": "25AM011",
+          "purchase_order_file": "副本25AM011-JY(1)(1).xlsx"
         },
         {
           "sku": "B10-MJB2-BK2",
@@ -63,7 +65,8 @@
               "purchase_order": "PO231026002"
             }
           ],
-          "purchase_order": "PO241202001"
+          "purchase_order": "PO241202001",
+          "purchase_order_file": "22AM007-AS.xlsx"
         },
         {
           "sku": "B10-MJQ1-PK",
@@ -158,14 +161,16 @@
               "name": "norsewood清洁刷子木",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM007-3"
+              "purchase_order": "25AM007-3",
+              "purchase_order_file": "25AM007-3.xlsx"
             },
             {
               "sku": "XLZ",
               "name": "norsewood雪梨纸猪鬃梳",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM007-6"
+              "purchase_order": "25AM007-6",
+              "purchase_order_file": "25AM007-6TP(1).xlsx"
             },
             {
               "sku": "TZ",
@@ -178,14 +183,16 @@
               "name": "norsewood鹿皮绒收缩袋",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM007-1-YL"
+              "purchase_order": "25AM007-1-YL",
+              "purchase_order_file": "25AM007-1-YL.xlsx"
             },
             {
               "sku": "ST1122-2",
               "name": "norsewood气垫猪鬃胶皮",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM007-1"
+              "purchase_order": "25AM007-1",
+              "purchase_order_file": "25AM007-1.xlsx"
             },
             {
               "sku": "ST1122-5",
@@ -199,10 +206,12 @@
               "name": "Norsewood猪鬃气垫梳包装（天地盖）",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM007-5"
+              "purchase_order": "25AM007-5",
+              "purchase_order_file": "25AM007-5.xlsx"
             }
           ],
-          "purchase_order": "25AM007"
+          "purchase_order": "25AM007",
+          "purchase_order_file": "副本25AM007-JX 返单(更新).xlsx"
         },
         {
           "sku": "ST1122-3",
@@ -213,14 +222,16 @@
               "name": "norsewood清洁刷子木",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM007-3"
+              "purchase_order": "25AM007-3",
+              "purchase_order_file": "25AM007-3.xlsx"
             },
             {
               "sku": "XLZ",
               "name": "norsewood雪梨纸猪鬃梳",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM007-6"
+              "purchase_order": "25AM007-6",
+              "purchase_order_file": "25AM007-6TP(1).xlsx"
             },
             {
               "sku": "TZ",
@@ -233,7 +244,8 @@
               "name": "norsewood鹿皮绒收缩袋",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM007-1-YL"
+              "purchase_order": "25AM007-1-YL",
+              "purchase_order_file": "25AM007-1-YL.xlsx"
             },
             {
               "sku": "ST1122-1-3",
@@ -547,7 +559,8 @@
               "name": "ecoed发泡带洗头刷用",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM004-JY"
+              "purchase_order": "25AM004-JY",
+              "purchase_order_file": "25AM004-JY.xlsx"
             },
             {
               "sku": "EC404-2-3-2",
@@ -568,7 +581,8 @@
               "name": "ecoed发泡带洗头刷用",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM004-JY"
+              "purchase_order": "25AM004-JY",
+              "purchase_order_file": "25AM004-JY.xlsx"
             },
             {
               "sku": "EC404-2-2-2",
@@ -589,7 +603,8 @@
               "name": "ecoed发泡带洗头刷用",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM004-JY"
+              "purchase_order": "25AM004-JY",
+              "purchase_order_file": "25AM004-JY.xlsx"
             },
             {
               "sku": "EC404-2-1-2",
@@ -599,7 +614,8 @@
               "purchase_order": "24AM034-1"
             }
           ],
-          "purchase_order": "PO250401005"
+          "purchase_order": "PO250401005",
+          "purchase_order_file": "24AM034-JX 老款洗头刷绿色.xlsx"
         },
         {
           "sku": "2EC-Yellow",
@@ -610,7 +626,8 @@
               "name": "ecoed发泡带洗头刷用",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM004-JY"
+              "purchase_order": "25AM004-JY",
+              "purchase_order_file": "25AM004-JY.xlsx"
             },
             {
               "sku": "EC404-2-4-2",
@@ -672,17 +689,20 @@
               "name": "ecoed发泡带洗头刷用",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM004-JY"
+              "purchase_order": "25AM004-JY",
+              "purchase_order_file": "25AM004-JY.xlsx"
             },
             {
               "sku": "ECSB-7-1",
               "name": "洗头刷包装粉色粗针单只",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "24AM029-1"
+              "purchase_order": "24AM029-1",
+              "purchase_order_file": "24AM029-1-FD(1)"
             }
           ],
-          "purchase_order": "24AM029"
+          "purchase_order": "24AM029",
+          "purchase_order_file": "副本24AM029-JX 新款洗头刷(1)"
         },
         {
           "sku": "EC405-1-Grey",
@@ -736,7 +756,8 @@
               "name": "ecoed发泡带洗头刷用",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM004-JY"
+              "purchase_order": "25AM004-JY",
+              "purchase_order_file": "25AM004-JY.xlsx"
             },
             {
               "sku": "EC204-2-3-1",
@@ -764,14 +785,16 @@
               "name": "ecoed发泡带洗头刷用",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM004-JY"
+              "purchase_order": "25AM004-JY",
+              "purchase_order_file": "25AM004-JY.xlsx"
             },
             {
               "sku": "ECSB-7-1",
               "name": "洗头刷包装粉色粗针单只",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "24AM029-1"
+              "purchase_order": "24AM029-1",
+              "purchase_order_file": "24AM029-1-FD(1)"
             }
           ],
           "purchase_order": "PO231007004"
@@ -785,7 +808,8 @@
               "name": "ecoed发泡带洗头刷用",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM004-JY"
+              "purchase_order": "25AM004-JY",
+              "purchase_order_file": "25AM004-JY.xlsx"
             },
             {
               "sku": "ECSB-8-1",
@@ -810,7 +834,8 @@
               "name": "ecoed发泡带洗头刷用",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM004-JY"
+              "purchase_order": "25AM004-JY",
+              "purchase_order_file": "25AM004-JY.xlsx"
             },
             {
               "sku": "2EC-1-1",
@@ -831,7 +856,8 @@
               "name": "ecoed发泡带洗头刷用",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM004-JY"
+              "purchase_order": "25AM004-JY",
+              "purchase_order_file": "25AM004-JY.xlsx"
             },
             {
               "sku": "2EC-1-1",
@@ -852,7 +878,8 @@
               "name": "ecoed发泡带洗头刷用",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM004-JY"
+              "purchase_order": "25AM004-JY",
+              "purchase_order_file": "25AM004-JY.xlsx"
             },
             {
               "sku": "ECSB-TPR1-1",
@@ -878,14 +905,16 @@
               "name": "norsewood清洁刷子木",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM007-3"
+              "purchase_order": "25AM007-3",
+              "purchase_order_file": "25AM007-3.xlsx"
             },
             {
               "sku": "XLZ",
               "name": "norsewood雪梨纸猪鬃梳",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM007-6"
+              "purchase_order": "25AM007-6",
+              "purchase_order_file": "25AM007-6TP(1).xlsx"
             },
             {
               "sku": "TZ",
@@ -898,7 +927,8 @@
               "name": "norsewood鹿皮绒收缩袋",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM007-1-YL"
+              "purchase_order": "25AM007-1-YL",
+              "purchase_order_file": "25AM007-1-YL.xlsx"
             }
           ]
         },
@@ -911,14 +941,16 @@
               "name": "norsewood清洁刷子木",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM007-3"
+              "purchase_order": "25AM007-3",
+              "purchase_order_file": "25AM007-3.xlsx"
             },
             {
               "sku": "XLZ",
               "name": "norsewood雪梨纸猪鬃梳",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM007-6"
+              "purchase_order": "25AM007-6",
+              "purchase_order_file": "25AM007-6TP(1).xlsx"
             },
             {
               "sku": "TZ",
@@ -931,7 +963,8 @@
               "name": "norsewood鹿皮绒收缩袋",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM007-1-YL"
+              "purchase_order": "25AM007-1-YL",
+              "purchase_order_file": "25AM007-1-YL.xlsx"
             }
           ]
         },
@@ -944,14 +977,16 @@
               "name": "norsewood清洁刷子木",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM007-3"
+              "purchase_order": "25AM007-3",
+              "purchase_order_file": "25AM007-3.xlsx"
             },
             {
               "sku": "XLZ",
               "name": "norsewood雪梨纸猪鬃梳",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM007-6"
+              "purchase_order": "25AM007-6",
+              "purchase_order_file": "25AM007-6TP(1).xlsx"
             },
             {
               "sku": "TZ",
@@ -964,7 +999,8 @@
               "name": "norsewood鹿皮绒收缩袋",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM007-1-YL"
+              "purchase_order": "25AM007-1-YL",
+              "purchase_order_file": "25AM007-1-YL.xlsx"
             }
           ]
         }
@@ -982,10 +1018,12 @@
               "name": "猪鬃卷发通风梳",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "24AM042-2"
+              "purchase_order": "24AM042-2",
+              "purchase_order_file": "副本24AM042-2.xlsx"
             }
           ],
-          "purchase_order": "PO250701002"
+          "purchase_order": "PO250701002",
+          "purchase_order_file": "副本副本24AM042-JX.xlsx"
         },
         {
           "sku": "AMCB-Pink",
@@ -996,7 +1034,8 @@
               "name": "胶皮黑人卷发梳粉色包装",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM008-1"
+              "purchase_order": "25AM008-1",
+              "purchase_order_file": "副本25AM008-1.xlsx"
             }
           ]
         },
@@ -1009,7 +1048,8 @@
               "name": "胶皮黑人卷发梳蓝色包装",
               "ratio_main": "1",
               "ratio_accessory": "1",
-              "purchase_order": "25AM008-1"
+              "purchase_order": "25AM008-1",
+              "purchase_order_file": "副本25AM008-1.xlsx"
             }
           ]
         },
