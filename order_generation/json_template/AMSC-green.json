@@ -49,11 +49,11 @@
       "value": ""
     },
     "F15": {
-      "key": "色卡",
+      "key": "色卡1",
       "value": ""
     },
     "G15": {
-      "key": "Logo",
+      "key": "Logo1",
       "value": ""
     },
     "B16": {
@@ -61,146 +61,95 @@
       "value": ""
     },
     "F16": {
-      "key": "色卡",
+      "key": "色卡2",
       "value": ""
     },
     "G16": {
-      "key": "Logo",
+      "key": "Logo2",
       "value": ""
     },
     "B17": {
-      "key": "4: 出货样：每款2套",
+      "key": "出货样",
       "value": ""
     },
     "F17": {
-      "key": "色卡",
+      "key": "色卡3",
       "value": ""
     },
     "G17": {
-      "key": "Logo",
-      "value": ""
-    },
-    "B18": {
-      "key": "5：注意事项",
+      "key": "Logo3",
       "value": ""
     },
     "F18": {
-      "key": "色卡",
+      "key": "色卡4",
       "value": ""
     },
     "G18": {
-      "key": "Logo",
+      "key": "Logo4",
       "value": ""
     },
     "A19": {
-      "key": "5：注意事项",
-      "value": ""
-    },
-    "B19": {
-      "key": "以上价格含税运含包装",
-      "value": ""
+      "key": "注意事项：1",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A20": {
-      "key": "5：注意事项",
-      "value": ""
-    },
-    "B20": {
-      "key": "以上价格含税运含包装",
-      "value": ""
+      "key": "2：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A21": {
-      "key": "5：注意事项",
-      "value": ""
-    },
-    "B21": {
-      "key": "以上价格含税运含包装",
-      "value": ""
+      "key": "3：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A22": {
-      "key": "5：注意事项",
-      "value": ""
-    },
-    "B22": {
-      "key": "以上价格含税运含包装",
-      "value": ""
+      "key": "4：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A23": {
-      "key": "5：注意事项",
-      "value": ""
-    },
-    "B23": {
-      "key": "以上价格含税运含包装",
-      "value": ""
+      "key": "5：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A24": {
-      "key": "5：注意事项",
-      "value": ""
-    },
-    "B24": {
-      "key": "以上价格含税运含包装",
-      "value": ""
+      "key": "6：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A25": {
-      "key": "5：注意事项",
-      "value": ""
-    },
-    "B25": {
-      "key": "以上价格含税运含包装",
-      "value": ""
+      "key": "7：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A26": {
-      "key": "5：注意事项",
-      "value": ""
-    },
-    "B26": {
-      "key": "以上价格含税运含包装",
-      "value": ""
+      "key": "8：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A27": {
-      "key": "5：注意事项",
-      "value": ""
-    },
-    "B27": {
-      "key": "以上价格含税运含包装",
-      "value": ""
+      "key": "9：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A28": {
-      "key": "5：注意事项",
-      "value": ""
-    },
-    "B28": {
-      "key": "以上价格含税运含包装",
-      "value": ""
+      "key": "10：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A29": {
-      "key": "5：注意事项",
-      "value": ""
-    },
-    "B29": {
-      "key": "以上价格含税运含包装",
-      "value": ""
+      "key": "11：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A30": {
-      "key": "5：注意事项",
-      "value": ""
-    },
-    "B30": {
-      "key": "以上价格含税运含包装",
-      "value": ""
+      "key": "12：",
+      "value": "<TODO put note or addtional requirement here>"
     }
   },
   "products": [
     {
       "产品编号": "",
+      "产品名称": "",
       "产品图片": "",
-      "描述": "",
+      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
       "数量/个": 0,
       "单价": 0,
       "包装方式": ""
     }
   ],
   "footer": {
-    "buyer": "",
+    "buyer": "宁波品秀美容科技有限公司",
     "supplier": ""
   }
 }
