@@ -2,51 +2,51 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "宁波瑾秀制刷科技有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "23AM076-KY"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "18067420259"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2023-07-15"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "张德波"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "义乌进仓"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "出货后45天凭增值税发票付款"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "2023年08月15日"
     },
     "F14": {
       "key": "色卡",
-      "value": ""
+      "value": "蓝色"
     },
     "G14": {
       "key": "Logo",
-      "value": ""
+      "value": "白色"
     },
     "B15": {
       "key": "箱规",
-      "value": ""
+      "value": "一个入一个内盒，1200套"
     },
     "F15": {
       "key": "色卡1",
@@ -58,7 +58,7 @@
     },
     "B16": {
       "key": "产前确认样",
-      "value": ""
+      "value": "每款1套样品"
     },
     "F16": {
       "key": "色卡2",
@@ -70,7 +70,7 @@
     },
     "B17": {
       "key": "出货样",
-      "value": ""
+      "value": "每款2套"
     },
     "F17": {
       "key": "色卡3",
@@ -90,66 +90,66 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "印刷logo要印的清晰，线条清楚，绝对不能掉色"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "针头毛边控尽量不要有毛边"
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "硬度按照55"
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "注意控制注塑流纹"
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "注意表面不能有油污，脏渍"
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "外箱大小单边不得大于60cm"
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A26": {
       "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A27": {
       "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A28": {
       "key": "10：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A29": {
       "key": "11：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A30": {
       "key": "12：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     }
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "EC221-3-1",
+      "产品名称": "ecoed鱼骨梳包装2.0蓝",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
-      "包装方式": ""
+      "描述": "适用于ecoed可降解蓝色鱼骨梳的纸盒包装，版本2.0",
+      "数量/个": 1200,
+      "单价": 0.1,
+      "包装方式": "纸盒"
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "宁波瑾秀制刷科技有限公司"
   }
 }
