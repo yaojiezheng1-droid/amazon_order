@@ -41,3 +41,26 @@ Using the PO, manually fill every field in the JSON template. Do not add, remove
 When copying the product‑description text, preserve any bold text, highlights, and font‑color formatting found in the PO.
 
 If you cannot find a matching PO, fill the template with the most reasonable information you can infer and continue; never abort the process.
+
+## Handling Direct SKU Requests
+
+Sometimes an order request only specifies a SKU and quantity, for example:
+
+"I want to place order of 800 of 48-82P3-QSFG product."
+
+Follow these steps to generate the purchase order:
+
+1. Look up the SKU in `order_generation/docs/complete_mapping.json` to
+   determine any accessories. The entry for `48-82P3-QSFG` lists
+   accessories `US-RB01-01`, `SSD`, `ST1122-1-2` and `ST1122-5` with a 1:1
+   ratio.
+2. Copy the JSON templates for the main product and each accessory from
+   `order_generation/json_template/`. Set the `数量/个` field to the
+   requested quantity multiplied by the accessory ratio (800 in this
+   example).
+3. Open `order_generation/docs/empty_base_template.xlsx` and manually copy
+   the values from each JSON file into the matching cells. Do **not** run any
+   Python scripts to generate the spreadsheet.
+
+This procedure ensures the PO includes the product and all required
+accessories for the specified quantity.
