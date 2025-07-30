@@ -2,154 +2,154 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "宁波瑾秀制刷科技有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "25AM013-1"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "N/A"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "N/A"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "N/A"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "N/A"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "N/A"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "N/A"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "N/A"
     },
     "F14": {
       "key": "色卡",
-      "value": ""
+      "value": "N/A"
     },
     "G14": {
       "key": "Logo",
-      "value": ""
+      "value": "N/A"
     },
     "B15": {
       "key": "箱规",
-      "value": ""
+      "value": "N/A"
     },
     "F15": {
       "key": "色卡1",
-      "value": ""
+      "value": "N/A"
     },
     "G15": {
       "key": "Logo1",
-      "value": ""
+      "value": "N/A"
     },
     "B16": {
       "key": "产前确认样",
-      "value": ""
+      "value": "N/A"
     },
     "F16": {
       "key": "色卡2",
-      "value": ""
+      "value": "N/A"
     },
     "G16": {
       "key": "Logo2",
-      "value": ""
+      "value": "N/A"
     },
     "B17": {
       "key": "出货样",
-      "value": ""
+      "value": "N/A"
     },
     "F17": {
       "key": "色卡3",
-      "value": ""
+      "value": "N/A"
     },
     "G17": {
       "key": "Logo3",
-      "value": ""
+      "value": "N/A"
     },
     "F18": {
       "key": "色卡4",
-      "value": ""
+      "value": "N/A"
     },
     "G18": {
       "key": "Logo4",
-      "value": ""
+      "value": "N/A"
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A26": {
       "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A27": {
       "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A28": {
       "key": "10：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A29": {
       "key": "11：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A30": {
       "key": "12：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     }
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "17-A1KN-KJGW-1",
+      "产品名称": "黑人卷发梳包装",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
+      "描述": "定制纸盒，适配黑人卷发定型梳，颜色与产品匹配",
       "数量/个": 0,
       "单价": 0,
-      "包装方式": ""
+      "包装方式": "纸盒"
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "宁波瑾秀制刷科技有限公司"
   }
 }
