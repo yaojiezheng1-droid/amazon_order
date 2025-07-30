@@ -30,9 +30,14 @@ An example JSON file is provided in `order_generation/docs/order_template_exampl
   different parents, create a separate spreadsheet for each parent product.
 
 
-## Converting Workbooks to JSON
+## Converting PO_files to JSON_template
 
-Run `order_generation/convert_all_excel.py` to parse every `.xlsx` file in the repository.
-The script writes each workbook to the `order_generation/json_exports/` directory.  File names
-are sanitized to contain only letters, numbers, underscores, and hyphens.
-A short hash is appended to ensure uniqueness across similarly named files.
+Manually Fill valus in JSON
+
+Locate the purchase‑order (PO) file(s) whose SKU matches each JSON filename (look in order_generation/orders/).
+
+Using the PO, manually fill every field in the JSON template. Do not add, remove, or rename keys; keep the structure exactly the same.
+
+When copying the product‑description text, preserve any bold text, highlights, and font‑color formatting found in the PO.
+
+If you cannot find a matching PO, fill the template with the most reasonable information you can infer and continue; never abort the process.

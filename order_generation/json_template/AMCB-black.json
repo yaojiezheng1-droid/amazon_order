@@ -69,7 +69,7 @@
       "value": ""
     },
     "B17": {
-      "key": "4: 出货样：每款2套",
+      "key": "出货样",
       "value": ""
     },
     "F17": {
@@ -89,66 +89,67 @@
       "value": ""
     },
     "A19": {
-      "key": "注意事项1",
-      "value": ""
+      "key": "注意事项：1",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A20": {
-      "key": "注意事项2",
-      "value": ""
+      "key": "2：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A21": {
-      "key": "注意事项3",
-      "value": ""
+      "key": "3：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A22": {
-      "key": "注意事项4",
-      "value": ""
+      "key": "4：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A23": {
-      "key": "注意事项5",
-      "value": ""
+      "key": "5：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A24": {
-      "key": "注意事项6",
-      "value": ""
+      "key": "6：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A25": {
-      "key": "注意事项7",
-      "value": ""
+      "key": "7：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A26": {
-      "key": "注意事项8",
-      "value": ""
+      "key": "8：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A27": {
-      "key": "注意事项9",
-      "value": ""
+      "key": "9：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A28": {
-      "key": "注意事项10",
-      "value": ""
+      "key": "10：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A29": {
-      "key": "注意事项11",
-      "value": ""
+      "key": "11：",
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A30": {
-      "key": "注意事项12",
-      "value": ""
+      "key": "12：",
+      "value": "<TODO put note or addtional requirement here>"
     }
   },
   "products": [
     {
       "产品编号": "",
+      "产品名称": "",
       "产品图片": "",
-      "描述": "TODO (value not filled - fill with product description/requirement from PO, mustfill*)",
+      "描述": "<TODO (value not filled - fill with product description/requirement from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
       "数量/个": 0,
       "单价": 0,
       "包装方式": ""
     }
   ],
   "footer": {
-    "buyer": "",
+    "buyer": "宁波品秀美容科技有限公司",
     "supplier": ""
   }
 }
