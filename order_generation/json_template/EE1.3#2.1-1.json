@@ -6,7 +6,7 @@
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "25AM006-2"
     },
     "B4": {
       "key": "电话：",
@@ -14,7 +14,7 @@
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2025-02-11"
     },
     "B5": {
       "key": "联系人：",
@@ -22,19 +22,19 @@
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "收货信息是瑾秀：浙江宁波市余姚市陆埠镇五马工业区创利西路 15 号 18067420259 李万祥"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "出货后45天凭增值税发票付款"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "2025/3/20前"
     },
     "F14": {
       "key": "色卡",
@@ -90,15 +90,15 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "放2%余量"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "交货期：2025/3/20前"
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "付款方式：出货后45天凭增值税发票付款"
     },
     "A22": {
       "key": "4：",
@@ -139,12 +139,12 @@
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "EE1.3#2.1-1",
+      "产品名称": "EE1.3&2.1 铝桶包装烫金",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
+      "描述": "铝桶包装，350g白卡双面印刷流纹烫金亚膜",
+      "数量/个": 3600,
+      "单价": 0.9,
       "包装方式": ""
     }
   ],
