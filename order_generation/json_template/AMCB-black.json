@@ -2,39 +2,39 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "宁波瑾秀制刷科技有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "PO250701002"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "0574-27889688"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2021-10-12"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "孙诚昱"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "Laura"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "浙江宁波市余姚市陆埠镇五马工业区创利西路 15 号"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "款到发货"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "2021-11-25"
     },
     "F14": {
       "key": "色卡",
@@ -90,7 +90,7 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "注意单箱不要超过100个"
     },
     "A20": {
       "key": "2：",
@@ -139,17 +139,17 @@
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "AM312-1",
+      "产品名称": "卷发定型梳蓝色",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
-      "包装方式": ""
+      "描述": "黑色2.0cm长0.8粗黑色尼龙针（同手梳）黑色染头+黑色1.2cm长0.3粗黑色尼龙毛，手柄571U透明弹性漆 包装方式：纸盒包装，包装背面贴fba不干胶，注意单箱不要超过100个",
+      "数量/个": 16200,
+      "单价": 5.2,
+      "包装方式": "纸盒包装，包装背面贴fba不干胶"
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "宁波瑾秀制刷科技有限公司"
   }
 }
