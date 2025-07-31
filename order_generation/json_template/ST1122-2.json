@@ -2,39 +2,39 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "宁波瑾秀制刷科技有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "25AM007-1"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "电话: +86-574-27889688   传真: +86-574-27889677"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2025-04-07"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "小张"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "宁波市海曙区高桥镇秀丰路67号1栋1楼，小张，18668289261"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "含税含运含进仓"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "2025-04-30"
     },
     "F14": {
       "key": "色卡",
@@ -90,7 +90,7 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "宁波市海曙区高桥镇秀丰路67号1栋1楼，小张，18668289261"
     },
     "A20": {
       "key": "2：",
@@ -139,17 +139,17 @@
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "ST1122-2",
+      "产品名称": "胶皮",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
-      "包装方式": ""
+      "描述": "透明尼龙针+猪鬃.深棕色胶皮（TPR）带纹路模具更新（7589C），0.7mm透明尼龙针+猪鬃，棕色染头（7589C）. 包装方式：散货",
+      "数量/个": 6000,
+      "单价": 3.6,
+      "包装方式": "散货"
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "宁波瑾秀制刷科技有限公司"
   }
 }
