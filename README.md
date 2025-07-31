@@ -22,6 +22,11 @@ and inserts product rows. Green cells contain formulas that compute totals
 automatically.
 An example JSON file is provided in `order_generation/docs/order_template_example.json`.
 
+When generating the spreadsheet the script inserts any image referenced in the
+`产品图片` field of each product row. The value should be a path to the image
+file on disk.  The product name (`产品名称`) is automatically prepended to the
+description when filling the "描述" column.
+
 
 ## Order Rules
 

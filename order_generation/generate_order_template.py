@@ -51,7 +51,11 @@ def insert_products(ws, products: List[Dict[str, Any]]) -> int:
                 ws.cell(row=r, column=2, value=img_path)
         else:
             ws.cell(row=r, column=2, value="")
-        ws.cell(row=r, column=3, value=item.get("描述", ""))
+        name = item.get("产品名称", "").strip()
+        desc = item.get("描述", "").strip()
+        if name:
+            desc = f"{name} {desc}" if desc else name
+        ws.cell(row=r, column=3, value=desc)
         ws.cell(row=r, column=4, value=item.get("数量/个", ""))
         ws.cell(row=r, column=5, value=item.get("单价", ""))
         ws.cell(row=r, column=6, value=f"=E{r}*D{r}")
