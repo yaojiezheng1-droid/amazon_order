@@ -2,47 +2,47 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "宁波瑾秀制刷科技有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "24AM008"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "18067420259"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "45344"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "陈文峰"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "义乌"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "出货后45天凭增值税发票付款"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "45361"
     },
     "F14": {
       "key": "色卡",
-      "value": ""
+      "value": "pantone address 1"
     },
     "G14": {
       "key": "Logo",
-      "value": ""
+      "value": "logo address 1"
     },
     "B15": {
       "key": "箱规",
@@ -50,23 +50,23 @@
     },
     "F15": {
       "key": "色卡1",
-      "value": ""
+      "value": "pantone address 2"
     },
     "G15": {
       "key": "Logo1",
-      "value": ""
+      "value": "logo address 2"
     },
     "B16": {
       "key": "产前确认样",
-      "value": ""
+      "value": "每款1套样品"
     },
     "F16": {
       "key": "色卡2",
-      "value": ""
+      "value": "pantone address 3"
     },
     "G16": {
       "key": "Logo2",
-      "value": ""
+      "value": "logo address 3"
     },
     "B17": {
       "key": "出货样",
@@ -74,82 +74,82 @@
     },
     "F17": {
       "key": "色卡3",
-      "value": ""
+      "value": "pantone address 4"
     },
     "G17": {
       "key": "Logo3",
-      "value": ""
+      "value": "logo address 4"
     },
     "F18": {
       "key": "色卡4",
-      "value": ""
+      "value": "pantone address 5"
     },
     "G18": {
       "key": "Logo4",
-      "value": ""
+      "value": "logo address 5"
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "1）印刷logo要印的清晰，线条清楚，绝对不能掉色"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "2）印刷logo要印的清晰，线条清楚，绝对不能掉色"
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "3）印刷logo要印的清晰，线条清楚，绝对不能掉色"
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "4）印刷logo要印的清晰，线条清楚，绝对不能掉色"
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "5）印刷logo要印的清晰，线条清楚，绝对不能掉色"
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "6）印刷logo要印的清晰，线条清楚，绝对不能掉色"
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "7）印刷logo要印的清晰，线条清楚，绝对不能掉色"
     },
     "A26": {
       "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "8）印刷logo要印的清晰，线条清楚，绝对不能掉色"
     },
     "A27": {
       "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "9）印刷logo要印的清晰，线条清楚，绝对不能掉色"
     },
     "A28": {
       "key": "10：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "10）印刷logo要印的清晰，线条清楚，绝对不能掉色"
     },
     "A29": {
       "key": "11：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "11）印刷logo要印的清晰，线条清楚，绝对不能掉色"
     },
     "A30": {
       "key": "12：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "12）印刷logo要印的清晰，线条清楚，绝对不能掉色"
     }
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "EC405-2-Blue",
+      "产品名称": "ecoed 洗头刷405两只装蓝色粗针",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
+      "描述": "粗针洗头刷 颜色蓝色 两只装",
       "数量/个": 0,
       "单价": 0,
-      "包装方式": ""
+      "包装方式": "双只装"
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "宁波瑾秀塑业有限公司"
   }
 }
