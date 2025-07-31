@@ -2,39 +2,39 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "宁波泰丰机械有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "24AM038-QF"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "电话: +86-574-27889688 传真: +86-574-27889677"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2024-09-29"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "郑俊霞"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "宁波市鄞州投资创业中心启明路599号启发工业城"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "含税含运含进仓"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "2024-11-30"
     },
     "F14": {
       "key": "色卡",
@@ -90,66 +90,66 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "发上海含税运"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "交货地点：宁波"
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "包装：`"
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "发票："
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "付款日期："
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "供货商如确认此单，须在收到订单后24小时内确认。"
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "ROUND BRUSH GOLD PINXIU BEAUTY made in china"
     },
     "A26": {
       "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A27": {
       "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "需方: 宁波品秀美容科技有限公司"
     },
     "A28": {
       "key": "10：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "供方： 宁波泰丰机械有限公司"
     },
     "A29": {
       "key": "11：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A30": {
       "key": "12：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     }
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "AM310",
+      "产品名称": "HAIR BRUSH",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
-      "包装方式": ""
+      "描述": "尺寸: 45mm；铝筒颜色:金色；手柄：abs黑色注塑；中圈，垫圈：黑色,。尼龙丝出峰1cm， 包装：500g白卡两只装+4个发卡，包装发卡会寄到工厂，50个一箱无内箱，箱规任意边不能超过55cm",
+      "数量/个": 3600,
+      "单价": 6.42,
+      "包装方式": "500g白卡两只装+4个发卡"
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "宁波泰丰机械有限公司"
   }
 }
