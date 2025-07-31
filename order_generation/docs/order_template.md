@@ -19,7 +19,7 @@ corresponding yellow cells before inserting the product rows.
   },
   "products": [
     {
-      "产品编号": "EC1601",
+      "产品编号": "",
       "产品名称": "Sample brush",
       "产品图片": "path/to/image.png",
       "描述": "product description",
