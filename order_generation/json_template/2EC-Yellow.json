@@ -2,11 +2,11 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "宁波凯源印刷有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "24AM005-KY"
     },
     "B4": {
       "key": "电话：",
@@ -14,7 +14,7 @@
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2023/10/26"
     },
     "B5": {
       "key": "联系人：",
@@ -22,19 +22,19 @@
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "浙江省余姚市陆埠镇五马工业区创利西路15号 陈文峰 18067420259"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "出货后45天凭增值税发票付款"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "2024/3/1前"
     },
     "F14": {
       "key": "色卡",
@@ -90,19 +90,19 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "打样2套"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "备注： 放2%余量"
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "交货期： 2024/3/1前"
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "付款方式： 出货后45天凭增值税发票付款"
     },
     "A23": {
       "key": "5：",
@@ -139,17 +139,17 @@
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "2EC-Yellow",
+      "产品名称": "两只装洗头刷包装",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
+      "描述": "两只装黄色洗头刷包装FSC 350g 白卡哑膜",
+      "数量/个": 1000,
+      "单价": 0.8,
       "包装方式": ""
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "宁波凯源印刷有限公司"
   }
 }
