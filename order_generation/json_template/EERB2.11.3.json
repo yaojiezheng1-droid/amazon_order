@@ -2,27 +2,27 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "瑾秀制刷"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "JX22061601"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "15968053236"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2022-06-16"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "袁经理/李万祥"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
@@ -30,11 +30,11 @@
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "凭增值税发票 出货后 45天付款"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "2022年8月20日"
     },
     "F14": {
       "key": "色卡",
@@ -46,7 +46,7 @@
     },
     "B15": {
       "key": "箱规",
-      "value": ""
+      "value": "箱规单边不超过60cm"
     },
     "F15": {
       "key": "色卡1",
@@ -90,39 +90,39 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "入我司供纸卡，产品请安排生产； 包装参考下面图片。"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "箱规单边不超过60cm"
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "产品需要贴标，外箱需要贴亚马逊标，产品会分两次出货"
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "付款方式：凭增值税发票 出货后 45天付款"
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "外箱唛:印刷4面"
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "交货期：2022年8月20日"
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "BLACK CERAMIC ROUND BRUSH MADE IN CHINA"
     },
     "A26": {
       "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "大货样：每款每色各2只。"
     },
     "A27": {
       "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "供参考纸卡包装图示"
     },
     "A28": {
       "key": "10：",
@@ -139,13 +139,13 @@
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "EERB2.11.3",
+      "产品名称": "ellen evyse黑色弹性漆铝筒2只装2.1/1.3in",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
-      "包装方式": ""
+      "描述": "直径55mm，220℃耐高温黑色尼龙丝+负离子，黑色TPR手柄（最硬），顶盖黑色弹性漆，中筒黑色弹性漆，圆孔铝桶亮黑色陶瓷漆+负离子粉，尾针黑色注塑，尼龙丝出峰要同OG的MO铝桶头梳，品质都要同MO头梳，顶部印φ2.0inch，中环印ceramic ionic,手柄印logo。直径45mm，220℃耐高温黑色尼龙丝+负离子，黑色TPR手柄（最硬），顶盖黑色弹性漆，中筒黑色弹性漆，圆孔铝桶亮黑色陶瓷漆+负离子粉，尾针黑色注塑，尼龙丝出峰要同OG的MO铝桶头梳，品质都要同MO头梳，顶部印φ1.7inch，中环印ceramic ionic,手柄印logo。直径35mm，220℃耐高温黑色尼龙丝+负离子，黑色TPR手柄（最硬），顶盖黑色弹性漆，中筒黑色弹性漆，圆孔铝桶亮黑色陶瓷漆+负离子粉，尾针黑色注塑，尼龙丝出峰要同OG的MO铝桶头梳，品质都要同MO头梳,顶部印φ1.3inch，中环印ceramic ionic,手柄印logo, 纸卡盒包装附带2只鸭嘴夹。",
+      "数量/个": 5400,
+      "单价": 8.19,
+      "包装方式": "纸卡盒包装附带2只鸭嘴夹"
     }
   ],
   "footer": {

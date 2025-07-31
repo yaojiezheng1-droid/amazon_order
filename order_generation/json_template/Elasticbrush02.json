@@ -2,39 +2,39 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "宁波瑾秀塑业有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "21SP1145-JX"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "+86-574-27889688"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2021-10-12"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "李万祥"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "Laura"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "浙江宁波市余姚市陆埠镇五马工业区创利西路15号"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "凭发票，出货45天付款，含税含运含进仓"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "2021-11-25"
     },
     "F14": {
       "key": "色卡",
@@ -46,7 +46,7 @@
     },
     "B15": {
       "key": "箱规",
-      "value": ""
+      "value": "箱规120/24"
     },
     "F15": {
       "key": "色卡1",
@@ -90,31 +90,31 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "快速弯折120度，快速旋转120度不得断裂（20个样品最多一个）"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "注意柄部干净整洁，logo处清洁摸上去没有油"
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "外箱单边不得超过60cm，重量不得超过20公斤"
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "尼龙丝针注意不要大量明显弯曲"
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "染头不能有坑(2个以上），（有坑一律次品）"
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "染头不得粘连"
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "每个外箱需要贴2个标签FBA标签一个，货代标签一个"
     },
     "A26": {
       "key": "8：",
@@ -139,13 +139,13 @@
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "Elasticbrush02",
+      "产品名称": "ecoed 可降解黄色鱼骨梳",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
-      "包装方式": ""
+      "描述": "梳身半降解材料（用新材料防断裂）加麦秸秆7529U灰色尼龙针，尼龙丝0.8mm7529U灰色尼龙丝颜色同beter，棕色 ecoed logo颜色同beter！染头颜色同梳体. 包装方式：白卡盒，卡盒我司供，箱规120/24",
+      "数量/个": 3600,
+      "单价": 3.85,
+      "包装方式": "白卡盒，卡盒我司供，箱规120/24"
     }
   ],
   "footer": {
