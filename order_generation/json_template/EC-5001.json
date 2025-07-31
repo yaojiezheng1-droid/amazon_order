@@ -2,39 +2,39 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "菲迪印刷"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "22AM0012"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "0574-27889688"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2022-09-13"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "程雨"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "宁波市鄞州区姜山镇 朝阳顾家许家路128号 13028906023 小裘"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "预付30%余款出货前付清"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "见合同"
     },
     "F14": {
       "key": "色卡",
@@ -42,7 +42,7 @@
     },
     "G14": {
       "key": "Logo",
-      "value": ""
+      "value": "ECOED"
     },
     "B15": {
       "key": "箱规",
@@ -90,66 +90,66 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "按时交货，确保产品质量"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "包装需按我司确认的样板制作"
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "如有问题及时沟通"
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A26": {
       "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A27": {
       "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A28": {
       "key": "10：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A29": {
       "key": "11：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A30": {
       "key": "12：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     }
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
-      "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
-      "包装方式": ""
+      "产品编号": "EC-5001",
+      "产品名称": "ECOED粉色指甲钳套装新22",
+      "产品图片": "order_generation/images/products/EC-5001.jpg",
+      "描述": "粉色指甲钳五件套，含指甲剪、指甲锉等工具，附收纳盒",
+      "数量/个": 100,
+      "单价": 5,
+      "包装方式": "纸盒包装"
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "菲迪印刷"
   }
 }
