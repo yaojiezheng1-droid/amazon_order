@@ -2,43 +2,43 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "菲迪印刷"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "25AM010-1"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "0574-27889688"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2025/4/16"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "李万祥"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "瑾秀制刷科技有限公司 浙江宁波市余姚市陆埠镇五马工业区创利西路15号 18067420259 李万祥"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "出货后45天凭增值税发票付款"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "2024/5/10 前"
     },
     "F14": {
       "key": "色卡",
-      "value": ""
+      "value": "粉色色卡"
     },
     "G14": {
       "key": "Logo",
@@ -90,7 +90,7 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "放2%余量"
     },
     "A20": {
       "key": "2：",
@@ -139,17 +139,17 @@
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "EC221-4-1",
+      "产品名称": "ecoed鱼骨梳包装2.0粉",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
+      "描述": "鱼骨梳包装，350g白卡双面印刷，FSC 粉色",
+      "数量/个": 2400,
+      "单价": 0.45,
       "包装方式": ""
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "菲迪印刷"
   }
 }
