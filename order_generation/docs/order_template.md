@@ -20,6 +20,7 @@ corresponding yellow cells before inserting the product rows.
   "products": [
     {
       "产品编号": "EC1601",
+      "产品名称": "Sample brush",
       "产品图片": "path/to/image.png",
       "描述": "product description",
       "数量/个": 100,
@@ -56,11 +57,15 @@ fill out the JSON file by hand using the data in that PO:
 3. Create a product entry for each SKU listed in the PO.
    - Copy the SKU and all related details such as quantity, unit price and
      packaging.
-   - If the PO includes an image for the product, save that image in the
-     directory `/image/<SKU>/` (create the folder if it does not exist) and set
-     the `产品图片` field to that path.
-   - When copying the description, preserve any bold text, highlights and font
-     colors exactly as shown in the PO.
+  - If the PO includes an image for the product, save that image in the
+    directory `/image/<SKU>/` (create the folder if it does not exist) and set
+    the `产品图片` field to that path.  The path is used to place the image in
+    the Excel sheet.
+  - Include the product name in the `产品名称` field.  When the spreadsheet is
+    generated, this name is prepended to the description so the final "描述"
+    column contains both.
+  - When copying the description, preserve any bold text, highlights and font
+    colors exactly as shown in the PO.
 4. Complete the `footer` section with the buyer and supplier information from the
    bottom of the PO spreadsheet.
 
