@@ -1,22 +1,34 @@
-import os
 import json
+import os
 
-# Directory containing the JSON files
-directory = r"c:\Users\Cheng\Desktop\amazon_order\order_generation\json_template"
+# Paths
+mapping_path = r'c:\Users\Cheng\Desktop\amazon_order\order_generation\docs\complete_mapping_with_po.json'
+orders_folder = r'c:\Users\Cheng\Desktop\amazon_order\order_generation\orders'
 
-# Path to the reference JSON file
-reference_file = os.path.join(directory, "B10-TJ2-16.json")
+# 1. Collect all purchase_order_file values from the JSON
+def collect_purchase_order_files(data):
+    files = set()
+    def walk(obj):
+        if isinstance(obj, dict):
+            for k, v in obj.items():
+                if k == "purchase_order_file":
+                    files.add(str(v))
+                else:
+                    walk(v)
+        elif isinstance(obj, list):
+            for item in obj:
+                walk(item)
+    walk(data)
+    return files
 
-# Load the content of the reference JSON file
-with open(reference_file, "r", encoding="utf-8") as ref_file:
-    reference_content = ref_file.read()
+with open(mapping_path, encoding='utf-8') as f:
+    data = json.load(f)
+purchase_order_files = collect_purchase_order_files(data)
 
-# Iterate through all files in the directory
-for filename in os.listdir(directory):
-    if filename.endswith(".json") and filename != "B10-TJ2-16.json":
-        file_path = os.path.join(directory, filename)
-        # Overwrite the file with the reference content
-        with open(file_path, "w", encoding="utf-8") as json_file:
-            json_file.write(reference_content)
-
-print("All JSON files have been updated to match the reference JSON.")
+# 2. List all files in orders/all_orders
+for filename in os.listdir(orders_folder):
+    file_path = os.path.join(orders_folder, filename)
+    # 3. Delete files not in purchase_order_files
+    if filename not in purchase_order_files:
+        os.remove(file_path)
+        print(f"Deleted: {filename}")
