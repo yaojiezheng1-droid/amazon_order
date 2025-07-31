@@ -2,19 +2,19 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "宁波市柯莱威电子科技有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "24AM037-5"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "电话: +86-574-27889688   传真: +86-574-27889677"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2024/6/12"
     },
     "B5": {
       "key": "联系人：",
@@ -22,11 +22,11 @@
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "宁波市海曙区高桥镇秀丰路58号6栋  小张18668289261"
     },
     "B13": {
       "key": "付款方式",
@@ -34,7 +34,7 @@
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "2024/6/25"
     },
     "F14": {
       "key": "色卡",
@@ -90,66 +90,66 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "如描述中要求"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A26": {
       "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A27": {
       "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A28": {
       "key": "10：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A29": {
       "key": "11：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A30": {
       "key": "12：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     }
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "EX-1L2K-CN3N-1",
+      "产品名称": "蜂窝梳包装",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
+      "描述": "蜂窝梳包装 ST1122-3",
+      "数量/个": 8600,
+      "单价": 0.6,
       "包装方式": ""
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "宁波市柯莱威电子科技有限公司"
   }
 }
