@@ -2,154 +2,154 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "宁波市艾盛电器有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "PO-UNKNOWN"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "0574-27889688"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2025-07-31"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "程宇"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "宁波江南路1528号高新科技广场2号楼10楼"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "银行转账"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "30天"
     },
     "F14": {
       "key": "色卡",
-      "value": ""
+      "value": "粉色"
     },
     "G14": {
       "key": "Logo",
-      "value": ""
+      "value": "定制"
     },
     "B15": {
       "key": "箱规",
-      "value": ""
+      "value": "100个/箱"
     },
     "F15": {
       "key": "色卡1",
-      "value": ""
+      "value": "N/A"
     },
     "G15": {
       "key": "Logo1",
-      "value": ""
+      "value": "N/A"
     },
     "B16": {
       "key": "产前确认样",
-      "value": ""
+      "value": "否"
     },
     "F16": {
       "key": "色卡2",
-      "value": ""
+      "value": "N/A"
     },
     "G16": {
       "key": "Logo2",
-      "value": ""
+      "value": "N/A"
     },
     "B17": {
       "key": "出货样",
-      "value": ""
+      "value": "否"
     },
     "F17": {
       "key": "色卡3",
-      "value": ""
+      "value": "N/A"
     },
     "G17": {
       "key": "Logo3",
-      "value": ""
+      "value": "N/A"
     },
     "F18": {
       "key": "色卡4",
-      "value": ""
+      "value": "N/A"
     },
     "G18": {
       "key": "Logo4",
-      "value": ""
+      "value": "N/A"
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A26": {
       "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A27": {
       "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A28": {
       "key": "10：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A29": {
       "key": "11：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     },
     "A30": {
       "key": "12：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "N/A"
     }
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "B10-JMY802-PK",
+      "产品名称": "洗脸仪 粉色款",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
-      "包装方式": ""
+      "描述": "硅胶电动洗脸仪，粉色，USB充电，防水设计",
+      "数量/个": 1000,
+      "单价": 1.2,
+      "包装方式": "彩盒"
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "宁波市艾盛电器有限公司"
   }
 }
