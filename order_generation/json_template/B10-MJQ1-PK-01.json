@@ -2,31 +2,31 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "宁波艾盛"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "22AM008-AS"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "0574-27889688"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2022-09-05"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "孙诚昱"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "宁波江南路1528号高新科技广场2号楼10楼，邮编:315048"
     },
     "B13": {
       "key": "付款方式",
@@ -34,19 +34,19 @@
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "2022-10-07"
     },
     "F14": {
       "key": "色卡",
-      "value": ""
+      "value": "粉/蓝"
     },
     "G14": {
       "key": "Logo",
-      "value": ""
+      "value": "am:800"
     },
     "B15": {
       "key": "箱规",
-      "value": ""
+      "value": "包装盒2200粉/1100蓝，说明书3300"
     },
     "F15": {
       "key": "色卡1",
@@ -90,62 +90,62 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A26": {
       "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A27": {
       "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A28": {
       "key": "10：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A29": {
       "key": "11：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A30": {
       "key": "12：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     }
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "B10-MJQ1-PK-01",
+      "产品名称": "am800电动脚锉包装+说明书",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
-      "包装方式": ""
+      "描述": "350g白卡哑膜彩盒(粉/蓝)及105g铜版纸说明书",
+      "数量/个": 3300,
+      "单价": 1.21,
+      "包装方式": "纸盒+说明书"
     }
   ],
   "footer": {
