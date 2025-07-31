@@ -2,11 +2,11 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "义乌市一柠饰品有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "25AM002-1"
     },
     "B4": {
       "key": "电话：",
@@ -14,7 +14,7 @@
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2025-3-26"
     },
     "B5": {
       "key": "联系人：",
@@ -22,15 +22,15 @@
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "郑遥杰"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "瑾秀地址：浙江宁波市余姚市陆埠镇五马工业区创利西路 15 号 多多 15258337865"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "开专票，价格已含税运"
     },
     "B14": {
       "key": "交货时间",
@@ -90,7 +90,7 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "义乌市一柠饰品有限公司 税号:91330782MA2HQR5A51 对公账号:201000320634668 开户行:浙江义乌农村商业银行股份有限公司鹏城支行"
     },
     "A20": {
       "key": "2：",
@@ -139,12 +139,12 @@
   },
   "products": [
     {
-      "产品编号": "",
+      "产品编号": "EEHB-NBB-1B",
       "产品名称": "",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
+      "描述": "黑色",
+      "数量/个": 1200,
+      "单价": 0.45,
       "包装方式": ""
     }
   ],
