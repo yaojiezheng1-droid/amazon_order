@@ -2,154 +2,154 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "瑾秀制刷科技有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "PO231007003"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "18067420259"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2023-10-07"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "袁存义"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "采购员"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "浙江宁波市余姚市陆埠镇五马工业区创利西路15号"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "银行转账"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "7天"
     },
     "F14": {
       "key": "色卡",
-      "value": ""
+      "value": "蓝色"
     },
     "G14": {
       "key": "Logo",
-      "value": ""
+      "value": "Ecoed"
     },
     "B15": {
       "key": "箱规",
-      "value": ""
+      "value": "1200只/箱"
     },
     "F15": {
       "key": "色卡1",
-      "value": ""
+      "value": "蓝色"
     },
     "G15": {
       "key": "Logo1",
-      "value": ""
+      "value": "Ecoed"
     },
     "B16": {
       "key": "产前确认样",
-      "value": ""
+      "value": "需要"
     },
     "F16": {
       "key": "色卡2",
-      "value": ""
+      "value": "蓝色"
     },
     "G16": {
       "key": "Logo2",
-      "value": ""
+      "value": "Ecoed"
     },
     "B17": {
       "key": "出货样",
-      "value": ""
+      "value": "需要"
     },
     "F17": {
       "key": "色卡3",
-      "value": ""
+      "value": "蓝色"
     },
     "G17": {
       "key": "Logo3",
-      "value": ""
+      "value": "Ecoed"
     },
     "F18": {
       "key": "色卡4",
-      "value": ""
+      "value": "蓝色"
     },
     "G18": {
       "key": "Logo4",
-      "value": ""
+      "value": "Ecoed"
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "无"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "无"
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "无"
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "无"
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "无"
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "无"
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "无"
     },
     "A26": {
       "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "无"
     },
     "A27": {
       "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "无"
     },
     "A28": {
       "key": "10：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "无"
     },
     "A29": {
       "key": "11：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "无"
     },
     "A30": {
       "key": "12：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "无"
     }
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
-      "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
+      "产品编号": "ECSB-2Blue",
+      "产品名称": "Ecoed洗头刷蓝色组合装",
+      "产品图片": "order_generation/images/products/ECSB-2Blue.jpg",
+      "描述": "蓝色洗头刷两只装组合，包括包装和配件",
       "数量/个": 0,
       "单价": 0,
-      "包装方式": ""
+      "包装方式": "套装"
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "瑾秀制刷科技有限公司"
   }
 }
