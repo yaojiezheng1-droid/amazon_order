@@ -2,27 +2,27 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "宁波瑾秀制刷科技有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "25AM002"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "18067420259"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2025-1-17"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "张德波"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "郑遥杰"
     },
     "B12": {
       "key": "进仓地址：",
@@ -90,66 +90,66 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "表面处理干净光滑，不能有划痕，做大货前先确认大货样"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A26": {
       "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A27": {
       "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A28": {
       "key": "10：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A29": {
       "key": "11：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A30": {
       "key": "12：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     }
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "AM036",
+      "产品名称": "黑红猪鬃气垫梳",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
-      "包装方式": ""
+      "描述": "手柄表面电镀处理尽量光亮，黑色手柄做防静电处理。\n\n气垫颜色（打样确认色），植猪鬃毛，梳针颜色黑色防静电，植0.8 mm细尼龙针染头和梳针颜色一致，染头尽量偏小（视觉效果染头和梳针一体）梳针做防静电处理。\n\nLOGO：ellen evyse 颜色印金\n",
+      "数量/个": 1200,
+      "单价": 13.39,
+      "包装方式": "我司提供包装，瑾秀包装，分两次发货"
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "宁波瑾秀塑业有限公司"
   }
 }
