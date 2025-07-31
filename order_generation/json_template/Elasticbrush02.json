@@ -2,39 +2,39 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": "宁波瑾秀制刷科技有限公司"
+      "value": ""
     },
     "G3": {
       "key": "订单号",
-      "value": "PO240510001"
+      "value": ""
     },
     "B4": {
       "key": "电话：",
-      "value": "18067420259"
+      "value": ""
     },
     "G4": {
       "key": "日期",
-      "value": "2024-05-10"
+      "value": ""
     },
     "B5": {
       "key": "联系人：",
-      "value": "李万祥"
+      "value": ""
     },
     "G5": {
       "key": "订单安排人",
-      "value": "孙诚昱"
+      "value": ""
     },
     "B12": {
       "key": "进仓地址：",
-      "value": "义乌"
+      "value": ""
     },
     "B13": {
       "key": "付款方式",
-      "value": "凭发票，出货45天付款"
+      "value": ""
     },
     "B14": {
       "key": "交货时间",
-      "value": "2024-06-10"
+      "value": ""
     },
     "F14": {
       "key": "色卡",
@@ -46,7 +46,7 @@
     },
     "B15": {
       "key": "箱规",
-      "value": "箱规120/24"
+      "value": ""
     },
     "F15": {
       "key": "色卡1",
@@ -58,7 +58,7 @@
     },
     "B16": {
       "key": "产前确认样",
-      "value": "每款1套样品"
+      "value": ""
     },
     "F16": {
       "key": "色卡2",
@@ -70,7 +70,7 @@
     },
     "B17": {
       "key": "出货样",
-      "value": "每款2套"
+      "value": ""
     },
     "F17": {
       "key": "色卡3",
@@ -90,11 +90,11 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "印刷logo清晰"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A20": {
       "key": "2：",
-      "value": "包装按要求"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A21": {
       "key": "3：",
@@ -139,10 +139,10 @@
   },
   "products": [
     {
-      "产品编号": "Elasticbrush02",
-      "产品名称": "ecoed 可降解黄色鱼骨梳",
-      "产品图片": "order_generation/images/products/Elasticbrush02.jpg",
-      "描述": "梳身半降解材料加麦秸秆，黄色，尼龙丝0.8mm，ecoed logo颜色同beter，白卡盒包装，箱规120/24",
+      "产品编号": "",
+      "产品名称": "",
+      "产品图片": "",
+      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
       "数量/个": 0,
       "单价": 0,
       "包装方式": ""
@@ -150,6 +150,6 @@
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": "宁波瑾秀制刷科技有限公司"
+    "supplier": ""
   }
 }

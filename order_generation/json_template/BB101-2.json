@@ -2,154 +2,154 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": "宁波美饰日用品有限公司"
+      "value": ""
     },
     "G3": {
       "key": "订单号",
-      "value": "22AM032YF"
+      "value": ""
     },
     "B4": {
       "key": "电话：",
-      "value": "0574-87000000"
+      "value": ""
     },
     "G4": {
       "key": "日期",
-      "value": "2023-08-01"
+      "value": ""
     },
     "B5": {
       "key": "联系人：",
-      "value": "王经理"
+      "value": ""
     },
     "G5": {
       "key": "订单安排人",
-      "value": "李四"
+      "value": ""
     },
     "B12": {
       "key": "进仓地址：",
-      "value": "宁波市鄞州区启明路88号"
+      "value": ""
     },
     "B13": {
       "key": "付款方式",
-      "value": "30%预付，70%出货前付清"
+      "value": ""
     },
     "B14": {
       "key": "交货时间",
-      "value": "2023-08-15"
+      "value": ""
     },
     "F14": {
       "key": "色卡",
-      "value": "玫红"
+      "value": ""
     },
     "G14": {
       "key": "Logo",
-      "value": "BoxxBrush"
+      "value": ""
     },
     "B15": {
       "key": "箱规",
-      "value": "50个/箱"
+      "value": ""
     },
     "F15": {
       "key": "色卡1",
-      "value": "无"
+      "value": ""
     },
     "G15": {
       "key": "Logo1",
-      "value": "无"
+      "value": ""
     },
     "B16": {
       "key": "产前确认样",
-      "value": "需要"
+      "value": ""
     },
     "F16": {
       "key": "色卡2",
-      "value": "无"
+      "value": ""
     },
     "G16": {
       "key": "Logo2",
-      "value": "无"
+      "value": ""
     },
     "B17": {
       "key": "出货样",
-      "value": "需要"
+      "value": ""
     },
     "F17": {
       "key": "色卡3",
-      "value": "无"
+      "value": ""
     },
     "G17": {
       "key": "Logo3",
-      "value": "无"
+      "value": ""
     },
     "F18": {
       "key": "色卡4",
-      "value": "无"
+      "value": ""
     },
     "G18": {
       "key": "Logo4",
-      "value": "无"
+      "value": ""
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "产品包装需按我司确认样板执行；"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A20": {
       "key": "2：",
-      "value": "外箱需贴亚马逊标签；"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A21": {
       "key": "3：",
-      "value": "交货时提供完整装箱单；"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A22": {
       "key": "4：",
-      "value": "出货样随货一起寄出；"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A23": {
       "key": "5：",
-      "value": "如有疑问及时沟通；"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A24": {
       "key": "6：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A25": {
       "key": "7：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A26": {
       "key": "8：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A27": {
       "key": "9：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A28": {
       "key": "10：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A29": {
       "key": "11：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A30": {
       "key": "12：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     }
   },
   "products": [
     {
-      "产品编号": "BB101-2",
-      "产品名称": "boxxbrush盒子梳玫红色",
-      "产品图片": "BB101-2.jpg",
-      "描述": "盒子梳玫红色款，PET盒包装。",
-      "数量/个": 1000,
-      "单价": 2.5,
-      "包装方式": "PET盒/单个入袋"
+      "产品编号": "",
+      "产品名称": "",
+      "产品图片": "",
+      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
+      "数量/个": 0,
+      "单价": 0,
+      "包装方式": ""
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": "宁波美饰日用品有限公司"
+    "supplier": ""
   }
 }

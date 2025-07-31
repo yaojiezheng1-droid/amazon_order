@@ -2,19 +2,19 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": "宁波市艾盛电器有限公司"
+      "value": ""
     },
     "G3": {
       "key": "订单号",
-      "value": "22AM007-AS"
+      "value": ""
     },
     "B4": {
       "key": "电话：",
-      "value": "0574-27889688"
+      "value": ""
     },
     "G4": {
       "key": "日期",
-      "value": "2022-09-05"
+      "value": ""
     },
     "B5": {
       "key": "联系人：",
@@ -22,7 +22,7 @@
     },
     "G5": {
       "key": "订单安排人",
-      "value": "孙诚昱"
+      "value": ""
     },
     "B12": {
       "key": "进仓地址：",
@@ -34,7 +34,7 @@
     },
     "B14": {
       "key": "交货时间",
-      "value": "2022-10-07前"
+      "value": ""
     },
     "F14": {
       "key": "色卡",
@@ -90,66 +90,66 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "留样3套，注意1：出厂时电池电量60%以上，2：有评论提到噪音大，这批货噪音不要大于上一批货。"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A20": {
       "key": "2：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A21": {
       "key": "3：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A22": {
       "key": "4：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A23": {
       "key": "5：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A24": {
       "key": "6：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A25": {
       "key": "7：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A26": {
       "key": "8：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A27": {
       "key": "9：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A28": {
       "key": "10：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A29": {
       "key": "11：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A30": {
       "key": "12：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     }
   },
   "products": [
     {
-      "产品编号": "AS992",
-      "产品名称": "电动磨脚器",
+      "产品编号": "",
+      "产品名称": "",
       "产品图片": "",
-      "描述": "电动磨脚器，我司型号：AS992 材料：ABS，上盖蓝色注塑，下盖白色磨砂面，上盖银色logo：am:800 距离尾端25mm，logo大小：18mm*11mm 镍氢电池：AAA 600mA*3 机器下盖贴产品信息标签，透明黑字可移型不干胶； 2个磨头，60目/100目，60目装机器上； 配件：1根usb数据线，1个白色抽绳袋，一本说明书，铜版纸，外包装：350g白卡彩印纸盒，CMYK印刷，表面覆雅膜； 装箱率：100pcs无内盒，单边长度不得超过60cm",
-      "数量/个": 1200,
-      "单价": 28,
-      "包装方式": "白卡彩印纸盒"
+      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
+      "数量/个": 0,
+      "单价": 0,
+      "包装方式": ""
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": "宁波市艾盛电器有限公司"
+    "supplier": ""
   }
 }

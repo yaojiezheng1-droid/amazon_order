@@ -2,15 +2,15 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": "宁波瑾秀制刷科技有限公司"
+      "value": ""
     },
     "G3": {
       "key": "订单号",
-      "value": "24AM008"
+      "value": ""
     },
     "B4": {
       "key": "电话：",
-      "value": "18067420259"
+      "value": ""
     },
     "G4": {
       "key": "日期",
@@ -18,19 +18,19 @@
     },
     "B5": {
       "key": "联系人：",
-      "value": "张德波"
+      "value": ""
     },
     "G5": {
       "key": "订单安排人",
-      "value": "孙诚昱"
+      "value": ""
     },
     "B12": {
       "key": "进仓地址：",
-      "value": "义乌进仓"
+      "value": ""
     },
     "B13": {
       "key": "付款方式",
-      "value": "出货后45天凭增值税发票付款"
+      "value": ""
     },
     "B14": {
       "key": "交货时间",
@@ -46,7 +46,7 @@
     },
     "B15": {
       "key": "箱规",
-      "value": "两个入一个内盒，1200套"
+      "value": ""
     },
     "F15": {
       "key": "色卡1",
@@ -58,7 +58,7 @@
     },
     "B16": {
       "key": "产前确认样",
-      "value": "每款1套样品"
+      "value": ""
     },
     "F16": {
       "key": "色卡2",
@@ -70,7 +70,7 @@
     },
     "B17": {
       "key": "出货样",
-      "value": "每款2套"
+      "value": ""
     },
     "F17": {
       "key": "色卡3",
@@ -90,66 +90,66 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "以上价格含税运含包装义乌进仓"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A20": {
       "key": "2：",
-      "value": "1： 付款方式：出货后45天凭增值税发票付款"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A21": {
       "key": "3：",
-      "value": "2： 交货时间：2024年08月31日"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A22": {
       "key": "4：",
-      "value": "3:  logo 设计稿参照pdf附件"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A23": {
       "key": "5：",
-      "value": "4: 产前确认样：每款1套样品"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A24": {
       "key": "6：",
-      "value": "5: 出货样：每款2套"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A25": {
       "key": "7：",
-      "value": "6：注意事项"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A26": {
       "key": "8：",
-      "value": "1）印刷logo要印的清晰，线条清楚，绝对不能掉色"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A27": {
       "key": "9：",
-      "value": "2）针头毛边控尽量不要有毛边"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A28": {
       "key": "10：",
-      "value": "3）硬度按照55"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A29": {
       "key": "11：",
-      "value": "4）注意控制注塑流纹"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A30": {
       "key": "12：",
-      "value": "5）注意表面不能有油污，脏渍；外箱大小单边不得大于60cm"
+      "value": "<TODO put note or addtional requirement here>"
     }
   },
   "products": [
     {
-      "产品编号": "EC405-2-Pink",
-      "产品名称": "Ecoed洗头刷粉色两只装粗针",
+      "产品编号": "",
+      "产品名称": "",
       "产品图片": "",
-      "描述": "老款粗针洗头刷TPEE，硬度55，注意控制针头毛边，顶部印白色logo，颜色粉色\n包装方式：两个入一个内盒，1200套",
-      "数量/个": 2400,
-      "单价": 1.75,
-      "包装方式": "纸盒"
+      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
+      "数量/个": 0,
+      "单价": 0,
+      "包装方式": ""
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": "宁波瑾秀制刷科技有限公司"
+    "supplier": ""
   }
 }

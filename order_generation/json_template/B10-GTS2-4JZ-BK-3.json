@@ -2,31 +2,31 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": "宁波泰丰机械有限公司"
+      "value": ""
     },
     "G3": {
       "key": "订单号",
-      "value": "24AM031-QF"
+      "value": ""
     },
     "B4": {
       "key": "电话：",
-      "value": "13605889085"
+      "value": ""
     },
     "G4": {
       "key": "日期",
-      "value": "2024-06-06"
+      "value": ""
     },
     "B5": {
       "key": "联系人：",
-      "value": "郑小姐"
+      "value": ""
     },
     "G5": {
       "key": "订单安排人",
-      "value": "孙诚昱"
+      "value": ""
     },
     "B12": {
       "key": "进仓地址：",
-      "value": "宁波鄞州投资创业中心，启明路599路，启发工业城，"
+      "value": ""
     },
     "B13": {
       "key": "付款方式",
@@ -34,7 +34,7 @@
     },
     "B14": {
       "key": "交货时间",
-      "value": "2024-06-30"
+      "value": ""
     },
     "F14": {
       "key": "色卡",
@@ -90,66 +90,66 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "如描述中要求"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A20": {
       "key": "2：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A21": {
       "key": "3：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A22": {
       "key": "4：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A23": {
       "key": "5：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A24": {
       "key": "6：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A25": {
       "key": "7：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A26": {
       "key": "8：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A27": {
       "key": "9：",
-      "value": "需方: 宁波品秀美容科技有限公司"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A28": {
       "key": "10：",
-      "value": "供方: 宁波泰丰机械有限公司"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A29": {
       "key": "11：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A30": {
       "key": "12：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     }
   },
   "products": [
     {
-      "产品编号": "AM311",
-      "产品名称": "卷发定型梳蓝色",
+      "产品编号": "",
+      "产品名称": "",
       "产品图片": "",
-      "描述": "白色针+黑色（TPR）胶皮参考denman样品，手柄571U透明弹性漆，背面印白色logo 包装方式：纸卡包装系扎带，包装背面贴fba不干胶，套opp袋，注意单箱不要超过100个",
-      "数量/个": 2000,
-      "单价": 5.14,
+      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
+      "数量/个": 0,
+      "单价": 0,
       "包装方式": ""
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": "宁波泰丰机械有限公司"
+    "supplier": ""
   }
 }

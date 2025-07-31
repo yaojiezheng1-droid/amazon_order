@@ -2,39 +2,39 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": "宁波菲迪印刷有限公司"
+      "value": ""
     },
     "G3": {
       "key": "订单号",
-      "value": "23AM002-KY"
+      "value": ""
     },
     "B4": {
       "key": "电话：",
-      "value": "18067420259"
+      "value": ""
     },
     "G4": {
       "key": "日期",
-      "value": "2023-03-05"
+      "value": ""
     },
     "B5": {
       "key": "联系人：",
-      "value": "李万祥"
+      "value": ""
     },
     "G5": {
       "key": "订单安排人",
-      "value": "孙诚昱"
+      "value": ""
     },
     "B12": {
       "key": "进仓地址：",
-      "value": "浙江宁波市余姚市陆埠镇五马工业区创利西路 15 号"
+      "value": ""
     },
     "B13": {
       "key": "付款方式",
-      "value": "出货后45天凭增值税发票付款"
+      "value": ""
     },
     "B14": {
       "key": "交货时间",
-      "value": "2023-03-25"
+      "value": ""
     },
     "F14": {
       "key": "色卡",
@@ -46,7 +46,7 @@
     },
     "B15": {
       "key": "箱规",
-      "value": "无"
+      "value": ""
     },
     "F15": {
       "key": "色卡1",
@@ -58,7 +58,7 @@
     },
     "B16": {
       "key": "产前确认样",
-      "value": "打样2套"
+      "value": ""
     },
     "F16": {
       "key": "色卡2",
@@ -70,7 +70,7 @@
     },
     "B17": {
       "key": "出货样",
-      "value": "需要"
+      "value": ""
     },
     "F17": {
       "key": "色卡3",
@@ -90,66 +90,66 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "放2%余量"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A20": {
       "key": "2：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A21": {
       "key": "3：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A22": {
       "key": "4：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A23": {
       "key": "5：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A24": {
       "key": "6：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A25": {
       "key": "7：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A26": {
       "key": "8：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A27": {
       "key": "9：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A28": {
       "key": "10：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A29": {
       "key": "11：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A30": {
       "key": "12：",
-      "value": "无"
+      "value": "<TODO put note or addtional requirement here>"
     }
   },
   "products": [
     {
-      "产品编号": "EC221-2-1",
-      "产品名称": "ecoed鱼骨梳包装2.0黄",
-      "产品图片": "order_generation/images/accessories/EC221-2-1.jpg",
-      "描述": "环保可降解鱼骨梳黄色包装，500g白卡双面印刷哑膜过UV。",
-      "数量/个": 2400,
-      "单价": 0.45,
-      "包装方式": "送瑾秀"
+      "产品编号": "",
+      "产品名称": "",
+      "产品图片": "",
+      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
+      "数量/个": 0,
+      "单价": 0,
+      "包装方式": ""
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": "宁波菲迪印刷有限公司"
+    "supplier": ""
   }
 }

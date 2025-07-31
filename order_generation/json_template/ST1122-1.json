@@ -2,39 +2,39 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": "宁波市海曙硕丰塑料五金制品有限公司"
+      "value": ""
     },
     "G3": {
       "key": "订单号",
-      "value": "25AM007-JX"
+      "value": ""
     },
     "B4": {
       "key": "电话：",
-      "value": "0574-27889688"
+      "value": ""
     },
     "G4": {
       "key": "日期",
-      "value": "2025-04-07"
+      "value": ""
     },
     "B5": {
       "key": "联系人：",
-      "value": "小张"
+      "value": ""
     },
     "G5": {
       "key": "订单安排人",
-      "value": "孙诚昱"
+      "value": ""
     },
     "B12": {
       "key": "进仓地址：",
-      "value": "宁波市海曙区高桥镇秀丰路67号1栋1楼，小张，18668289261"
+      "value": ""
     },
     "B13": {
       "key": "付款方式",
-      "value": "含税含运含进仓"
+      "value": ""
     },
     "B14": {
       "key": "交货时间",
-      "value": "2025-05-25"
+      "value": ""
     },
     "F14": {
       "key": "色卡",
@@ -90,7 +90,7 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "合同备注：双层漆效果参考以寄样为准，配件需要全部入纸袋然后放进礼盒包装，木柄表面处理平整干净，没有坑洼，气垫与木柄交接处没有缝隙，气垫梳60一外箱"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A20": {
       "key": "2：",
@@ -139,17 +139,17 @@
   },
   "products": [
     {
-      "产品编号": "ST1122-1",
-      "产品名称": "棕黑色气垫猪鬃手柄",
-      "产品图片": "order_generation/images/products/ST1122-1.jpg",
-      "描述": "黑色气垫猪鬃手柄：水曲柳手柄棕黑色喷漆双层，喷漆效果参考Moroccooil，形状同寄样。8.5*24.5*1.3，金色移印logoNorsewood。梳面开口严格按照提供线稿，礼盒包装我司提供，胶皮配件我司提供，清洁刷和布袋我司提供，需装配，贴标。",
-      "数量/个": 6000,
-      "单价": 8.8,
-      "包装方式": "如描述中要求"
+      "产品编号": "",
+      "产品名称": "",
+      "产品图片": "",
+      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
+      "数量/个": 0,
+      "单价": 0,
+      "包装方式": ""
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": "宁波市海曙硕丰塑料五金制品有限公司"
+    "supplier": ""
   }
 }

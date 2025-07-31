@@ -2,19 +2,19 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": "宁波市艾盛电器有限公司"
+      "value": ""
     },
     "G3": {
       "key": "订单号",
-      "value": "PO231026002"
+      "value": ""
     },
     "B4": {
       "key": "电话：",
-      "value": "0574-27889688"
+      "value": ""
     },
     "G4": {
       "key": "日期",
-      "value": "2023-10-26"
+      "value": ""
     },
     "B5": {
       "key": "联系人：",
@@ -22,7 +22,7 @@
     },
     "G5": {
       "key": "订单安排人",
-      "value": "孙诚昱"
+      "value": ""
     },
     "B12": {
       "key": "进仓地址：",
@@ -90,66 +90,66 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A20": {
       "key": "2：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A21": {
       "key": "3：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A22": {
       "key": "4：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A23": {
       "key": "5：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A24": {
       "key": "6：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A25": {
       "key": "7：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A26": {
       "key": "8：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A27": {
       "key": "9：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A28": {
       "key": "10：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A29": {
       "key": "11：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A30": {
       "key": "12：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     }
   },
   "products": [
     {
       "产品编号": "",
-      "产品名称": "am800电动脚锉包装+说明书",
+      "产品名称": "",
       "产品图片": "",
-      "描述": "am800电动脚锉包装+说明书",
-      "数量/个": 3200,
+      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
+      "数量/个": 0,
       "单价": 0,
-      "包装方式": "纸盒+说明书"
+      "包装方式": ""
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": "宁波市艾盛电器有限公司"
+    "supplier": ""
   }
 }

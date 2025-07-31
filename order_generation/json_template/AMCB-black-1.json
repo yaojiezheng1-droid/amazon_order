@@ -2,39 +2,39 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": "菲迪印刷"
+      "value": ""
     },
     "G3": {
       "key": "订单号",
-      "value": "24AM042-2"
+      "value": ""
     },
     "B4": {
       "key": "电话：",
-      "value": "0574-27889688"
+      "value": ""
     },
     "G4": {
       "key": "日期",
-      "value": "2024-12-24"
+      "value": ""
     },
     "B5": {
       "key": "联系人：",
-      "value": "孙诚昱"
+      "value": ""
     },
     "G5": {
       "key": "订单安排人",
-      "value": "孙诚昱"
+      "value": ""
     },
     "B12": {
       "key": "进仓地址：",
-      "value": "瑾秀地址：浙江宁波市余姚市陆埠镇五马工业区创利西路 15 号 15258337865 瑾秀制刷科技"
+      "value": ""
     },
     "B13": {
       "key": "付款方式",
-      "value": "款到发货"
+      "value": ""
     },
     "B14": {
       "key": "交货时间",
-      "value": "2025-1-10"
+      "value": ""
     },
     "F14": {
       "key": "色卡",
@@ -90,7 +90,7 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "放2%余量"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A20": {
       "key": "2：",
@@ -139,17 +139,17 @@
   },
   "products": [
     {
-      "产品编号": "AM413-2",
-      "产品名称": "猪鬃卷发通风梳包装",
+      "产品编号": "",
+      "产品名称": "",
       "产品图片": "",
-      "描述": "黑人卷发梳双面印刷哑膜过UV，500g白卡",
-      "数量/个": 2400,
-      "单价": 0.36,
-      "包装方式": "版费"
+      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
+      "数量/个": 0,
+      "单价": 0,
+      "包装方式": ""
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": "菲迪印刷"
+    "supplier": ""
   }
 }

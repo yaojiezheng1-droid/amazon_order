@@ -2,39 +2,39 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": "和鑫制刷厂"
+      "value": ""
     },
     "G3": {
       "key": "订单号",
-      "value": "25AM007-3"
+      "value": ""
     },
     "B4": {
       "key": "电话：",
-      "value": "0574-27889688"
+      "value": ""
     },
     "G4": {
       "key": "日期",
-      "value": "2025-05-09"
+      "value": ""
     },
     "B5": {
       "key": "联系人：",
-      "value": "朱春景"
+      "value": ""
     },
     "G5": {
       "key": "订单安排人",
-      "value": "孙诚昱"
+      "value": ""
     },
     "B12": {
       "key": "进仓地址：",
-      "value": "做好发到 小张 18668289261 浙江省 宁波市 海曙区 高桥镇高强路8号吉秀制刷"
+      "value": ""
     },
     "B13": {
       "key": "付款方式",
-      "value": "含税含运含进仓"
+      "value": ""
     },
     "B14": {
       "key": "交货时间",
-      "value": "2025-05-20"
+      "value": ""
     },
     "F14": {
       "key": "色卡",
@@ -90,11 +90,11 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "掉毛，压毛问题不超过2%"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A20": {
       "key": "2：",
-      "value": "植毛口不能存在裂缝"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A21": {
       "key": "3：",
@@ -139,17 +139,17 @@
   },
   "products": [
     {
-      "产品编号": "ST1122-3",
-      "产品名称": "清洁刷",
-      "产品图片": "order_generation/images/products/ST1122-3.jpg",
-      "描述": "禾木清洁刷清漆，3.1*7.3*1.1 厘米48孔。尼龙刷毛出峰2.5cm，加粗0.7mm，刷子表面和刷面清洁不要有碎屑附着,背后要加印logo Norsewood激光logo,散货",
-      "数量/个": 6400,
-      "单价": 0.9,
-      "包装方式": "如描述中要求"
+      "产品编号": "",
+      "产品名称": "",
+      "产品图片": "",
+      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
+      "数量/个": 0,
+      "单价": 0,
+      "包装方式": ""
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": "和鑫制刷厂"
+    "supplier": ""
   }
 }

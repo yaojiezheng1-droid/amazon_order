@@ -1,27 +1,22 @@
 import os
-import pandas as pd
+import json
 
-# Define paths
-orders_folder = r'C:\Users\Cheng\Desktop\amazon_order\order_generation\orders'
-采购单_file = r'C:\Users\Cheng\Desktop\amazon_order\order_generation\docs\采购单_modified.xlsx'
+# Directory containing the JSON files
+directory = r"c:\Users\Cheng\Desktop\amazon_order\order_generation\json_template"
 
-# Read the "order" column from 采购单modified.xlsx
-df = pd.read_excel(采购单_file)
-valid_orders = df['order'].astype(str).str.strip().str.lower().tolist()  # Normalize valid orders
-print("Valid orders loaded:", valid_orders)
+# Path to the reference JSON file
+reference_file = os.path.join(directory, "B10-TJ2-16.json")
 
-# Iterate through files in the orders folder
-for file_name in os.listdir(orders_folder):
-    file_path = os.path.join(orders_folder, file_name)
-    
-    # Check if the file is an Excel file
-    if file_name.endswith('.xlsx') or file_name.endswith('.xls'):
-        # Extract the order name (assuming the file name matches the order name)
-        order_name = os.path.splitext(file_name)[0].strip().lower()  # Normalize file name
-        
-        # Remove the file if it's not in the valid orders list
-        if order_name not in valid_orders:
-            os.remove(file_path)
-            print(f"Removed: {file_path}")
+# Load the content of the reference JSON file
+with open(reference_file, "r", encoding="utf-8") as ref_file:
+    reference_content = ref_file.read()
 
-print("Cleanup complete.")
+# Iterate through all files in the directory
+for filename in os.listdir(directory):
+    if filename.endswith(".json") and filename != "B10-TJ2-16.json":
+        file_path = os.path.join(directory, filename)
+        # Overwrite the file with the reference content
+        with open(file_path, "w", encoding="utf-8") as json_file:
+            json_file.write(reference_content)
+
+print("All JSON files have been updated to match the reference JSON.")

@@ -2,39 +2,39 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": "宁波菲迪印刷有限公司"
+      "value": ""
     },
     "G3": {
       "key": "订单号",
-      "value": "24AM029"
+      "value": ""
     },
     "B4": {
       "key": "电话：",
-      "value": "18067420259"
+      "value": ""
     },
     "G4": {
       "key": "日期",
-      "value": "2024-05-07"
+      "value": ""
     },
     "B5": {
       "key": "联系人：",
-      "value": "李万祥"
+      "value": ""
     },
     "G5": {
       "key": "订单安排人",
-      "value": "孙诚昱"
+      "value": ""
     },
     "B12": {
       "key": "进仓地址：",
-      "value": "浙江宁波市余姚市陆埠镇五马工业区创利西路 15 号"
+      "value": ""
     },
     "B13": {
       "key": "付款方式",
-      "value": "出货后45天凭增值税发票付款"
+      "value": ""
     },
     "B14": {
       "key": "交货时间",
-      "value": "2024-01-20前"
+      "value": ""
     },
     "F14": {
       "key": "色卡",
@@ -58,7 +58,7 @@
     },
     "B16": {
       "key": "产前确认样",
-      "value": "打样2套"
+      "value": ""
     },
     "F16": {
       "key": "色卡2",
@@ -90,15 +90,15 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "放2%余量"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A20": {
       "key": "2：",
-      "value": "交货期：2024/1/20前"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A21": {
       "key": "3：",
-      "value": "付款方式：出货后45天凭增值税发票付款"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A22": {
       "key": "4：",
@@ -139,17 +139,17 @@
   },
   "products": [
     {
-      "产品编号": "ECSB-7-1",
-      "产品名称": "洗头刷包装粉色粗针单只",
+      "产品编号": "",
+      "产品名称": "",
       "产品图片": "",
-      "描述": "粉色粗针洗头刷包装",
-      "数量/个": 2400,
-      "单价": 0.45,
-      "包装方式": "送瑾秀"
+      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
+      "数量/个": 0,
+      "单价": 0,
+      "包装方式": ""
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": "宁波菲迪印刷有限公司"
+    "supplier": ""
   }
 }
