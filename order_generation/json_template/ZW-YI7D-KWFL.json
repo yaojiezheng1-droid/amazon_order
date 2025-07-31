@@ -2,43 +2,43 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "宁波瑾秀制刷科技有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "25AM005"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "18067420259"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2025-2-11"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "陈文峰"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "宁波品秀美容科技有限公司 宁波高新区江南路1528号高新科技广场2号楼10楼"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "出货后45天凭增值税发票付款"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "2025年3月10日"
     },
     "F14": {
       "key": "色卡",
-      "value": ""
+      "value": "logo 设计稿参照pdf附件"
     },
     "G14": {
       "key": "Logo",
@@ -46,7 +46,7 @@
     },
     "B15": {
       "key": "箱规",
-      "value": ""
+      "value": "产前确认样：每款1套样品"
     },
     "F15": {
       "key": "色卡1",
@@ -58,7 +58,7 @@
     },
     "B16": {
       "key": "产前确认样",
-      "value": ""
+      "value": "出货样：每款2套"
     },
     "F16": {
       "key": "色卡2",
@@ -90,66 +90,66 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "1）印刷logo要印的清晰，线条清楚，绝对不能掉色"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "2）针头毛边控尽量不要有毛边"
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "3）硬度按照55"
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "4）注意控制注塑流纹"
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "5）外箱单边不得大于60cm，每箱最多150个"
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "6）和之前样品对照一下色差"
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "7）大货表面不能有污渍"
     },
     "A26": {
       "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A27": {
       "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A28": {
       "key": "10：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A29": {
       "key": "11：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A30": {
       "key": "12：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     }
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "ZW-YI7D-KWFL",
+      "产品名称": "Ecoed洗头刷蓝色单只装细针",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
-      "包装方式": ""
+      "描述": "老款细针洗头刷TPEE，硬度55，注意控制针头毛边，顶部印白色logo，颜色2404C绿色",
+      "数量/个": 4800,
+      "单价": 1.75,
+      "包装方式": "纸盒4800单支装"
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "宁波瑾秀制刷科技有限公司"
   }
 }

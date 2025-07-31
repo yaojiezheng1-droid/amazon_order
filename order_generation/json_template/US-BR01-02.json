@@ -2,39 +2,39 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "瑞安市诚叶美发用具有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "25AM006-1"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "15967719778"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2025-02-24"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "叶敏"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "郑遥杰"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "宁波品秀美容科技有限公司 宁波江南路1528号高新科技广场10楼"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "30%定金，出货前验货合格后付清尾款，后补增值税发票"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "2025-03-30"
     },
     "F14": {
       "key": "色卡",
@@ -90,66 +90,66 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A26": {
       "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A27": {
       "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A28": {
       "key": "10：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A29": {
       "key": "11：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A30": {
       "key": "12：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     }
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "ARTB-DY113",
+      "产品名称": "发夹",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
-      "包装方式": ""
+      "描述": "塑料发夹，111mm，黑色组装，4个入一OPP袋，客供卡头",
+      "数量/个": 6600,
+      "单价": 3,
+      "包装方式": "按合同，包装前先拍照给我司确认，合同内的新货号需打产前样，确认后才可生产大货。"
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "瑞安市诚叶美发用具有限公司"
   }
 }
