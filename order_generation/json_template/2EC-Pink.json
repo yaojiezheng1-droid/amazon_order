@@ -2,43 +2,43 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "瑾秀制刷科技有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "PO240509002"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "0574-88308563"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2024-05-09"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "袁存义"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "浙江宁波市余姚市陆埠镇五马工业区创利西路15号"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "30%定金，出货前凭发票付款"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "2024-06-01"
     },
     "F14": {
       "key": "色卡",
-      "value": ""
+      "value": "粉色"
     },
     "G14": {
       "key": "Logo",
@@ -90,66 +90,66 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "放2%余量"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A26": {
       "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A27": {
       "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A28": {
       "key": "10：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A29": {
       "key": "11：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A30": {
       "key": "12：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     }
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "2EC-Pink",
+      "产品名称": "Ecoed洗头刷粉色两只装细针",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
-      "包装方式": ""
+      "描述": "细针TPR材质，粉色手柄，两只装",
+      "数量/个": 450,
+      "单价": 2.5,
+      "包装方式": "纸盒包装"
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "瑾秀制刷科技有限公司"
   }
 }
