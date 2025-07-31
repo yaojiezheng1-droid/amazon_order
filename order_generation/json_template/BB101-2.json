@@ -2,39 +2,39 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "应发鼎艺"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "22AM032YF"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "88002769"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2022-12-21"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "杨莉"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "宁波市海曙区金云街2号 应发鼎艺 杨莉 88002769"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "凭增值税发票 付款后发货"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "2023年2月20日"
     },
     "F14": {
       "key": "色卡",
@@ -46,7 +46,7 @@
     },
     "B15": {
       "key": "箱规",
-      "value": ""
+      "value": "箱规单边不超过60cm"
     },
     "F15": {
       "key": "色卡1",
@@ -90,66 +90,66 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "入我司供纸卡，产品请安排生产； 包装参考下面图片。"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "箱规单边不超过60cm"
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "产品需要贴标，外箱需要贴亚马逊标，产品会分两次出货"
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "外箱唛:印刷4面"
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "BLACK GOLD CERAMIC ROUND BRUSH MADE IN CHINA"
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "大货样：每款每色各2只。"
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "供参考纸卡包装图示"
     },
     "A26": {
       "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "装箱率200"
     },
     "A27": {
       "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "内箱装箱率20"
     },
     "A28": {
       "key": "10：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "每个外箱内箱数量10"
     },
     "A29": {
       "key": "11：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "具体装箱率:(内箱高宽长，外箱高宽长) [[4, 5, 1], [4, 10, 5]]"
     },
     "A30": {
       "key": "12：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "外箱高度(cm)40.7 外箱宽度(cm)47.6 外箱长度(cm)56.85"
     }
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
-      "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
-      "包装方式": ""
+      "产品编号": "EE211",
+      "产品名称": "boxxbrush盒子梳红色",
+      "产品图片": "order_generation/images/products/BB101-2.jpg",
+      "描述": "盒子梳梳体,red 0331C，盒子透明红色参考寄样，包装我司提供包装泡壳+纸盒, 装箱率200/20，外壳要印两处logo，具体待定",
+      "数量/个": 1200,
+      "单价": 6.9,
+      "包装方式": "泡壳+纸盒"
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "应发鼎艺"
   }
 }
