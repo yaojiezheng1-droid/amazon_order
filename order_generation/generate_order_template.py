@@ -88,7 +88,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Fill order template spreadsheet")
     parser.add_argument("json", help="Path to order data json")
     parser.add_argument("output", help="Output Excel file path")
-    parser.add_argument("--template", default="docs/base_template.xlsx", help="Template workbook path")
+    parser.add_argument("--template", default="docs/empty_base_template.xlsx", help="Template workbook path")
     args = parser.parse_args()
 
     with open(args.json, "r", encoding="utf-8") as f:
