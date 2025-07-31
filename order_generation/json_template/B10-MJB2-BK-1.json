@@ -2,31 +2,31 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "宁波菲迪印刷有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "25AM011-1-FD"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "13702802466"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2024-03-15"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "莫小姐"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "广东省阳江市江城区城东街道随垌工业区骏业厂"
     },
     "B13": {
       "key": "付款方式",
@@ -90,7 +90,7 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "备注： 放2%余量"
     },
     "A20": {
       "key": "2：",
@@ -139,12 +139,12 @@
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "B10-MJB2-BK-1",
+      "产品名称": "木头脚锉 包装",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
+      "描述": "木头脚搓包装（更新版）",
+      "数量/个": 2700,
+      "单价": 0.55,
       "包装方式": ""
     }
   ],

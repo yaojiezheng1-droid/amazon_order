@@ -2,39 +2,39 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "阳江骏业工贸有限公司"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "25AM011-JY"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "13702802466"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2025/04/30"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "莫小姐"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
-      "value": ""
+      "value": "广州进仓"
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "甲方验完货，确认完成后乙方开增值税发票，甲方支付全款金额，乙方安排发货"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "2025/6/3"
     },
     "F14": {
       "key": "色卡",
@@ -42,11 +42,11 @@
     },
     "G14": {
       "key": "Logo",
-      "value": ""
+      "value": "am800"
     },
     "B15": {
       "key": "箱规",
-      "value": ""
+      "value": "2个入纸盒，60盒一外箱"
     },
     "F15": {
       "key": "色卡1",
@@ -90,23 +90,23 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "注意产品的表面打磨和湿度控制!!!!湿度<16"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "头部喷砂平整均匀，不可以有明显凹凸 < 1%"
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "每个产品头部过热收缩，！"
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "产品包材和小卡片我司提供，其余贵司采购"
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "外箱要贴货代标签+FBA条码，不要贴错，货代标签和FBA出货前4天提供出货前2天需要贴好"
     },
     "A24": {
       "key": "6：",
@@ -139,12 +139,12 @@
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "B10-MJB2-BK2",
+      "产品名称": "黑白木头脚挫2只装",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
+      "描述": "榉木，白色砂砾，产品尺寸26*5*1.1cm，移印logo：am800，头部过热收缩 2个入纸盒，60盒一外箱送指定货代，外箱用3瓦加固！无需内盒，直接入外箱！",
+      "数量/个": 2400,
+      "单价": 5.9,
       "包装方式": ""
     }
   ],
