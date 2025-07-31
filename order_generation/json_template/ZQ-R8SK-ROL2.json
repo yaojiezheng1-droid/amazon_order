@@ -2,27 +2,27 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": ""
+      "value": "瑾秀制刷"
     },
     "G3": {
       "key": "订单号",
-      "value": ""
+      "value": "25AM006-JX"
     },
     "B4": {
       "key": "电话：",
-      "value": ""
+      "value": "15968053236"
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2025-02-24"
     },
     "B5": {
       "key": "联系人：",
-      "value": ""
+      "value": "袁经理/陈文锋"
     },
     "G5": {
       "key": "订单安排人",
-      "value": ""
+      "value": "孙诚昱"
     },
     "B12": {
       "key": "进仓地址：",
@@ -30,11 +30,11 @@
     },
     "B13": {
       "key": "付款方式",
-      "value": ""
+      "value": "凭增值税发票 出货后 45天付款"
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "2025年5月15日"
     },
     "F14": {
       "key": "色卡",
@@ -90,66 +90,66 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "入我司供纸卡，产品请安排生产； 包装参考下面图片。"
     },
     "A20": {
       "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "箱规单边不超过60cm"
     },
     "A21": {
       "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "产品需要贴标，外箱需要贴亚马逊标，产品会分两次出货"
     },
     "A22": {
       "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "注意夹子不要漏放"
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "大货样：每款每色各2只。"
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": "供参考纸卡包装图示"
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A26": {
       "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A27": {
       "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A28": {
       "key": "10：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A29": {
       "key": "11：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A30": {
       "key": "12：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     }
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "ZQ-R8SK-ROL2",
+      "产品名称": "金色陶瓷漆圆桶刷2.1&1.3in",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
-      "包装方式": ""
+      "描述": "直径55mm，尼龙66黑色同OG essential+1%负离子，黑色TPR手柄，圆孔铝桶玫瑰金色电镀，尾针金色注塑，两只装附带4只发夹",
+      "数量/个": 2400,
+      "单价": 10.66,
+      "包装方式": "进纸卡盒包装，套OPP袋，两只装附4只发夹"
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
+    "supplier": "瑾秀制刷"
   }
 }
