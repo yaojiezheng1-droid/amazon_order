@@ -1,155 +1,50 @@
 {
   "cells": {
-    "B3": {
-      "key": "供货商：",
-      "value": ""
-    },
-    "G3": {
-      "key": "订单号",
-      "value": ""
-    },
-    "B4": {
-      "key": "电话：",
-      "value": ""
-    },
-    "G4": {
-      "key": "日期",
-      "value": ""
-    },
-    "B5": {
-      "key": "联系人：",
-      "value": ""
-    },
-    "G5": {
-      "key": "订单安排人",
-      "value": ""
-    },
-    "B12": {
-      "key": "进仓地址：",
-      "value": ""
-    },
-    "B13": {
-      "key": "付款方式",
-      "value": ""
-    },
-    "B14": {
-      "key": "交货时间",
-      "value": ""
-    },
-    "F14": {
-      "key": "色卡",
-      "value": ""
-    },
-    "G14": {
-      "key": "Logo",
-      "value": ""
-    },
-    "B15": {
-      "key": "箱规",
-      "value": ""
-    },
-    "F15": {
-      "key": "色卡1",
-      "value": ""
-    },
-    "G15": {
-      "key": "Logo1",
-      "value": ""
-    },
-    "B16": {
-      "key": "产前确认样",
-      "value": ""
-    },
-    "F16": {
-      "key": "色卡2",
-      "value": ""
-    },
-    "G16": {
-      "key": "Logo2",
-      "value": ""
-    },
-    "B17": {
-      "key": "出货样",
-      "value": ""
-    },
-    "F17": {
-      "key": "色卡3",
-      "value": ""
-    },
-    "G17": {
-      "key": "Logo3",
-      "value": ""
-    },
-    "F18": {
-      "key": "色卡4",
-      "value": ""
-    },
-    "G18": {
-      "key": "Logo4",
-      "value": ""
-    },
-    "A19": {
-      "key": "注意事项：1",
-      "value": "<TODO put note or addtional requirement here>"
-    },
-    "A20": {
-      "key": "2：",
-      "value": "<TODO put note or addtional requirement here>"
-    },
-    "A21": {
-      "key": "3：",
-      "value": "<TODO put note or addtional requirement here>"
-    },
-    "A22": {
-      "key": "4：",
-      "value": "<TODO put note or addtional requirement here>"
-    },
-    "A23": {
-      "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
-    },
-    "A24": {
-      "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
-    },
-    "A25": {
-      "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
-    },
-    "A26": {
-      "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
-    },
-    "A27": {
-      "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
-    },
-    "A28": {
-      "key": "10：",
-      "value": "<TODO put note or addtional requirement here>"
-    },
-    "A29": {
-      "key": "11：",
-      "value": "<TODO put note or addtional requirement here>"
-    },
-    "A30": {
-      "key": "12：",
-      "value": "<TODO put note or addtional requirement here>"
-    }
+    "B3": {"key": "供货商：", "value": "宁波泰友进出口有限公司"},
+    "G3": {"key": "订单号", "value": "N/A"},
+    "B4": {"key": "电话：", "value": "0574-27889688"},
+    "G4": {"key": "日期", "value": "2024-01-01"},
+    "B5": {"key": "联系人：", "value": "郑小姐"},
+    "G5": {"key": "订单安排人", "value": "Laura"},
+    "B12": {"key": "进仓地址：", "value": "宁波江南路1528号高新科技广场10楼"},
+    "B13": {"key": "付款方式", "value": "含税含运含进仓"},
+    "B14": {"key": "交货时间", "value": "2024-02-01"},
+    "F14": {"key": "色卡", "value": "如色板"},
+    "G14": {"key": "Logo", "value": "按设计"},
+    "B15": {"key": "箱规", "value": "常规"},
+    "F15": {"key": "色卡1", "value": "如图"},
+    "G15": {"key": "Logo1", "value": "按设计"},
+    "B16": {"key": "产前确认样", "value": "需要"},
+    "F16": {"key": "色卡2", "value": "如图"},
+    "G16": {"key": "Logo2", "value": "按设计"},
+    "B17": {"key": "出货样", "value": "需要"},
+    "F17": {"key": "色卡3", "value": "如图"},
+    "G17": {"key": "Logo3", "value": "按设计"},
+    "F18": {"key": "色卡4", "value": "如图"},
+    "G18": {"key": "Logo4", "value": "按设计"},
+    "A19": {"key": "注意事项：1", "value": "无"},
+    "A20": {"key": "2：", "value": "无"},
+    "A21": {"key": "3：", "value": "无"},
+    "A22": {"key": "4：", "value": "无"},
+    "A23": {"key": "5：", "value": "无"},
+    "A24": {"key": "6：", "value": "无"},
+    "A25": {"key": "7：", "value": "无"},
+    "A26": {"key": "8：", "value": "无"},
+    "A27": {"key": "9：", "value": "无"},
+    "A28": {"key": "10：", "value": "无"},
+    "A29": {"key": "11：", "value": "无"},
+    "A30": {"key": "12：", "value": "无"}
   },
   "products": [
     {
-      "产品编号": "",
-      "产品名称": "",
+      "产品编号": "FSC-WB02-1",
+      "产品名称": "ecoed木针按摩梳包装",
       "产品图片": "",
-      "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",
-      "数量/个": 0,
-      "单价": 0,
-      "包装方式": ""
+      "描述": "配套木针梳专用包装材料。",
+      "数量/个": 1000,
+      "单价": 0.5,
+      "包装方式": "按PO要求"
     }
   ],
-  "footer": {
-    "buyer": "宁波品秀美容科技有限公司",
-    "supplier": ""
-  }
+  "footer": {"buyer": "宁波品秀美容科技有限公司", "supplier": "宁波泰友进出口有限公司"}
 }
