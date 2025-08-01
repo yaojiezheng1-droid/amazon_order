@@ -53,8 +53,6 @@ Sometimes an order request only specifies a SKU and quantity, for example:
 
 "I want to place order of 800 of 48-82P3-QSFG product."
 
-To ensure an AI agent completes the task without skipping any steps, give it
-this prompt and require it to pause after each numbered step before continuing:
 
 > You are generating purchase orders from SKU/quantity requests. Work through
 > the numbered checklist one item at a time and only move to the next item once
@@ -76,11 +74,7 @@ this prompt and require it to pause after each numbered step before continuing:
 4. For each factory group, run `json_PO_excel.py` to write the JSON values into
    `order_generation/docs/empty_base_template.xlsx`.
 5. Confirm that the populated `empty_base_template.xlsx` matches the cell
-   addresses expected by the JSON. Update `generate_order_template.py` if any
-   mismatch appears.
-6. Execute `generate_order_template.py` to produce the final spreadsheet(s)
-   from the filled JSON data.
-7. Review the generated Excel file(s) and correct any remaining issues.
+   addresses expected by the JSON. 
 
 This process keeps products from different factories on separate spreadsheets
 while still providing a single sheet when everything is sourced from one
