@@ -4,8 +4,9 @@ from pathlib import Path
 
 try:
     from openpyxl import load_workbook
+    from openpyxl.drawing.image import Image
 except ModuleNotFoundError as exc:  # pragma: no cover - dependency missing in tests
-    raise SystemExit("openpyxl is required to run this script") from exc
+    raise SystemExit("openpyxl and pillow are required to run this script") from exc
 
 PRODUCT_START_ROW = 7
 COLUMN_MAP = {
@@ -30,7 +31,20 @@ def fill_workbook(template: Path, data: dict):
     for product in data.get('products', []):
         for key, col in COLUMN_MAP.items():
             if key in product:
-                ws[f"{col}{row}"] = product[key]
+                if key == '产品图片':
+                    img_path = Path(product[key])
+                    if not img_path.is_absolute() and not img_path.exists():
+                        alt_path = template.parent.parent / img_path
+                        if alt_path.exists():
+                            img_path = alt_path
+                    try:
+                        img = Image(img_path)
+                    except Exception:
+                        ws[f"{col}{row}"] = product[key]
+                    else:
+                        ws.add_image(img, f"{col}{row}")
+                else:
+                    ws[f"{col}{row}"] = product[key]
         qty = product.get('数量/个')
         price = product.get('单价')
         if qty not in (None, '') and price not in (None, ''):
