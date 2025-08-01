@@ -57,7 +57,7 @@ Sometimes an order request only specifies a SKU and quantity, for example:
 > You are generating purchase orders from SKU/quantity requests. Work through
 > the numbered checklist one item at a time and only move to the next item once
 > the current one is fully complete. Your goal is to populate
-> `order_generation/docs/empty_base_template.xlsx` with the correct values from
+> `order_generation/docs/empty_base_template.xlsx` with the correct values by json_PO_excel.py from
 > the JSON templates and produce a finished spreadsheet.
 
 1. Look up the SKU in `order_generation/docs/complete_mapping.json` to
@@ -74,6 +74,7 @@ Sometimes an order request only specifies a SKU and quantity, for example:
      section.
 4. For each factory group, run `json_PO_excel.py` to write the JSON values into
    `order_generation/docs/empty_base_template.xlsx`.
+   !excel must be created by json_PO_excel.py not manually!
 5. Confirm that the populated `empty_base_template.xlsx` matches the cell
    addresses expected by the JSON. 
 
