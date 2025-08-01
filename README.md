@@ -65,11 +65,11 @@ Sometimes an order request only specifies a SKU and quantity, for example:
 2. For the main product and each accessory, copy the corresponding JSON
    template from `order_generation/json_template/` and set the `数量/个` field to
    the requested quantity.
-3. Decide whether the items originate from one factory or several:
+3. Decide if any items originate from the same factory:
    - **Different factories** – keep the templates separate and create one Excel
      file per factory.
    - **Same factory** – use `order_generation/merge_json_templates.py` to merge
-     the JSON data. The script appends every entry to the `products` list and
+     the JSON data from the same factory. The script appends every entry to the `products` list and
      chooses the most appropriate value for each cell in the merged `cells`
      section.
 4. For each factory group, run `json_PO_excel.py` to write the JSON values into
