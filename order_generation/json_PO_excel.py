@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 from typing import Dict, Any, List
 
+from copy import copy
 from openpyxl import load_workbook
 from openpyxl.drawing.image import Image as XLImage
 
@@ -41,15 +42,29 @@ def fill_cells(ws, cells: Dict[str, Any]) -> None:
         ws[address] = value
 
 
-def insert_products(ws, products: List[Dict[str, Any]]) -> int:
-    """Insert product rows into the worksheet starting at ``START_ROW``.
+def _clone_row(ws, src: int, tgt: int) -> None:
+    """Copy formatting from ``src`` row to ``tgt`` row."""
+    ws.row_dimensions[tgt].height = ws.row_dimensions[src].height
+    for col in range(1, ws.max_column + 1):
+        c1 = ws.cell(row=src, column=col)
+        c2 = ws.cell(row=tgt, column=col)
+        c2.font = copy(c1.font)
+        c2.border = copy(c1.border)
+        c2.fill = copy(c1.fill)
+        c2.number_format = copy(c1.number_format)
+        c2.protection = copy(c1.protection)
+        c2.alignment = copy(c1.alignment)
 
-    Returns the number of rows inserted which is used to adjust footer
-    positions below the product table.
-    """
+
+def insert_products(ws, products: List[Dict[str, Any]]) -> int:
+    """Insert product rows starting at ``START_ROW`` while preserving formatting."""
+
+    template_row = START_ROW + PLACEHOLDER_ROWS - 1
     extra = max(0, len(products) - PLACEHOLDER_ROWS)
     if extra:
-        ws.insert_rows(START_ROW + PLACEHOLDER_ROWS, extra)
+        ws.insert_rows(template_row + 1, extra)
+        for i in range(extra):
+            _clone_row(ws, template_row, template_row + 1 + i)
 
     row_count = max(len(products), PLACEHOLDER_ROWS)
     for idx in range(row_count):
