@@ -1,4 +1,6 @@
+import base64
 import json
+from io import BytesIO
 from pathlib import Path
 from typing import Dict, Any, List
 
@@ -71,14 +73,18 @@ def insert_products(ws, products: List[Dict[str, Any]]) -> int:
         r = START_ROW + idx
         item = products[idx] if idx < len(products) else {}
         ws.cell(row=r, column=1, value=item.get("产品编号", ""))
-        img_path = item.get("产品图片")
-        if img_path:
+        img_data = item.get("产品图片")
+        ws.cell(row=r, column=2, value="")
+        if img_data:
             try:
-                ws.add_image(XLImage(img_path), f"B{r}")
+                if Path(str(img_data)).is_file():
+                    img = XLImage(img_data)
+                else:
+                    img_bytes = base64.b64decode(str(img_data))
+                    img = XLImage(BytesIO(img_bytes))
+                ws.add_image(img, f"B{r}")
             except Exception:
-                ws.cell(row=r, column=2, value=img_path)
-        else:
-            ws.cell(row=r, column=2, value="")
+                ws.cell(row=r, column=2, value=img_data)
         name = item.get("产品名称", "").strip()
         desc = item.get("描述", "").strip()
         if name:
