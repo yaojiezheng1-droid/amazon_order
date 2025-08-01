@@ -66,13 +66,16 @@ Follow these steps to generate the purchase order:
    - **Same factory** – merge the JSON data first by appending all entries to
      the `products` list and combining the `cells` section by selecting the
      most appropriate value for each cell.
-4. Ensure that `order_generation/docs/empty_base_template.xlsx` matches the
+4. Create a factory-based JSON template for each group of items and use
+   `json_PO_excel.py` to populate `order_generation/docs/empty_base_template.xlsx`
+   with those values.
+5. Ensure that `order_generation/docs/empty_base_template.xlsx` matches the
    cell addresses used in the JSON templates. If they do not match,
    update `generate_order_template.py` accordingly.
-5. Run `generate_order_template.py` to fill the spreadsheet(s). The script
+6. Run `generate_order_template.py` to fill the spreadsheet(s). The script
    defaults to `empty_base_template.xlsx` and writes the values from the JSON
    file.
-6. Review the generated Excel file(s) manually and fix any remaining issues.
+7. Review the generated Excel file(s) manually and fix any remaining issues.
 
 This process keeps products from different factories on separate spreadsheets
 while still providing a single sheet when everything is sourced from one
