@@ -3,9 +3,23 @@ import json
 import zipfile
 import xml.etree.ElementTree as ET
 from typing import Dict, Tuple, Any, List
+from pathlib import Path
 
 NAMESPACE = '{http://schemas.openxmlformats.org/spreadsheetml/2006/main}'
 YELLOW = 'FFFFFF00'
+
+# base paths for product and accessory images
+IMG_BASE = Path(__file__).resolve().parent / "images"
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
+
+def find_image_path(sku: str) -> str | None:
+    """Return relative path to image for ``sku`` if available."""
+    for sub in ("products", "accessories"):
+        candidate = IMG_BASE / sub / f"{sku}.jpg"
+        if candidate.exists():
+            return str(candidate.relative_to(REPO_ROOT))
+    return None
 
 
 def guess_key(address: str, cells: Dict[str, Tuple[str, str, str]]) -> str:
@@ -108,6 +122,14 @@ def parse_order(path: str) -> Dict[str, Any]:
             '包装方式': row_cells[6][0],
         })
         row += 1
+
+    # fill image paths from repository if missing
+    for item in products:
+        if item.get('产品图片'):
+            continue
+        img = find_image_path(item.get('产品编号', ''))
+        if img:
+            item['产品图片'] = img
 
     yellow_cells = {}
     for addr, (val, color, _) in cells.items():
