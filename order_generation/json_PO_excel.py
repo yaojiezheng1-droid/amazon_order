@@ -27,22 +27,42 @@ def fill_workbook(template: Path, data: dict):
     for addr, info in data.get('cells', {}).items():
         ws[addr] = info.get('value', '')
 
+    from PIL import Image as PILImage
     row = PRODUCT_START_ROW
     for product in data.get('products', []):
         for key, col in COLUMN_MAP.items():
             if key in product:
                 if key == '产品图片':
                     img_path = Path(product[key])
-                    if not img_path.is_absolute() and not img_path.exists():
-                        alt_path = template.parent.parent / img_path
-                        if alt_path.exists():
-                            img_path = alt_path
-                    try:
-                        img = Image(img_path)
-                    except Exception:
-                        ws[f"{col}{row}"] = product[key]
+                    # Try to resolve to absolute path
+                    if not img_path.is_absolute():
+                        candidate_paths = [
+                            template.parent / img_path,
+                            template.parent.parent / img_path,
+                            img_path.resolve()
+                        ]
+                        img_path = next((p for p in candidate_paths if p.exists()), img_path)
+                    if img_path.exists():
+                        try:
+                            # Verify image can be opened by Pillow and get size
+                            with PILImage.open(img_path) as pil_img:
+                                pil_img.verify()
+                                orig_width, orig_height = pil_img.size
+                            img = Image(str(img_path))
+                            # Set row height to 100
+                            ws.row_dimensions[row].height = 100
+                            # openpyxl row height is in points (1 point = 1/72 inch),
+                            # and image.height is in pixels. Excel's default DPI is 96.
+                            # 1 point = 1.333 pixels, so 100 points ≈ 133 pixels
+                            target_height_px = 133
+                            scale = target_height_px / orig_height
+                            img.height = target_height_px
+                            img.width = int(orig_width * scale)
+                            ws.add_image(img, f"{col}{row}")
+                        except Exception as e:
+                            ws[f"{col}{row}"] = f"[图片错误] {product[key]}: {e}"
                     else:
-                        ws.add_image(img, f"{col}{row}")
+                        ws[f"{col}{row}"] = f"[图片未找到] {product[key]}"
                 else:
                     ws[f"{col}{row}"] = product[key]
         qty = product.get('数量/个')
