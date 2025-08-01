@@ -3,7 +3,7 @@
 This repository organizes files used for managing Amazon orders. It is designed for manual updating of spreadsheets with help from AI tools. The main directories are:
 
 - `order_generation/docs/` – Project notes, templates, and mapping JSON files.
-- `order_generation/orders/` – Past orders and new purchase orders.
+- `order_generation/PO_excel/` – Past orders and new purchase orders.
 - `order_generation/accessories/` – Packaging and accessory information.
 - `order_generation/json_exports/` – Generated JSON exports from Excel files.
 - `sales/` – Sales history and reports.
@@ -39,7 +39,7 @@ description when filling the "描述" column.
 
 Manually Fill valus in JSON
 
-Locate the purchase‑order (PO) file(s) whose SKU matches each JSON filename (look in order_generation/orders/).
+Locate the purchase‑order (PO) file(s) whose SKU matches each JSON filename (look in order_generation/PO_excel/).
 
 Using the PO, manually fill every field in the JSON template. Do not add, remove, or rename keys; keep the structure exactly the same.
 

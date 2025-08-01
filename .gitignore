@@ -1,5 +1,5 @@
-# Ignore everything in order_generation/orders/all_orders
-order_generation/orders/all_orders/*
+# Ignore everything in order_generation/PO_excel/all_orders
+order_generation/PO_excel/all_orders/*
 
 # Ignore everything in order_generation/images/local
 order_generation/images/local/*
