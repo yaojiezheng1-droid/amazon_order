@@ -53,29 +53,34 @@ Sometimes an order request only specifies a SKU and quantity, for example:
 
 "I want to place order of 800 of 48-82P3-QSFG product."
 
-Follow these steps to generate the purchase order:
+To ensure an AI agent completes the task without skipping any steps, give it
+this prompt and require it to pause after each numbered step before continuing:
+
+> You are generating purchase orders from SKU/quantity requests. Work through
+> the numbered checklist one item at a time and only move to the next item once
+> the current one is fully complete. Your goal is to populate
+> `order_generation/docs/empty_base_template.xlsx` with the correct values from
+> the JSON templates and produce a finished spreadsheet.
 
 1. Look up the SKU in `order_generation/docs/complete_mapping.json` to
-   determine any accessories and their ratios.
-2. Copy the JSON templates for the main product and each accessory from
-   `order_generation/json_template/` and update the `数量/个` field using the
-   requested quantity.
-3. Decide whether the items come from one factory or several:
-   - **Different factories** – keep the templates separate and create one
-     Excel file for each factory.
-   - **Same factory** – merge the JSON data first by appending all entries to
-     the `products` list and combining the `cells` section by selecting the
-     most appropriate value for each cell.
-4. Create a factory-based JSON template for each group of items and use
-   `json_PO_excel.py` to populate `order_generation/docs/empty_base_template.xlsx`
-   with those values.
-5. Ensure that `order_generation/docs/empty_base_template.xlsx` matches the
-   cell addresses used in the JSON templates. If they do not match,
-   update `generate_order_template.py` accordingly.
-6. Run `generate_order_template.py` to fill the spreadsheet(s). The script
-   defaults to `empty_base_template.xlsx` and writes the values from the JSON
-   file.
-7. Review the generated Excel file(s) manually and fix any remaining issues.
+   determine all required accessories and their ratios.
+2. For the main product and each accessory, copy the corresponding JSON
+   template from `order_generation/json_template/` and set the `数量/个` field to
+   the requested quantity.
+3. Decide whether the items originate from one factory or several:
+   - **Different factories** – keep the templates separate and create one Excel
+     file per factory.
+   - **Same factory** – merge the JSON data by appending every entry to the
+     `products` list and merging the `cells` section, choosing the most
+     appropriate value for each cell.
+4. For each factory group, run `json_PO_excel.py` to write the JSON values into
+   `order_generation/docs/empty_base_template.xlsx`.
+5. Confirm that the populated `empty_base_template.xlsx` matches the cell
+   addresses expected by the JSON. Update `generate_order_template.py` if any
+   mismatch appears.
+6. Execute `generate_order_template.py` to produce the final spreadsheet(s)
+   from the filled JSON data.
+7. Review the generated Excel file(s) and correct any remaining issues.
 
 This process keeps products from different factories on separate spreadsheets
 while still providing a single sheet when everything is sourced from one
