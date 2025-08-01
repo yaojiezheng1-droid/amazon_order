@@ -13,7 +13,7 @@ Each directory contains an empty `.gitkeep` file so that it is tracked by Git ev
 
 ## Generating JSON Templates
 
-Use `generate_order_template.py` with a JSON file that follows the
+Use `generate_JSON_template.py` with a JSON file that follows the
 
 structure documented in `order_generation/docs/order_template.md`. The JSON lists every
 yellow cell from the Excel template with its label (`key`) and the value
