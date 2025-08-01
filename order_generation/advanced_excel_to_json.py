@@ -46,6 +46,19 @@ HEADER_MAP = {
 
 COLUMNS = [chr(65 + i) for i in range(12)]  # A-L
 
+# base paths for product and accessory images
+IMG_BASE = Path(__file__).resolve().parent / "images"
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
+
+def find_image_path(sku: str) -> str | None:
+    """Return relative path to image for ``sku`` if available."""
+    for sub in ("products", "accessories"):
+        candidate = IMG_BASE / sub / f"{sku}.jpg"
+        if candidate.exists():
+            return str(candidate.relative_to(REPO_ROOT))
+    return None
+
 
 def slugify(name: str) -> str:
     base = Path(name).stem
@@ -98,8 +111,13 @@ def parse_table(cells: Dict[str, Any], header_row: int) -> (List[Dict[str, Any]]
             val = row_vals.get(col, "")
             item[key] = convert_number(val)
         sku = item.get("产品编号")
-        if sku and sku in ACCESSORY_MAP:
-            item["产品名称"] = ACCESSORY_MAP[sku]["name"]
+        if sku:
+            if sku in ACCESSORY_MAP:
+                item["产品名称"] = ACCESSORY_MAP[sku]["name"]
+            if not item.get("产品图片"):
+                img = find_image_path(sku)
+                if img:
+                    item["产品图片"] = img
         products.append(item)
         row += 1
     return products, row - 1
