@@ -13,18 +13,17 @@ Each directory contains an empty `.gitkeep` file so that it is tracked by Git ev
 
 ## Generating Order Templates
 
-Use `generate_order_template.py` with a JSON file that follows the
-
-structure documented in `order_generation/docs/order_template.md`. The JSON lists every
-yellow cell from the Excel template with its label (`key`) and the value
-to write. The script fills those cells in `order_generation/docs/empty_base_template.xlsx`
-and inserts product rows. Green cells contain formulas that compute totals
-automatically.
+Use `PO_excel.py` with a JSON file that follows the structure documented in
+`order_generation/docs/order_template.md`. The JSON lists every yellow cell from
+the Excel template with its label (`key`) and the value to write. The script
+verifies that each cell reference matches the labels in
+`order_generation/docs/empty_base_template.xlsx`, fills those cells, and inserts
+product rows. Green cells contain formulas that compute totals automatically.
 An example JSON file is provided in `order_generation/docs/order_template_example.json`.
 
 When generating the spreadsheet the script inserts any image referenced in the
-`产品图片` field of each product row. The value should be a path to the image
-file on disk.  The product name (`产品名称`) is automatically prepended to the
+`产品图片` field of each product row. The value should be a path to the image file
+on disk. The product name (`产品名称`) is automatically prepended to the
 description when filling the "描述" column.
 
 
@@ -67,11 +66,10 @@ Follow these steps to generate the purchase order:
      the `products` list and combining the `cells` section by selecting the
      most appropriate value for each cell.
 4. Ensure that `order_generation/docs/empty_base_template.xlsx` matches the
-   cell addresses used in the JSON templates. If they do not match,
-   update `generate_order_template.py` accordingly.
-5. Run `generate_order_template.py` to fill the spreadsheet(s). The script
-   defaults to `empty_base_template.xlsx` and writes the values from the JSON
-   file.
+   cell addresses used in the JSON templates. If they do not match, update
+   `PO_excel.py` accordingly.
+5. Run `PO_excel.py` to fill the spreadsheet(s). The script defaults to
+   `empty_base_template.xlsx` and writes the values from the JSON file.
 6. Review the generated Excel file(s) manually and fix any remaining issues.
 
 This process keeps products from different factories on separate spreadsheets

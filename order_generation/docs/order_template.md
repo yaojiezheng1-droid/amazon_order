@@ -1,12 +1,13 @@
 # Order Template Format
 
 The order template is an Excel workbook that already contains most of the layout
-and formulas.  Only the yellow cells in `template_order_excel_1.xlsx` are meant
-to be filled from JSON.  Green cells contain formulas and will be calculated by
+and formulas. Only the yellow cells in `empty_base_template.xlsx` are meant to
+be filled from JSON. Green cells contain formulas and will be calculated by
 Excel automatically.
 
-`generate_order_template.py` reads a JSON file and writes the values into the
-corresponding yellow cells before inserting the product rows.
+`PO_excel.py` reads a JSON file, verifies that the cell references match the
+labels in the template, and writes the values into the corresponding yellow
+cells before inserting the product rows.
 
 ## JSON Structure
 
@@ -35,7 +36,7 @@ corresponding yellow cells before inserting the product rows.
 
 - **cells** – mapping of Excel cell addresses to objects containing ``key`` and
   ``value``. Every yellow cell from the template is included even if the value
-  is empty. `template_order_excel_1.xlsx` contains 47 yellow cells and the
+  is empty. `empty_base_template.xlsx` contains 47 yellow cells and the
   example lists them all.
 - **products** – list of product rows inserted starting at row 7. The amount
   column is calculated automatically with a formula.
@@ -50,7 +51,7 @@ When a purchase order (PO) spreadsheet cannot be parsed automatically, you can
 fill out the JSON file by hand using the data in that PO:
 
 1. Open the PO `.xlsx` file and locate every field that maps to a yellow cell in
-   `template_order_excel_1.xlsx`.
+   `empty_base_template.xlsx`.
 2. Copy the text from each cell directly into the corresponding `value` in the
    JSON. **Do not change the keys** and make sure every field from the template
    appears in the JSON even if the value is empty.
@@ -69,5 +70,5 @@ fill out the JSON file by hand using the data in that PO:
 4. Complete the `footer` section with the buyer and supplier information from the
    bottom of the PO spreadsheet.
 
-After the JSON is prepared you can run `generate_order_template.py` to populate
-`template_order_excel_1.xlsx` with the PO data.
+After the JSON is prepared you can run `PO_excel.py` to populate
+`empty_base_template.xlsx` with the PO data.
