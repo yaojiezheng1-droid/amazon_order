@@ -65,14 +65,7 @@ Sometimes an order request only specifies a SKU and quantity, for example:
 2. For the main product and each accessory, copy the corresponding JSON
    template from `order_generation/json_template/` and set the `数量/个` field to
    the requested quantity.
-3. Decide if any items originate from the same factory:
-   - **Different factories** – keep the templates separate and create one Excel
-     file per factory.
-   - **Same factory** – use `order_generation/merge_json_templates.py` to merge
-     the JSON data from the same factory. The script appends every entry to the `products` list and
-     chooses the most appropriate value for each cell in the merged `cells`
-     section.
-4. download images in the json_templates by its path together with `empty_base_template.xlsx`, `json_PO_excel.py` in structure of following
+3. download images in the json_templates by its path together with `empty_base_template.xlsx`, `json_PO_excel.py` in structure of following
       order_generation/
       ├── json_PO_excel.py           # ← Should stay here
       ├── merge_json_templates.py    # Other processing scripts
@@ -85,6 +78,13 @@ Sometimes an order request only specifies a SKU and quantity, for example:
       └── json_template/
          ├── template1.json
          └── template2.json
+4. Decide if any items originate from the same factory:
+   - **Different factories** – keep the templates separate and create one Excel
+     file per factory.
+   - **Same factory** – use `order_generation/merge_json_templates.py` to merge
+     the JSON data from the same factory. The script appends every entry to the `products` list and
+     chooses the most appropriate value for each cell in the merged `cells`
+     section.
 5. For each factory group, run `json_PO_excel.py` to write the JSON values into
    `order_generation/docs/empty_base_template.xlsx`.
    !excel must be created by json_PO_excel.py not manually!
