@@ -72,15 +72,28 @@ Sometimes an order request only specifies a SKU and quantity, for example:
      the JSON data from the same factory. The script appends every entry to the `products` list and
      chooses the most appropriate value for each cell in the merged `cells`
      section.
-4. For each factory group, run `json_PO_excel.py` to write the JSON values into
+4. download images in the json_templates by its path together with `empty_base_template.xlsx`, `json_PO_excel.py` in structure of following
+      order_generation/
+      ├── json_PO_excel.py           # ← Should stay here
+      ├── merge_json_templates.py    # Other processing scripts
+      ├── other_scripts.py
+      ├── docs/
+      │   ├── empty_base_template.xlsx
+      │   ├── {sku1}.jpg
+      │   ├── {sku2}.jpg
+      │   └── other_files...
+      └── json_template/
+         ├── template1.json
+         └── template2.json
+5. For each factory group, run `json_PO_excel.py` to write the JSON values into
    `order_generation/docs/empty_base_template.xlsx`.
    !excel must be created by json_PO_excel.py not manually!
    !!do not make your own Excel generating python strickly adhere to the readme, use json_PO_excel.py for excel generation!!
    !!do not make your own Excel generating python strickly adhere to the readme, use json_PO_excel.py for excel generation!!
    !!do not make your own Excel generating python strickly adhere to the readme, use json_PO_excel.py for excel generation!!
-5. Confirm that the populated `empty_base_template.xlsx` matches the cell
+6. Confirm that the populated `empty_base_template.xlsx` matches the cell
    addresses expected by the JSON. 
-6. If you find any excels having the same factory name, it is a mistake go back to step 3 and merge json_template with same factory
+7. If you find any excels having the same factory name, it is a mistake go back to step 3 and merge json_template with same factory
 
 This process keeps products from different factories on separate spreadsheets
 while still providing a single sheet when everything is sourced from one

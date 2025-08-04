@@ -33,15 +33,9 @@ def fill_workbook(template: Path, data: dict):
         for key, col in COLUMN_MAP.items():
             if key in product:
                 if key == '产品图片':
-                    img_path = Path(product[key])
-                    # Try to resolve to absolute path
-                    if not img_path.is_absolute():
-                        candidate_paths = [
-                            template.parent / img_path,
-                            template.parent.parent / img_path,
-                            img_path.resolve()
-                        ]
-                        img_path = next((p for p in candidate_paths if p.exists()), img_path)
+                    # Use SKU (产品编号) to construct image path: /docs/{sku}.jpg
+                    sku = product.get('产品编号', '')
+                    img_path = template.parent / 'docs' / f'{sku}.jpg'
                     if img_path.exists():
                         try:
                             # Verify image can be opened by Pillow and get size
