@@ -80,6 +80,7 @@ Sometimes an order request only specifies a SKU and quantity, for example:
    !!do not make your own Excel generating python strickly adhere to the readme, use json_PO_excel.py for excel generation!!
 5. Confirm that the populated `empty_base_template.xlsx` matches the cell
    addresses expected by the JSON. 
+6. If you find any excels having the same factory name, it is a mistake go back to step 3 and merge json_template with same factory
 
 This process keeps products from different factories on separate spreadsheets
 while still providing a single sheet when everything is sourced from one
