@@ -75,6 +75,9 @@ Sometimes an order request only specifies a SKU and quantity, for example:
 4. For each factory group, run `json_PO_excel.py` to write the JSON values into
    `order_generation/docs/empty_base_template.xlsx`.
    !excel must be created by json_PO_excel.py not manually!
+   !!do not make your own Excel generating python strickly adhere to the readme, use json_PO_excel.py for excel generation!!
+   !!do not make your own Excel generating python strickly adhere to the readme, use json_PO_excel.py for excel generation!!
+   !!do not make your own Excel generating python strickly adhere to the readme, use json_PO_excel.py for excel generation!!
 5. Confirm that the populated `empty_base_template.xlsx` matches the cell
    addresses expected by the JSON. 
 
