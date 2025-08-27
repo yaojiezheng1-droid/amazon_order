@@ -71,10 +71,12 @@ Sometimes an order request only specifies a SKU and quantity, for example:
       ├── merge_json_templates.py    # Other processing scripts
       ├── other_scripts.py
       ├── docs/
-      │   ├── empty_base_template.xlsx
-      │   ├── {sku1}.jpg
-      │   ├── {sku2}.jpg
-      │   └── other_files...
+      │   └── empty_base_template.xlsx
+      ├── images/
+      │   ├── accessories/
+      │   ├── colors/
+      │   ├── logos/
+      │   ├── products/
       └── json_template/
          ├── template1.json
          └── template2.json
