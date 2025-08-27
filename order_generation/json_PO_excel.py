@@ -33,9 +33,13 @@ def fill_workbook(template: Path, data: dict):
         for key, col in COLUMN_MAP.items():
             if key in product:
                 if key == '产品图片':
-                    # Use SKU (产品编号) to construct image path: /docs/{sku}.jpg
+                    # Use SKU (产品编号) to construct image path, check multiple directories
                     sku = product.get('产品编号', '')
-                    img_path = template.parent / 'docs' / f'{sku}.jpg'
+                    # Try products directory first, then accessories directory
+                    img_path = template.parent.parent / 'images' / 'products' / f'{sku}.jpg'
+                    if not img_path.exists():
+                        img_path = template.parent.parent / 'images' / 'accessories' / f'{sku}.jpg'
+                    
                     if img_path.exists():
                         try:
                             # Verify image can be opened by Pillow and get size

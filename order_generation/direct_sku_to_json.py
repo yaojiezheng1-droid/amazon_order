@@ -93,12 +93,14 @@ def generate_factory_jsons(pairs: Dict[str, int]) -> List[Path]:
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     out_paths: List[Path] = []
+    factory_counter = 1
     for factory, paths in temp_files.items():
         merged = merge_json_templates(paths)
-        out_path = OUTPUT_DIR / f"{_sanitize(factory)}.json"
+        out_path = OUTPUT_DIR / f"factory{factory_counter}.json"
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(merged, f, ensure_ascii=False, indent=2)
         out_paths.append(out_path)
+        factory_counter += 1
         for p in paths:
             try:
                 Path(p).unlink()
