@@ -14,7 +14,7 @@
     },
     "G4": {
       "key": "日期",
-      "value": ""
+      "value": "2025年08月27日"
     },
     "B5": {
       "key": "联系人：",
@@ -34,7 +34,7 @@
     },
     "B14": {
       "key": "交货时间",
-      "value": ""
+      "value": "7"
     },
     "F14": {
       "key": "色卡",
@@ -106,35 +106,35 @@
     },
     "A23": {
       "key": "5：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A24": {
       "key": "6：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A25": {
       "key": "7：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A26": {
       "key": "8：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A27": {
       "key": "9：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A28": {
       "key": "10：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A29": {
       "key": "11：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     },
     "A30": {
       "key": "12：",
-      "value": "<TODO put note or addtional requirement here>"
+      "value": ""
     }
   },
   "products": [
