@@ -2,23 +2,23 @@
   "cells": {
     "B3": {
       "key": "供货商：",
-      "value": "XX印刷厂"
+      "value": ""
     },
     "G3": {
       "key": "订单号",
-      "value": "24AM022"
+      "value": "24AM026-2"
     },
     "B4": {
       "key": "电话：",
-      "value": "0574-27889688"
+      "value": ""
     },
     "G4": {
       "key": "日期",
-      "value": "2024-4-9"
+      "value": "2025/2/11"
     },
     "B5": {
       "key": "联系人：",
-      "value": "袁存义"
+      "value": ""
     },
     "G5": {
       "key": "订单安排人",
@@ -26,7 +26,7 @@
     },
     "B12": {
       "key": "进仓地址：",
-      "value": "货发到 瑾秀制刷科技有限公司 18067420259 袁存义 浙江宁波市余姚市陆埠镇五马工业区创利西路 15 号"
+      "value": "收货信息是瑾秀：浙江宁波市余姚市陆埠镇五马工业区创利西路 15 号 18067420259 李万祥"
     },
     "B13": {
       "key": "付款方式",
@@ -34,7 +34,7 @@
     },
     "B14": {
       "key": "交货时间",
-      "value": "2024-4-30前"
+      "value": "2025/3/20前"
     },
     "F14": {
       "key": "色卡",
@@ -58,7 +58,7 @@
     },
     "B16": {
       "key": "产前确认样",
-      "value": "打样2套"
+      "value": ""
     },
     "F16": {
       "key": "色卡2",
@@ -70,7 +70,7 @@
     },
     "B17": {
       "key": "出货样",
-      "value": "每款2套"
+      "value": ""
     },
     "F17": {
       "key": "色卡3",
@@ -90,66 +90,75 @@
     },
     "A19": {
       "key": "注意事项：1",
-      "value": "放2%余量"
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A20": {
       "key": "2：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A21": {
       "key": "3：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A22": {
       "key": "4：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A23": {
       "key": "5：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A24": {
       "key": "6：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A25": {
       "key": "7：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A26": {
       "key": "8：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A27": {
       "key": "9：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A28": {
       "key": "10：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A29": {
       "key": "11：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     },
     "A30": {
       "key": "12：",
-      "value": ""
+      "value": "<TODO put note or addtional requirement here>"
     }
   },
   "products": [
     {
-      "产品编号": "EC404-2-2-2",
-      "产品名称": "洗头刷细绿色单只装",
-      "产品图片": "order_generation/images/accessories/EC404-2-2-2.jpg",
-      "描述": "洗头刷细绿色单只装，FSC，350g白卡哑膜",
-      "数量/个": 2400,
-      "单价": 0.45,
+      "产品编号": "EE1101-1-2",
+      "产品名称": "",
+      "产品图片": "order_generation/images/accessories/EE1101-1-2.jpg",
+      "描述": "鳄鱼夹板，双面印刷",
+      "数量/个": 1200,
+      "单价": 0,
+      "包装方式": ""
+    },
+    {
+      "产品编号": "EE1.3#2.1-1",
+      "产品名称": "",
+      "产品图片": "order_generation/images/accessories/EE1.3#2.1-1.jpg",
+      "描述": "铝桶包装，350g白卡双面印刷流纹烫金亚膜",
+      "数量/个": 1200,
+      "单价": 0.9,
       "包装方式": ""
     }
   ],
   "footer": {
     "buyer": "宁波品秀美容科技有限公司",
-    "supplier": "菲迪印刷"
+    "supplier": ""
   }
 }
