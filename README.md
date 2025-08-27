@@ -85,6 +85,19 @@ Sometimes an order request only specifies a SKU and quantity, for example:
      the JSON data from the same factory. The script appends every entry to the `products` list and
      chooses the most appropriate value for each cell in the merged `cells`
      section.
+
+### Automating steps 1, 2, and 4
+
+Instead of performing the previous steps manually, run:
+
+```bash
+python order_generation/direct_sku_to_json.py <asin1> <qty1> [<asin2> <qty2> ...]
+```
+
+The script reads accessory ratios from `order_generation/docs/complete_mapping.json`,
+fills in each template's `数量/个` field, groups items by supplier, and writes a
+merged JSON file for each factory to `order_generation/json_exports/`. Continue
+with step 5 using these generated files.
 5. For each factory group, run `json_PO_excel.py` to write the JSON values into
    `order_generation/docs/empty_base_template.xlsx`.
    !excel must be created by json_PO_excel.py not manually!
