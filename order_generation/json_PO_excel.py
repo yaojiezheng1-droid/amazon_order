@@ -1,5 +1,7 @@
 import sys
 import json
+import re
+from datetime import datetime, timedelta
 from pathlib import Path
 
 try:
@@ -25,7 +27,28 @@ def fill_workbook(template: Path, data: dict):
     ws = wb.active
 
     for addr, info in data.get('cells', {}).items():
-        ws[addr] = info.get('value', '')
+        value = info.get('value', '')
+        key = info.get('key', '')
+        
+        # Handle special date fields
+        if key == '日期':
+            # Fill with today's date
+            value = datetime.now().strftime('%Y年%m月%d日')
+        elif key == '交货时间' or key == '交货日期':
+            # Extract number from the original value and add to today's date
+            original_value = str(value)
+            # Look for numbers in the value (could be "15天", "30", "45", etc.)
+            numbers = re.findall(r'\d+', original_value)
+            if numbers:
+                days_to_add = int(numbers[0])
+                delivery_date = datetime.now() + timedelta(days=days_to_add)
+                value = delivery_date.strftime('%Y年%m月%d日')
+            else:
+                # If no number found, default to 30 days from today
+                delivery_date = datetime.now() + timedelta(days=30)
+                value = delivery_date.strftime('%Y年%m月%d日')
+        
+        ws[addr] = value
 
     from PIL import Image as PILImage
     row = PRODUCT_START_ROW

@@ -26,6 +26,8 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import subprocess
+import sys
 import tempfile
 from pathlib import Path
 from typing import Dict, List
@@ -37,6 +39,7 @@ ROOT = Path(__file__).resolve().parent
 TEMPLATE_DIR = ROOT / "json_template"
 MAPPING_PATH = ROOT / "docs" / "complete_mapping.json"
 OUTPUT_DIR = ROOT / "json_exports"
+EXCEL_OUTPUT_DIR = ROOT / "PO_excel_export"
 
 
 def _load_accessory_mapping() -> Dict[str, List[dict]]:
@@ -71,6 +74,34 @@ def _sanitize(name: str) -> str:
     return safe or "factory"
 
 
+def _run_json_to_excel(json_path: Path) -> Path:
+    """Convert JSON file to Excel using json_PO_excel.py"""
+    EXCEL_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    excel_filename = json_path.stem + ".xlsx"
+    excel_path = EXCEL_OUTPUT_DIR / excel_filename
+    
+    json_po_excel_script = ROOT / "json_PO_excel.py"
+    
+    try:
+        # Run json_PO_excel.py as a subprocess
+        result = subprocess.run([
+            sys.executable, str(json_po_excel_script), 
+            str(json_path), str(excel_path)
+        ], check=True, capture_output=True, text=True)
+        
+        print(f"Generated Excel file: {excel_path}")
+        return excel_path
+        
+    except subprocess.CalledProcessError as e:
+        print(f"Error converting {json_path} to Excel: {e}")
+        print(f"stdout: {e.stdout}")
+        print(f"stderr: {e.stderr}")
+        raise
+    except Exception as e:
+        print(f"Unexpected error converting {json_path} to Excel: {e}")
+        raise
+
+
 def generate_factory_jsons(pairs: Dict[str, int]) -> List[Path]:
     mapping = _load_accessory_mapping()
     all_items = _compute_all_items(pairs, mapping)
@@ -93,19 +124,36 @@ def generate_factory_jsons(pairs: Dict[str, int]) -> List[Path]:
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     out_paths: List[Path] = []
+    excel_paths: List[Path] = []
     factory_counter = 1
+    
     for factory, paths in temp_files.items():
         merged = merge_json_templates(paths)
         out_path = OUTPUT_DIR / f"factory{factory_counter}.json"
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(merged, f, ensure_ascii=False, indent=2)
         out_paths.append(out_path)
+        
+        # Automatically convert JSON to Excel
+        try:
+            excel_path = _run_json_to_excel(out_path)
+            excel_paths.append(excel_path)
+        except Exception as e:
+            print(f"Failed to convert {out_path} to Excel: {e}")
+        
         factory_counter += 1
         for p in paths:
             try:
                 Path(p).unlink()
             except OSError:
                 pass
+    
+    # Print summary
+    print(f"\nGenerated {len(out_paths)} JSON files and {len(excel_paths)} Excel files:")
+    for json_path, excel_path in zip(out_paths, excel_paths):
+        print(f"  JSON: {json_path}")
+        print(f"  Excel: {excel_path}")
+    
     return out_paths
 
 
@@ -129,3 +177,24 @@ def main(argv: List[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+# Execution code for 1200 pieces EEHB-NBB
+if __name__ == "__main__":
+    # Generate JSON for 1200 pieces of EEHB-NBB
+    sku_quantity_pairs = {"EEHB-NBB": 1200}
+    
+    print(f"Generating factory JSON files for {sku_quantity_pairs}")
+    
+    try:
+        output_paths = generate_factory_jsons(sku_quantity_pairs)
+        
+        print("\nGenerated factory JSON files:")
+        for path in output_paths:
+            print(f"  - {path}")
+            
+        print(f"\nSuccessfully processed order for 1200 pieces of EEHB-NBB")
+        print(f"Output files saved to: {OUTPUT_DIR}")
+        
+    except Exception as e:
+        print(f"Error generating JSON files: {e}")
+        raise SystemExit(1)
