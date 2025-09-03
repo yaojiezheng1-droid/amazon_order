@@ -14,12 +14,12 @@ import re
 from pathlib import Path
 from typing import Any, Dict, List
 
-from excel_to_json import read_workbook, guess_key
+from legacy.excel_to_json import read_workbook, guess_key
 
 # load accessory and parent-child mappings
-with open("docs/accessory_mapping.json", "r", encoding="utf-8") as f:
+with open("order_generation/docs/accessory_mapping.json", "r", encoding="utf-8") as f:
     ACCESSORY_MAP = json.load(f)["products"]
-with open("docs/parent_child_mapping.json", "r", encoding="utf-8") as f:
+with open("order_generation/docs/parent_child_mapping.json", "r", encoding="utf-8") as f:
     PARENT_DATA = json.load(f)["parents"]
 CHILD_TO_PARENT = {
     child: parent for parent, info in PARENT_DATA.items() for child in info["children"]

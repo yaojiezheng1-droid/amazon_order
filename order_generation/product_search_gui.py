@@ -25,10 +25,13 @@ class ProductSearchGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("Amazon Order Product Search")
-        self.root.geometry("800x600")
+        self.root.geometry("1000x800")
         
         # Load product data
         self.products = self._load_products()
+        
+        # Initialize product pool/cart
+        self.product_pool = {}  # {sku: {'product': product_dict, 'quantity': int}}
         
         # Create GUI elements
         self._create_widgets()
@@ -125,7 +128,7 @@ class ProductSearchGUI:
         self.price_label = ttk.Label(product_frame, text="")
         self.price_label.grid(row=2, column=1, sticky=tk.W)
         
-        # Quantity input
+        # Quantity input and add button
         quantity_frame = ttk.Frame(product_frame)
         quantity_frame.grid(row=3, column=0, columnspan=2, sticky=(tk.W, tk.E), pady=(10, 0))
         
@@ -136,13 +139,63 @@ class ProductSearchGUI:
                                      textvariable=self.quantity_var, width=10)
         quantity_spinbox.pack(side=tk.LEFT, padx=(0, 20))
         
-        # Generate command button
-        ttk.Button(quantity_frame, text="Generate Command", 
-                  command=self._generate_command).pack(side=tk.LEFT, padx=(20, 0))
+        # Add to pool button
+        ttk.Button(quantity_frame, text="Add to Pool", 
+                  command=self._add_to_pool).pack(side=tk.LEFT, padx=(0, 10))
+        
+        # Update quantity button (for existing items)
+        ttk.Button(quantity_frame, text="Update Quantity", 
+                  command=self._update_quantity).pack(side=tk.LEFT)
+        
+        # Product Pool section
+        pool_frame = ttk.LabelFrame(main_frame, text="Product Pool", padding="10")
+        pool_frame.grid(row=2, column=0, columnspan=2, sticky=(tk.W, tk.E, tk.N, tk.S), pady=(0, 10))
+        pool_frame.columnconfigure(0, weight=1)
+        pool_frame.rowconfigure(0, weight=1)
+        
+        # Create Treeview for product pool
+        columns = ('SKU', 'Product Name', 'Quantity', 'Unit Price', 'Total Price')
+        self.pool_tree = ttk.Treeview(pool_frame, columns=columns, show='headings', height=8)
+        
+        # Define headings
+        for col in columns:
+            self.pool_tree.heading(col, text=col)
+            
+        # Configure column widths
+        self.pool_tree.column('SKU', width=120)
+        self.pool_tree.column('Product Name', width=300)
+        self.pool_tree.column('Quantity', width=80)
+        self.pool_tree.column('Unit Price', width=100)
+        self.pool_tree.column('Total Price', width=100)
+        
+        # Add scrollbar to treeview
+        pool_scrollbar = ttk.Scrollbar(pool_frame, orient=tk.VERTICAL, command=self.pool_tree.yview)
+        self.pool_tree.configure(yscrollcommand=pool_scrollbar.set)
+        
+        self.pool_tree.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+        pool_scrollbar.grid(row=0, column=1, sticky=(tk.N, tk.S))
+        
+        # Pool control buttons
+        pool_button_frame = ttk.Frame(pool_frame)
+        pool_button_frame.grid(row=1, column=0, sticky=tk.W, pady=(10, 0))
+        
+        ttk.Button(pool_button_frame, text="Remove Selected", 
+                  command=self._remove_from_pool).pack(side=tk.LEFT, padx=(0, 10))
+        ttk.Button(pool_button_frame, text="Clear All", 
+                  command=self._clear_pool).pack(side=tk.LEFT, padx=(0, 10))
+        
+        # Order name input
+        ttk.Label(pool_button_frame, text="Order Name:").pack(side=tk.LEFT, padx=(20, 5))
+        self.order_name_var = tk.StringVar(value="factory")
+        order_name_entry = ttk.Entry(pool_button_frame, textvariable=self.order_name_var, width=15)
+        order_name_entry.pack(side=tk.LEFT, padx=(0, 10))
+        
+        ttk.Button(pool_button_frame, text="Generate Command", 
+                  command=self._generate_command).pack(side=tk.LEFT, padx=(10, 0))
         
         # Command output section
         command_frame = ttk.LabelFrame(main_frame, text="Generated Command", padding="10")
-        command_frame.grid(row=2, column=0, columnspan=2, sticky=(tk.W, tk.E, tk.N, tk.S), pady=(0, 10))
+        command_frame.grid(row=3, column=0, columnspan=2, sticky=(tk.W, tk.E, tk.N, tk.S), pady=(0, 10))
         command_frame.columnconfigure(0, weight=1)
         command_frame.rowconfigure(1, weight=1)
         
@@ -164,7 +217,7 @@ class ProductSearchGUI:
         # Status bar
         self.status_var = tk.StringVar(value=f"Loaded {len(self.products)} products")
         status_bar = ttk.Label(main_frame, textvariable=self.status_var, relief=tk.SUNKEN)
-        status_bar.grid(row=3, column=0, columnspan=2, sticky=(tk.W, tk.E), pady=(10, 0))
+        status_bar.grid(row=4, column=0, columnspan=2, sticky=(tk.W, tk.E), pady=(10, 0))
         
         # Initialize suggestions
         self._update_suggestions()
@@ -222,10 +275,17 @@ class ProductSearchGUI:
         self.name_label.config(text=product["name"])
         self.price_label.config(text=f"¥{product['price']}")
         
-        self.status_var.set(f"Selected: {product['sku']} - {product['name']}")
+        # If product is already in pool, show its current quantity
+        if product["sku"] in self.product_pool:
+            current_qty = self.product_pool[product["sku"]]["quantity"]
+            self.quantity_var.set(str(current_qty))
+            self.status_var.set(f"Selected: {product['sku']} - {product['name']} (Currently in pool: {current_qty})")
+        else:
+            self.quantity_var.set("1")
+            self.status_var.set(f"Selected: {product['sku']} - {product['name']}")
     
-    def _generate_command(self):
-        """Generate the direct_sku_to_json.py command"""
+    def _add_to_pool(self):
+        """Add selected product to the pool"""
         if not hasattr(self, 'selected_product'):
             messagebox.showwarning("Warning", "Please select a product first")
             return
@@ -239,23 +299,144 @@ class ProductSearchGUI:
             return
         
         sku = self.selected_product["sku"]
-        command = f"python direct_sku_to_json.py {sku} {quantity}"
+        
+        # Add or update product in pool
+        self.product_pool[sku] = {
+            "product": self.selected_product,
+            "quantity": quantity
+        }
+        
+        self._refresh_pool_display()
+        self.status_var.set(f"Added {quantity} × {sku} to pool")
+    
+    def _update_quantity(self):
+        """Update quantity for existing product in pool"""
+        if not hasattr(self, 'selected_product'):
+            messagebox.showwarning("Warning", "Please select a product first")
+            return
+            
+        sku = self.selected_product["sku"]
+        if sku not in self.product_pool:
+            messagebox.showwarning("Warning", f"Product {sku} is not in the pool. Use 'Add to Pool' instead.")
+            return
+            
+        try:
+            quantity = int(self.quantity_var.get())
+            if quantity <= 0:
+                raise ValueError("Quantity must be positive")
+        except ValueError as e:
+            messagebox.showerror("Error", f"Invalid quantity: {e}")
+            return
+        
+        self.product_pool[sku]["quantity"] = quantity
+        self._refresh_pool_display()
+        self.status_var.set(f"Updated {sku} quantity to {quantity}")
+    
+    def _refresh_pool_display(self):
+        """Refresh the product pool display"""
+        # Clear existing items
+        for item in self.pool_tree.get_children():
+            self.pool_tree.delete(item)
+        
+        # Add current pool items
+        total_value = 0
+        for sku, item in self.product_pool.items():
+            product = item["product"]
+            quantity = item["quantity"]
+            unit_price = product["price"]
+            total_price = unit_price * quantity
+            total_value += total_price
+            
+            self.pool_tree.insert('', 'end', values=(
+                sku,
+                product["name"][:50] + ("..." if len(product["name"]) > 50 else ""),
+                quantity,
+                f"¥{unit_price}",
+                f"¥{total_price:,.2f}"
+            ))
+        
+        # Update frame title with count and total
+        pool_count = len(self.product_pool)
+        pool_frame = self.pool_tree.master
+        pool_frame.configure(text=f"Product Pool ({pool_count} items, Total: ¥{total_value:,.2f})")
+    
+    def _remove_from_pool(self):
+        """Remove selected item from pool"""
+        selection = self.pool_tree.selection()
+        if not selection:
+            messagebox.showwarning("Warning", "Please select an item to remove")
+            return
+            
+        # Get SKU from selected item
+        item = self.pool_tree.item(selection[0])
+        sku = item['values'][0]
+        
+        # Remove from pool
+        if sku in self.product_pool:
+            del self.product_pool[sku]
+            self._refresh_pool_display()
+            self.status_var.set(f"Removed {sku} from pool")
+    
+    def _clear_pool(self):
+        """Clear all items from pool"""
+        if not self.product_pool:
+            messagebox.showinfo("Info", "Pool is already empty")
+            return
+            
+        result = messagebox.askyesno("Confirm", "Are you sure you want to clear all items from the pool?")
+        if result:
+            self.product_pool.clear()
+            self._refresh_pool_display()
+            self.status_var.set("Cleared all items from pool")
+    
+    def _generate_command(self):
+        """Generate the direct_sku_to_json.py command for all products in pool"""
+        if not self.product_pool:
+            messagebox.showwarning("Warning", "Please add products to the pool first")
+            return
+        
+        # Get order name
+        order_name = self.order_name_var.get().strip()
+        if not order_name:
+            order_name = "factory"
+        
+        # Build command with all SKU-quantity pairs
+        command_parts = ["python", "direct_sku_to_json.py", "--name", order_name]
+        
+        total_value = 0
+        product_details = []
+        
+        for sku, item in self.product_pool.items():
+            product = item["product"]
+            quantity = item["quantity"]
+            unit_price = product["price"]
+            total_price = unit_price * quantity
+            total_value += total_price
+            
+            command_parts.extend([sku, str(quantity)])
+            product_details.append(f"- {sku}: {quantity} × ¥{unit_price} = ¥{total_price:,.2f} ({product['name']})")
+        
+        command = " ".join(command_parts)
         
         # Display command with details
-        details = f"""Command to generate order for {quantity} pieces of {sku}:
+        details = f"""Command to generate order for {len(self.product_pool)} products:
 
 {command}
 
 Product Details:
-- SKU: {sku}
-- Name: {self.selected_product['name']}
-- Price: ¥{self.selected_product['price']}
-- Total Value: ¥{self.selected_product['price'] * quantity:,.2f}
+{chr(10).join(product_details)}
+
+Order Summary:
+- Order Name: {order_name}
+- Total Products: {len(self.product_pool)}
+- Total Items: {sum(item['quantity'] for item in self.product_pool.values())}
+- Total Value: ¥{total_value:,.2f}
 
 This command will:
-1. Generate factory JSON files with accessories
-2. Automatically convert to Excel format
+1. Generate {order_name}-1.json, {order_name}-2.json, etc. (grouped by supplier/factory)
+2. Automatically convert to Excel format ({order_name}-1.xlsx, {order_name}-2.xlsx, etc.)
 3. Apply current date ({self._get_current_date()}) and delivery date calculations
+4. Include all required accessories based on accessory mapping
 """
         
         self.command_text.delete(1.0, tk.END)
@@ -264,7 +445,8 @@ This command will:
         # Store command for copying/execution
         self.current_command = command
         
-        self.status_var.set(f"Generated command for {quantity} × {sku}")
+        total_items = sum(item['quantity'] for item in self.product_pool.values())
+        self.status_var.set(f"Generated command for {len(self.product_pool)} products ({total_items} total items)")
     
     def _get_current_date(self):
         """Get current date in Chinese format"""

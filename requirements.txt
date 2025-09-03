@@ -1,0 +1,39 @@
+# Amazon Order Generation System - Dependencies
+# Required packages for GUI applications and order processing
+
+# Core dependencies for GUI applications and order processing
+pyperclip>=1.8.0          # Clipboard functionality for product_search_gui.py
+openpyxl>=3.0.0           # Excel file processing for multiple scripts
+pillow>=8.0.0             # Image processing for json_PO_excel.py (required for Excel image handling)
+
+# Optional dependencies for enhanced functionality
+# pandas>=1.3.0           # Enhanced Excel processing capabilities (optional)
+# xlsxwriter>=3.0.0       # Advanced Excel writing capabilities (optional)
+
+# Note: The following packages are typically included with Python:
+# - tkinter (GUI framework) - may need python3-tk on Linux
+# - json (JSON processing)
+# - pathlib (Path handling)
+# - typing (Type hints)
+# - xml.etree.ElementTree (XML processing)
+# - zipfile (ZIP file processing)
+# - datetime (Date/time handling)
+# - subprocess (Process execution)
+# - re (Regular expressions)
+# - traceback (Error handling)
+# - argparse (Command line parsing)
+# - sys (System functions)
+# - tempfile (Temporary files)
+
+# Scripts covered:
+# - product_search_gui.py: pyperclip + builtin modules
+# - accessory_mapping_updater_gui.py: openpyxl + builtin modules
+# - advanced_excel_to_json.py: builtin modules only
+# - direct_sku_to_json.py: builtin modules only
+# - json_PO_excel.py: openpyxl + pillow + builtin modules
+# - excel_to_json_template.py: openpyxl + builtin modules
+
+# Installation instructions:
+# 1. Basic installation: pip install -r requirements.txt
+# 2. Full installation: python setup_dependencies.py
+# 3. Linux users may need: sudo apt-get install python3-tk

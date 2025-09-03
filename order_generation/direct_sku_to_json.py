@@ -5,17 +5,19 @@ This script automates steps 1, 2, and 4 of the "Handling Direct SKU Requests"
 section of the README. Provide pairs of `<sku> <quantity>` on the command line
 and it will:
 
-* look up accessory ratios in ``docs/complete_mapping.json``;
+* look up accessory ratios in ``docs/accessory_mapping.json``;
 * set the ``数量/个`` field in each product template;
 * group templates by supplier (cell ``B3``) and merge items from the same
   factory;
-* write the merged JSON files into ``json_exports/``.
+* write the merged JSON files into ``json_exports/`` with custom naming.
 
 Example
 -------
 ```
-python direct_sku_to_json.py 48-82P3-QSFG 800 Elasticbrush01 500
+python direct_sku_to_json.py --name myorder 48-82P3-QSFG 800 Elasticbrush01 500
 ```
+
+This will generate files like myorder-1.json, myorder-2.json, etc.
 
 The resulting JSON files can then be converted to Excel using
 ``json_PO_excel.py``.
@@ -37,7 +39,7 @@ from merge_json_templates import merge_json_templates
 
 ROOT = Path(__file__).resolve().parent
 TEMPLATE_DIR = ROOT / "json_template"
-MAPPING_PATH = ROOT / "docs" / "complete_mapping.json"
+MAPPING_PATH = ROOT / "docs" / "accessory_mapping.json"
 OUTPUT_DIR = ROOT / "json_exports"
 EXCEL_OUTPUT_DIR = ROOT / "PO_excel_export"
 
@@ -46,9 +48,17 @@ def _load_accessory_mapping() -> Dict[str, List[dict]]:
     with open(MAPPING_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
     lookup: Dict[str, List[dict]] = {}
-    for parent in data.get("parents", {}).values():
-        for child in parent.get("children", []):
-            lookup[child["sku"]] = child.get("accessories", [])
+    
+    # Handle the new accessory_mapping.json structure
+    if "products" in data:
+        for sku, product_info in data["products"].items():
+            lookup[sku] = product_info.get("accessories", [])
+    else:
+        # Fallback to the old complete_mapping.json structure
+        for parent in data.get("parents", {}).values():
+            for child in parent.get("children", []):
+                lookup[child["sku"]] = child.get("accessories", [])
+    
     return lookup
 
 
@@ -102,7 +112,7 @@ def _run_json_to_excel(json_path: Path) -> Path:
         raise
 
 
-def generate_factory_jsons(pairs: Dict[str, int]) -> List[Path]:
+def generate_factory_jsons(pairs: Dict[str, int], input_name: str = "factory") -> List[Path]:
     mapping = _load_accessory_mapping()
     all_items = _compute_all_items(pairs, mapping)
     temp_files: Dict[str, List[Path]] = {}
@@ -129,7 +139,7 @@ def generate_factory_jsons(pairs: Dict[str, int]) -> List[Path]:
     
     for factory, paths in temp_files.items():
         merged = merge_json_templates(paths)
-        out_path = OUTPUT_DIR / f"factory{factory_counter}.json"
+        out_path = OUTPUT_DIR / f"{input_name}-{factory_counter}.json"
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(merged, f, ensure_ascii=False, indent=2)
         out_paths.append(out_path)
@@ -159,6 +169,7 @@ def generate_factory_jsons(pairs: Dict[str, int]) -> List[Path]:
 
 def parse_args(argv: List[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--name", "-n", default="factory", help="Base name for output files (default: factory)")
     parser.add_argument("items", nargs="+", help="Pairs of <sku> <quantity>")
     return parser.parse_args(argv)
 
@@ -169,7 +180,7 @@ def main(argv: List[str] | None = None) -> int:
         print("error: expected even number of arguments", flush=True)
         return 1
     requests = {ns.items[i]: int(ns.items[i + 1]) for i in range(0, len(ns.items), 2)}
-    paths = generate_factory_jsons(requests)
+    paths = generate_factory_jsons(requests, ns.name)
     for p in paths:
         print(p)
     return 0
@@ -177,24 +188,3 @@ def main(argv: List[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
-# Execution code for 1200 pieces EEHB-NBB
-if __name__ == "__main__":
-    # Generate JSON for 1200 pieces of EEHB-NBB
-    sku_quantity_pairs = {"EEHB-NBB": 1200}
-    
-    print(f"Generating factory JSON files for {sku_quantity_pairs}")
-    
-    try:
-        output_paths = generate_factory_jsons(sku_quantity_pairs)
-        
-        print("\nGenerated factory JSON files:")
-        for path in output_paths:
-            print(f"  - {path}")
-            
-        print(f"\nSuccessfully processed order for 1200 pieces of EEHB-NBB")
-        print(f"Output files saved to: {OUTPUT_DIR}")
-        
-    except Exception as e:
-        print(f"Error generating JSON files: {e}")
-        raise SystemExit(1)
