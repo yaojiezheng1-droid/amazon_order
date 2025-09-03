@@ -170,6 +170,8 @@ def generate_factory_jsons(pairs: Dict[str, int], input_name: str = "factory") -
 def parse_args(argv: List[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--name", "-n", default="factory", help="Base name for output files (default: factory)")
+    parser.add_argument("--po-import", action="store_true", help="Also generate PO import Excel file")
+    parser.add_argument("--warehouse", "-w", default="默认仓库", help="Warehouse for PO import (default: 默认仓库)")
     parser.add_argument("items", nargs="+", help="Pairs of <sku> <quantity>")
     return parser.parse_args(argv)
 
@@ -183,6 +185,18 @@ def main(argv: List[str] | None = None) -> int:
     paths = generate_factory_jsons(requests, ns.name)
     for p in paths:
         print(p)
+    
+    # Generate PO import file if requested
+    if ns.po_import:
+        try:
+            from fill_po_import import fill_po_import_for_order
+            po_import_path = fill_po_import_for_order(ns.name, warehouse=ns.warehouse)
+            print(f"\nAlso generated PO import file: {po_import_path}")
+        except ImportError:
+            print("\nWarning: Could not import fill_po_import module. PO import file not generated.")
+        except Exception as e:
+            print(f"\nError generating PO import file: {e}")
+    
     return 0
 
 

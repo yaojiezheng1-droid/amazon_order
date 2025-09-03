@@ -31,7 +31,7 @@ class ProductSearchGUI:
         self.products = self._load_products()
         
         # Initialize product pool/cart
-        self.product_pool = {}  # {sku: {'product': product_dict, 'quantity': int}}
+        self.product_pool = {}  # {sku: {'product': product_dict, 'quantity': int, 'warehouse': str}}
         
         # Create GUI elements
         self._create_widgets()
@@ -65,6 +65,17 @@ class ProductSearchGUI:
             messagebox.showerror("Error", f"Failed to load products: {e}")
             
         return products
+    
+    def _load_warehouse_options(self):
+        """Load warehouse options from Storage.txt"""
+        try:
+            storage_file = Path(__file__).resolve().parent / "docs" / "Storage.txt"
+            with open(storage_file, 'r', encoding='utf-8') as f:
+                warehouses = [line.strip() for line in f if line.strip()]
+            return warehouses
+        except Exception as e:
+            print(f"Error loading warehouse options: {e}")
+            return ["默认仓库"]
     
     def _create_widgets(self):
         """Create all GUI widgets"""
@@ -145,7 +156,11 @@ class ProductSearchGUI:
         
         # Update quantity button (for existing items)
         ttk.Button(quantity_frame, text="Update Quantity", 
-                  command=self._update_quantity).pack(side=tk.LEFT)
+                  command=self._update_quantity).pack(side=tk.LEFT, padx=(0, 10))
+        
+        # Update warehouse button (for existing items)
+        ttk.Button(quantity_frame, text="Update Warehouse", 
+                  command=self._update_warehouse).pack(side=tk.LEFT)
         
         # Product Pool section
         pool_frame = ttk.LabelFrame(main_frame, text="Product Pool", padding="10")
@@ -154,7 +169,7 @@ class ProductSearchGUI:
         pool_frame.rowconfigure(0, weight=1)
         
         # Create Treeview for product pool
-        columns = ('SKU', 'Product Name', 'Quantity', 'Unit Price', 'Total Price')
+        columns = ('SKU', 'Product Name', 'Quantity', 'Unit Price', 'Total Price', 'Warehouse')
         self.pool_tree = ttk.Treeview(pool_frame, columns=columns, show='headings', height=8)
         
         # Define headings
@@ -163,10 +178,11 @@ class ProductSearchGUI:
             
         # Configure column widths
         self.pool_tree.column('SKU', width=120)
-        self.pool_tree.column('Product Name', width=300)
+        self.pool_tree.column('Product Name', width=250)
         self.pool_tree.column('Quantity', width=80)
-        self.pool_tree.column('Unit Price', width=100)
+        self.pool_tree.column('Unit Price', width=80)
         self.pool_tree.column('Total Price', width=100)
+        self.pool_tree.column('Warehouse', width=120)
         
         # Add scrollbar to treeview
         pool_scrollbar = ttk.Scrollbar(pool_frame, orient=tk.VERTICAL, command=self.pool_tree.yview)
@@ -189,6 +205,12 @@ class ProductSearchGUI:
         self.order_name_var = tk.StringVar(value="factory")
         order_name_entry = ttk.Entry(pool_button_frame, textvariable=self.order_name_var, width=15)
         order_name_entry.pack(side=tk.LEFT, padx=(0, 10))
+        
+        # PO Import checkbox
+        self.po_import_var = tk.BooleanVar(value=True)
+        po_import_checkbox = ttk.Checkbutton(pool_button_frame, text="Generate PO Import", 
+                                           variable=self.po_import_var)
+        po_import_checkbox.pack(side=tk.LEFT, padx=(10, 10))
         
         ttk.Button(pool_button_frame, text="Generate Command", 
                   command=self._generate_command).pack(side=tk.LEFT, padx=(10, 0))
@@ -303,7 +325,8 @@ class ProductSearchGUI:
         # Add or update product in pool
         self.product_pool[sku] = {
             "product": self.selected_product,
-            "quantity": quantity
+            "quantity": quantity,
+            "warehouse": "默认仓库"  # Default warehouse for new products
         }
         
         self._refresh_pool_display()
@@ -332,6 +355,127 @@ class ProductSearchGUI:
         self._refresh_pool_display()
         self.status_var.set(f"Updated {sku} quantity to {quantity}")
     
+    def _update_warehouse(self):
+        """Update warehouse for existing product in pool"""
+        if not hasattr(self, 'selected_product'):
+            messagebox.showwarning("Warning", "Please select a product first")
+            return
+            
+        sku = self.selected_product["sku"]
+        if sku not in self.product_pool:
+            messagebox.showwarning("Warning", f"Product {sku} is not in the pool. Use 'Add to Pool' instead.")
+            return
+        
+        # Open warehouse selection dialog
+        self._select_warehouse_for_product(sku)
+    
+    def _select_warehouse_for_product(self, sku):
+        """Open warehouse selection dialog for specific product"""
+        # Create popup window
+        popup = tk.Toplevel(self.root)
+        popup.title(f"Select Warehouse for {sku}")
+        popup.geometry("350x400")
+        popup.resizable(False, False)
+        
+        # Make it modal
+        popup.transient(self.root)
+        popup.grab_set()
+        
+        # Center the popup
+        popup.update_idletasks()
+        x = (popup.winfo_screenwidth() // 2) - (350 // 2)
+        y = (popup.winfo_screenheight() // 2) - (400 // 2)
+        popup.geometry(f"350x400+{x}+{y}")
+        
+        # Load warehouse options
+        warehouses = self._load_warehouse_options()
+        current_warehouse = self.product_pool[sku]["warehouse"]
+        
+        # Create UI elements
+        ttk.Label(popup, text=f"Select warehouse for {sku}:", font=("Arial", 12, "bold")).pack(pady=(10, 5))
+        
+        # Current selection display
+        current_label = ttk.Label(popup, text=f"Current: {current_warehouse}", 
+                                foreground="blue")
+        current_label.pack(pady=(0, 10))
+        
+        # Listbox for warehouse selection
+        frame = ttk.Frame(popup)
+        frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=(0, 10))
+        
+        listbox = tk.Listbox(frame, font=("Arial", 10))
+        scrollbar = ttk.Scrollbar(frame, orient=tk.VERTICAL, command=listbox.yview)
+        listbox.config(yscrollcommand=scrollbar.set)
+        
+        listbox.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        
+        # Populate listbox
+        for warehouse in warehouses:
+            listbox.insert(tk.END, warehouse)
+            
+        # Select current warehouse
+        try:
+            current_index = warehouses.index(current_warehouse)
+            listbox.selection_set(current_index)
+            listbox.see(current_index)
+        except ValueError:
+            pass
+        
+        # Button frame
+        button_frame = ttk.Frame(popup)
+        button_frame.pack(pady=10)
+        
+        def on_ok():
+            selection = listbox.curselection()
+            if selection:
+                new_warehouse = warehouses[selection[0]]
+                self.product_pool[sku]["warehouse"] = new_warehouse
+                self._refresh_pool_display()
+                self.status_var.set(f"Updated {sku} warehouse to {new_warehouse}")
+                popup.destroy()
+            else:
+                messagebox.showwarning("Warning", "Please select a warehouse")
+        
+        def on_cancel():
+            popup.destroy()
+        
+        ttk.Button(button_frame, text="OK", command=on_ok).pack(side=tk.LEFT, padx=(0, 10))
+        ttk.Button(button_frame, text="Cancel", command=on_cancel).pack(side=tk.LEFT)
+        
+        # Handle double-click
+        def on_double_click(event):
+            on_ok()
+        
+        listbox.bind("<Double-Button-1>", on_double_click)
+        
+        # Handle Enter key
+        def on_enter(event):
+            on_ok()
+        
+        popup.bind("<Return>", on_enter)
+        popup.bind("<Escape>", lambda e: on_cancel())
+        
+        # Focus on listbox
+        listbox.focus_set()
+    
+    def _create_warehouse_mapping_file(self, order_name):
+        """Create warehouse mapping file for backend processing"""
+        import json
+        from pathlib import Path
+        
+        # Create mapping of SKU to warehouse
+        warehouse_mapping = {}
+        for sku, item in self.product_pool.items():
+            warehouse_mapping[sku] = item.get("warehouse", "默认仓库")
+        
+        # Save to temporary file
+        mapping_file = Path(__file__).resolve().parent / f"warehouse_mapping_{order_name}.json"
+        with open(mapping_file, 'w', encoding='utf-8') as f:
+            json.dump(warehouse_mapping, f, ensure_ascii=False, indent=2)
+        
+        print(f"Created warehouse mapping file: {mapping_file}")
+    
     def _refresh_pool_display(self):
         """Refresh the product pool display"""
         # Clear existing items
@@ -343,16 +487,18 @@ class ProductSearchGUI:
         for sku, item in self.product_pool.items():
             product = item["product"]
             quantity = item["quantity"]
+            warehouse = item.get("warehouse", "默认仓库")  # Default if not set
             unit_price = product["price"]
             total_price = unit_price * quantity
             total_value += total_price
             
             self.pool_tree.insert('', 'end', values=(
                 sku,
-                product["name"][:50] + ("..." if len(product["name"]) > 50 else ""),
+                product["name"][:40] + ("..." if len(product["name"]) > 40 else ""),
                 quantity,
                 f"¥{unit_price}",
-                f"¥{total_price:,.2f}"
+                f"¥{total_price:,.2f}",
+                warehouse
             ))
         
         # Update frame title with count and total
@@ -403,18 +549,25 @@ class ProductSearchGUI:
         # Build command with all SKU-quantity pairs
         command_parts = ["python", "direct_sku_to_json.py", "--name", order_name]
         
+        # Add PO import flag if checked
+        if self.po_import_var.get():
+            command_parts.append("--po-import")
+            # Create warehouse mapping file for backend
+            self._create_warehouse_mapping_file(order_name)
+        
         total_value = 0
         product_details = []
         
         for sku, item in self.product_pool.items():
             product = item["product"]
             quantity = item["quantity"]
+            warehouse = item.get("warehouse", "默认仓库")
             unit_price = product["price"]
             total_price = unit_price * quantity
             total_value += total_price
             
             command_parts.extend([sku, str(quantity)])
-            product_details.append(f"- {sku}: {quantity} × ¥{unit_price} = ¥{total_price:,.2f} ({product['name']})")
+            product_details.append(f"- {sku}: {quantity} × ¥{unit_price} = ¥{total_price:,.2f} ({product['name']}) [仓库: {warehouse}]")
         
         command = " ".join(command_parts)
         
@@ -436,7 +589,16 @@ This command will:
 1. Generate {order_name}-1.json, {order_name}-2.json, etc. (grouped by supplier/factory)
 2. Automatically convert to Excel format ({order_name}-1.xlsx, {order_name}-2.xlsx, etc.)
 3. Apply current date ({self._get_current_date()}) and delivery date calculations
-4. Include all required accessories based on accessory mapping
+4. Include all required accessories based on accessory mapping"""
+
+        if self.po_import_var.get():
+            # Get unique warehouses used
+            warehouses_used = set(item.get("warehouse", "默认仓库") for item in self.product_pool.values())
+            warehouse_list = ", ".join(sorted(warehouses_used))
+            details += f"""
+5. Generate PO import Excel file: PO_import_{order_name}.xlsx (warehouses: {warehouse_list})"""
+
+        details += """
 """
         
         self.command_text.delete(1.0, tk.END)

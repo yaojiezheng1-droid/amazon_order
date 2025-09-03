@@ -21,7 +21,7 @@ COLUMN_MAP = {
 }
 
 
-def fill_workbook(template: Path, data: dict):
+def fill_workbook(template: Path, data: dict, json_filename: str = ""):
     """Return workbook filled with ``data`` using ``template``."""
     wb = load_workbook(template)
     ws = wb.active
@@ -47,6 +47,10 @@ def fill_workbook(template: Path, data: dict):
                 # If no number found, default to 30 days from today
                 delivery_date = datetime.now() + timedelta(days=30)
                 value = delivery_date.strftime('%Y年%m月%d日')
+        elif key == '订单号' and not value and json_filename:
+            # Extract order number from filename (e.g., "factory-1.json" -> "factory-1")
+            order_number = Path(json_filename).stem
+            value = order_number
         
         ws[addr] = value
 
@@ -112,7 +116,7 @@ def main(argv: list[str]) -> int:
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    wb = fill_workbook(template, data)
+    wb = fill_workbook(template, data, json_path.name)
     wb.save(out_path)
     return 0
 
