@@ -139,7 +139,7 @@
   },
   "products": [
     {
-      "产品编号": "",
+      "产品编号": "EC404-2-3-2",
       "产品名称": "",
       "产品图片": "",
       "描述": "<TODO (value not filled - fill with product description/requirement #not product name/title from PO usually the second/third column in product table of PO file with description/requirement of the ordered product, mustfill*)>",

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Excel to JSON Template Generator
+Excel to JSON Template Generator with GUI
 
 This script converts Excel files in the format of empty_base_template.xlsx
 to JSON template files suitable for the json_template folder.
@@ -12,8 +12,16 @@ The script:
 4. Saves files to the json_template directory with proper formatting
 
 Usage:
-    python excel_to_json_template.py input_file.xlsx
-    python excel_to_json_template.py *.xlsx  # Process multiple files
+    python excel_to_json_template.py                    # Launch GUI (recommended)
+    python excel_to_json_template.py input_file.xlsx    # Command line mode
+    python excel_to_json_template.py *.xlsx             # Process multiple files
+
+GUI Features:
+- File selection with browse dialog
+- Folder selection to process all Excel files
+- Real-time conversion progress
+- Detailed logging and error reporting
+- Background processing to keep UI responsive
 """
 
 import json
@@ -21,6 +29,9 @@ import re
 import sys
 from pathlib import Path
 from typing import Any, Dict, List, Optional
+import tkinter as tk
+from tkinter import ttk, filedialog, messagebox, scrolledtext
+import threading
 
 try:
     from openpyxl import load_workbook
@@ -290,14 +301,288 @@ class ExcelToJsonConverter:
         print(f"Output directory: {self.template_dir}")
 
 
+class ExcelToJsonGUI:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Excel to JSON Template Converter")
+        self.root.geometry("800x600")
+        
+        # Initialize converter
+        self.converter = ExcelToJsonConverter()
+        
+        # Selected files list
+        self.selected_files = []
+        
+        # Create GUI
+        self._create_widgets()
+        
+    def _create_widgets(self):
+        """Create all GUI widgets"""
+        # Main frame
+        main_frame = ttk.Frame(self.root, padding="10")
+        main_frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+        
+        # Configure grid weights
+        self.root.columnconfigure(0, weight=1)
+        self.root.rowconfigure(0, weight=1)
+        main_frame.columnconfigure(0, weight=1)
+        main_frame.rowconfigure(2, weight=1)
+        
+        # Title
+        title_label = ttk.Label(main_frame, text="Excel to JSON Template Converter", 
+                               font=("TkDefaultFont", 16, "bold"))
+        title_label.grid(row=0, column=0, pady=(0, 20))
+        
+        # File selection section
+        file_frame = ttk.LabelFrame(main_frame, text="File Selection", padding="10")
+        file_frame.grid(row=1, column=0, sticky=(tk.W, tk.E), pady=(0, 10))
+        file_frame.columnconfigure(0, weight=1)
+        
+        # File selection buttons
+        button_frame = ttk.Frame(file_frame)
+        button_frame.grid(row=0, column=0, sticky=(tk.W, tk.E), pady=(0, 10))
+        
+        ttk.Button(button_frame, text="Select Excel Files", 
+                  command=self._select_files).pack(side=tk.LEFT, padx=(0, 10))
+        ttk.Button(button_frame, text="Add Folder", 
+                  command=self._select_folder).pack(side=tk.LEFT, padx=(0, 10))
+        ttk.Button(button_frame, text="Clear All", 
+                  command=self._clear_files).pack(side=tk.LEFT, padx=(0, 10))
+        
+        # File list
+        list_frame = ttk.Frame(file_frame)
+        list_frame.grid(row=1, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+        list_frame.columnconfigure(0, weight=1)
+        list_frame.rowconfigure(0, weight=1)
+        
+        # Create listbox with scrollbar
+        self.file_listbox = tk.Listbox(list_frame, height=6)
+        file_scrollbar = ttk.Scrollbar(list_frame, orient=tk.VERTICAL, command=self.file_listbox.yview)
+        self.file_listbox.configure(yscrollcommand=file_scrollbar.set)
+        
+        self.file_listbox.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+        file_scrollbar.grid(row=0, column=1, sticky=(tk.N, tk.S))
+        
+        # Control buttons
+        control_frame = ttk.Frame(file_frame)
+        control_frame.grid(row=2, column=0, sticky=(tk.W, tk.E), pady=(10, 0))
+        
+        ttk.Button(control_frame, text="Remove Selected", 
+                  command=self._remove_selected).pack(side=tk.LEFT, padx=(0, 10))
+        ttk.Button(control_frame, text="Convert to JSON", 
+                  command=self._convert_files).pack(side=tk.LEFT, padx=(20, 0))
+        
+        # Progress and output section
+        output_frame = ttk.LabelFrame(main_frame, text="Conversion Progress", padding="10")
+        output_frame.grid(row=2, column=0, sticky=(tk.W, tk.E, tk.N, tk.S), pady=(0, 10))
+        output_frame.columnconfigure(0, weight=1)
+        output_frame.rowconfigure(1, weight=1)
+        
+        # Progress bar
+        self.progress_var = tk.StringVar(value="Ready to convert files...")
+        progress_label = ttk.Label(output_frame, textvariable=self.progress_var)
+        progress_label.grid(row=0, column=0, sticky=(tk.W, tk.E), pady=(0, 5))
+        
+        self.progress_bar = ttk.Progressbar(output_frame, mode='determinate')
+        self.progress_bar.grid(row=1, column=0, sticky=(tk.W, tk.E), pady=(0, 10))
+        
+        # Output text
+        self.output_text = scrolledtext.ScrolledText(output_frame, height=15, wrap=tk.WORD)
+        self.output_text.grid(row=2, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+        
+        # Status bar
+        self.status_var = tk.StringVar(value="Ready")
+        status_bar = ttk.Label(main_frame, textvariable=self.status_var, relief=tk.SUNKEN)
+        status_bar.grid(row=3, column=0, sticky=(tk.W, tk.E), pady=(10, 0))
+        
+        # Initial message
+        self._log("Excel to JSON Template Converter ready!")
+        self._log("Select Excel files to convert to JSON templates.")
+        self._log(f"Output directory: {self.converter.template_dir}")
+        
+    def _log(self, message: str):
+        """Log a message to the output text"""
+        self.output_text.insert(tk.END, message + "\n")
+        self.output_text.see(tk.END)
+        self.root.update()
+        
+    def _select_files(self):
+        """Select Excel files to convert"""
+        filetypes = [
+            ("Excel files", "*.xlsx *.xls"),
+            ("All files", "*.*")
+        ]
+        
+        files = filedialog.askopenfilenames(
+            title="Select Excel files to convert",
+            filetypes=filetypes
+        )
+        
+        if files:
+            added_count = 0
+            for file_path in files:
+                if file_path not in self.selected_files:
+                    self.selected_files.append(file_path)
+                    self.file_listbox.insert(tk.END, Path(file_path).name)
+                    added_count += 1
+            
+            self._log(f"Added {added_count} file(s)")
+            self.status_var.set(f"Selected {len(self.selected_files)} file(s)")
+    
+    def _select_folder(self):
+        """Select all Excel files from a folder"""
+        folder = filedialog.askdirectory(title="Select folder containing Excel files")
+        
+        if folder:
+            folder_path = Path(folder)
+            excel_files = list(folder_path.glob("*.xlsx")) + list(folder_path.glob("*.xls"))
+            
+            added_count = 0
+            for file_path in excel_files:
+                file_str = str(file_path)
+                if file_str not in self.selected_files:
+                    self.selected_files.append(file_str)
+                    self.file_listbox.insert(tk.END, file_path.name)
+                    added_count += 1
+            
+            self._log(f"Added {added_count} file(s) from folder: {folder}")
+            self.status_var.set(f"Selected {len(self.selected_files)} file(s)")
+    
+    def _clear_files(self):
+        """Clear all selected files"""
+        self.selected_files.clear()
+        self.file_listbox.delete(0, tk.END)
+        self._log("Cleared all selected files")
+        self.status_var.set("Ready")
+    
+    def _remove_selected(self):
+        """Remove selected file from list"""
+        selection = self.file_listbox.curselection()
+        if selection:
+            index = selection[0]
+            removed_file = self.selected_files.pop(index)
+            self.file_listbox.delete(index)
+            self._log(f"Removed: {Path(removed_file).name}")
+            self.status_var.set(f"Selected {len(self.selected_files)} file(s)")
+    
+    def _convert_files(self):
+        """Convert selected files to JSON templates"""
+        if not self.selected_files:
+            messagebox.showwarning("Warning", "Please select Excel files to convert")
+            return
+        
+        # Disable convert button during processing
+        for child in self.root.winfo_children():
+            self._disable_widgets(child)
+        
+        # Start conversion in background thread
+        thread = threading.Thread(target=self._conversion_worker)
+        thread.daemon = True
+        thread.start()
+    
+    def _disable_widgets(self, widget):
+        """Recursively disable all widgets"""
+        try:
+            widget.configure(state='disabled')
+        except:
+            pass
+        for child in widget.winfo_children():
+            self._disable_widgets(child)
+    
+    def _enable_widgets(self, widget):
+        """Recursively enable all widgets"""
+        try:
+            widget.configure(state='normal')
+        except:
+            pass
+        for child in widget.winfo_children():
+            self._enable_widgets(child)
+    
+    def _conversion_worker(self):
+        """Background worker for file conversion"""
+        try:
+            total_files = len(self.selected_files)
+            total_generated = 0
+            
+            self.progress_bar.configure(maximum=total_files)
+            
+            for i, file_path in enumerate(self.selected_files):
+                self.progress_var.set(f"Processing {i+1}/{total_files}: {Path(file_path).name}")
+                self.progress_bar.configure(value=i)
+                
+                self._log(f"\n[{i+1}/{total_files}] Processing: {Path(file_path).name}")
+                
+                try:
+                    generated_files = self.converter.convert_excel_to_json(Path(file_path))
+                    total_generated += len(generated_files)
+                    
+                    if generated_files:
+                        self._log(f"  ✓ Generated {len(generated_files)} JSON template(s)")
+                        for json_file in generated_files:
+                            self._log(f"    - {json_file.name}")
+                    else:
+                        self._log(f"  ⚠ No templates generated (no products found)")
+                        
+                except Exception as e:
+                    self._log(f"  ✗ Error: {e}")
+            
+            self.progress_bar.configure(value=total_files)
+            self.progress_var.set("Conversion completed!")
+            
+            # Summary
+            self._log(f"\n" + "="*50)
+            self._log(f"CONVERSION SUMMARY")
+            self._log(f"="*50)
+            self._log(f"Files processed: {total_files}")
+            self._log(f"JSON templates generated: {total_generated}")
+            self._log(f"Output directory: {self.converter.template_dir}")
+            self._log(f"="*50)
+            
+            if total_generated > 0:
+                messagebox.showinfo("Success", 
+                    f"Conversion completed!\n\n"
+                    f"Files processed: {total_files}\n"
+                    f"JSON templates generated: {total_generated}\n"
+                    f"Output directory: {self.converter.template_dir}")
+            else:
+                messagebox.showwarning("Warning", 
+                    f"Conversion completed but no JSON templates were generated.\n"
+                    f"Please check the Excel files contain valid product data.")
+            
+            self.status_var.set(f"Completed: {total_generated} templates generated")
+            
+        except Exception as e:
+            self._log(f"\nUnexpected error: {e}")
+            messagebox.showerror("Error", f"Conversion failed: {e}")
+            self.status_var.set("Error occurred")
+        
+        finally:
+            # Re-enable widgets
+            for child in self.root.winfo_children():
+                self._enable_widgets(child)
+
+
 def main():
-    if len(sys.argv) < 2:
+    # Check if GUI mode should be used
+    if len(sys.argv) == 1:
+        # No command line arguments - launch GUI
+        try:
+            root = tk.Tk()
+            app = ExcelToJsonGUI(root)
+            root.mainloop()
+        except Exception as e:
+            print(f"GUI Error: {e}")
+            print("Falling back to command line mode...")
+            print("Usage: python excel_to_json_template.py <excel_file1> [excel_file2] ...")
+            sys.exit(1)
+    else:
+        # Command line arguments provided - use CLI mode
         print("Usage: python excel_to_json_template.py <excel_file1> [excel_file2] ...")
         print("       python excel_to_json_template.py *.xlsx")
-        sys.exit(1)
-    
-    converter = ExcelToJsonConverter()
-    converter.process_files(sys.argv[1:])
+        print("       python excel_to_json_template.py  # Launch GUI")
+        
+        converter = ExcelToJsonConverter()
+        converter.process_files(sys.argv[1:])
 
 
 if __name__ == "__main__":
