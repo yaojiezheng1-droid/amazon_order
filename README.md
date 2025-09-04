@@ -10,6 +10,19 @@ This repository organizes files used for managing Amazon orders. It is designed 
 
 Each directory contains an empty `.gitkeep` file so that it is tracked by Git even when no spreadsheets are present.
 
+## JSON and Excel Structure
+
+The tools in `order_generation` share a common data format:
+
+- **JSON templates** contain three sections:
+  - `cells`: mapping of Excel cell addresses to key/value pairs.
+  - `products`: list of items with fields such as `产品编号` (SKU), `产品图片`, `描述`,
+    `数量/个`, `单价`, and `包装方式`.
+  - `footer`: buyer and supplier information.
+- **Excel files** follow `docs/empty_base_template.xlsx` where:
+  - Metadata lives in cells like `B3` (供货商), `G4` (日期), etc.
+  - The product table starts around row 7 with columns `A`=SKU, `B`=图片,
+    `C`=描述, `D`=数量, `E`=单价, and `G`=包装方式.
 
 ## Generating JSON Templates
 
@@ -113,3 +126,39 @@ with step 5 using these generated files.
 This process keeps products from different factories on separate spreadsheets
 while still providing a single sheet when everything is sourced from one
 factory.
+
+## Additional Tools
+
+### `product_search_gui.py`
+- Visual interface to search templates by name or SKU
+- Builds commands for `direct_sku_to_json.py`
+- Optional warehouse selection and PO-import generation
+
+### `excel_to_json_template.py`
+- Converts `empty_base_template.xlsx`-style files to JSON templates
+- GUI or command-line usage
+- Example: `python order_generation/excel_to_json_template.py order.xlsx`
+
+### `json_templates_to_excel.py`
+- Batch converts JSON templates back into Excel
+- Leverages `json_PO_excel.py` for consistent formatting
+- Example: `python order_generation/json_templates_to_excel.py --templates ST1122-1 EEHB-NBB`
+
+### `fill_po_import.py`
+- Fills `docs/PO_import_empty.xlsx` using JSON exports
+- Run directly or through `direct_sku_to_json.py --po-import`
+- Example: `python order_generation/fill_po_import.py AM2025 --warehouse "义乌仓库"`
+
+## Typical Workflow
+
+1. Search and select products with `product_search_gui.py` or call
+   `direct_sku_to_json.py` with SKU/quantity pairs to create JSON exports and
+   factory-grouped Excel orders.
+2. When a supplier needs the PO-import format, run `fill_po_import.py` or add
+   `--po-import` and `--warehouse` when generating orders.
+3. To create new templates from an existing spreadsheet, convert it with
+   `excel_to_json_template.py`.
+4. To rebuild Excel files from templates, use `json_templates_to_excel.py`.
+
+These scripts remain separate because each handles a distinct stage of the
+workflow while sharing the common JSON and Excel structures described above.
