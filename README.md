@@ -15,6 +15,7 @@ Excel from JSON templates and SKU requests.
 Each directory is tracked with an empty `.gitkeep` file so it remains in the
 repository even when no spreadsheets are present.
 
+
 ## Data Formats
 
 The scripts share a common representation of order data:
